@@ -1,0 +1,22 @@
+{
+  "name": "agadir-keys-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node api/contact.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.1"
+  },
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
