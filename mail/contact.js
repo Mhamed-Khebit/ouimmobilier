@@ -39,7 +39,6 @@
 
 
 
-
 function emailSend() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -47,7 +46,7 @@ function emailSend() {
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    fetch("/api/send", {   // ✅ no localhost
+    fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, phone, subject, message })
@@ -56,7 +55,7 @@ function emailSend() {
     .then(data => {
         if (data.message) {
             swal("Success", data.message, "success");
-            document.getElementById("contactForm").reset(); // ✅ clear form
+            document.getElementById("contactForm").reset();
         } else {
             swal("Error", data.error, "error");
         }
