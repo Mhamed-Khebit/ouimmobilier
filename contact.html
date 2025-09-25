@@ -186,7 +186,7 @@
                     <div id="success"></div>
                     
                     <!-- ✅ Added action and method -->
-                    <form id="contactForm" onsubmit="emailSend(); return false;">
+                    <form id="contactForm" onsubmit="event.preventDefault(); emailSend();">
                         <div class="form-row">
                             <div class="col-sm-6 control-group">
                                 <input type="text" class="form-control border-0 p-4" id="name" name="name"
