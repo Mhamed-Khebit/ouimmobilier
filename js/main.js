@@ -1,22 +1,64 @@
 (function ($) {
     "use strict";
     
-    // Dropdown on mouse hover
+
+    // navbarCollapse
     $(document).ready(function () {
-        function toggleNavbarMethod() {
-            if ($(window).width() > 992) {
-                $('.navbar .dropdown').on('mouseover', function () {
-                    $('.dropdown-toggle', this).trigger('click');
-                }).on('mouseout', function () {
-                    $('.dropdown-toggle', this).trigger('click').blur();
-                });
-            } else {
-                $('.navbar .dropdown').off('mouseover').off('mouseout');
+        var checkbox = $('#check'); // hamburger checkbox
+    
+        function closeNavbar() {
+            $('.navbar-collapse').collapse('hide');
+            if (checkbox.length) {
+                checkbox.prop('checked', false); // reset hamburger
             }
+            $('.navbar-toggler').addClass('collapsed');
+            $('.navbar-toggler').attr('aria-expanded', 'false'); 
         }
-        toggleNavbarMethod();
-        $(window).resize(toggleNavbarMethod);
+    
+        // Close menu when clicking on links (except Traduction)
+        $('.navbar-nav a').on('click', function(e) {
+            var link = $(this);
+            if(!link.hasClass('dropdown-toggle')) {
+                if($('.navbar-collapse').hasClass('show')) {
+                    closeNavbar();
+                }
+            }
+        });
+    
+        // Close menu when clicking outside
+        $(document).on('click', function(e) {
+            var target = $(e.target);
+            if(!target.closest('.navbar').length && $('.navbar-collapse').hasClass('show')) {
+                closeNavbar();
+            }
+        });
+    
+        // Close menu when scrolling
+        $(window).on('scroll', function() {
+            if($('.navbar-collapse').hasClass('show')) {
+                closeNavbar();
+            }
+        });
     });
+    
+    
+
+    $(document).ready(function(){
+        function adjustPadding(){
+          var topbarHeight = $('.topbar').outerHeight() || 0;
+          var navbarHeight = $('.navbar').outerHeight() || 0;
+          $('body').css('padding-top', topbarHeight + navbarHeight + 'px');
+        }
+      
+        adjustPadding();
+        $(window).resize(adjustPadding); // update f resize
+      });
+      
+
+
+    
+
+
 
 
     // Back to top button
