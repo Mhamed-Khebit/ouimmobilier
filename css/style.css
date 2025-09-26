@@ -37,6 +37,21 @@
 }
 
 
+    /* منع السحب والإفلات */
+img, a {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+/* منع التحديد (الكوبي) */
+/* body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
 
 a, button, .btn {
   -webkit-tap-highlight-color: transparent; /* يحيد الإفكت فالموبايل */
