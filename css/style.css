@@ -37,26 +37,21 @@
 }
 
 
-    /* منع السحب والإفلات */
-img, a {
-  -webkit-user-drag: none;
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-  -webkit-user-drag: none;
-}
+
 /* منع التحديد (الكوبي) */
-/* body {
+/* * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 } */
 
-/* nav */
-a, button, .btn {
-  -webkit-tap-highlight-color: transparent; /* يحيد الإفكت فالموبايل */
+
+* {
+  -webkit-tap-highlight-color: transparent; /* iOS/Android blue highlight */
+  outline: none; /* remove focus outline */
 }
+
 *,
 *::before,
 *::after {
@@ -84,7 +79,7 @@ body {
   line-height: 1.5;
   color: #3C3D1D;
   text-align: left;
-  background-color: #fff;
+  background-color: #FFFFFF;
   
 }
 

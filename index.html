@@ -315,15 +315,14 @@ window.addEventListener("load", () => {
 
                     <div class="gallery-container">
                         <div class="gallery-card">
-                            <img src="imgs/marinaAbout.png" alt="Resort Poolside View">
+                            <img class="twistable" src="imgs/marinaAbout.png" alt="Resort Poolside View">
                         </div>
                         <div class="gallery-card tall-card">
-                            <img src="imgs/aboutPics2.jpg" alt="Lush Poolside with Huts">
+                            <img class="twistable" src="imgs/aboutPics2.jpg" alt="Lush Poolside with Huts">
                         </div>
                         <div class="gallery-card">
-                            <img src="imgs/aboutPics3.jpg" alt="Resort Building by the Pool">
+                            <img class="twistable" src="imgs/aboutPics3.jpg" alt="Resort Building by the Pool">
                         </div>
-
                     </div>
 
 
@@ -335,13 +334,14 @@ window.addEventListener("load", () => {
                         grid-gap: 15px;
                         max-width: 600px;
                         margin: 50px auto;
+                    
                     }
                     .gallery-card {
                         overflow: hidden;
                         border-radius: 10px;
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.234);
                         transform: scale(0.85);
                         transition: transform 0.6s ease-out;
+                        background-color:  transparent !important;
                     }
                     .gallery-card.in-view {
                         transform: scale(1);
@@ -356,10 +356,10 @@ window.addEventListener("load", () => {
                         display: block;
                     }
 
-                    .gallery-card:active {
+                    /* .gallery-card:active {
     transform: scale(0.9) rotateX(5deg);
     transition: transform 0.5s ease-in-out;
-}
+} */
                     </style>
 
 <script>
@@ -379,6 +379,51 @@ window.addEventListener("load", () => {
         observer.observe(card);
     });
 </script>
+
+
+<!-- effect images -->
+
+<style>
+    /* Twist effect style */
+    .twistable {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+      /* box-shadow: 0 8px 20px rgba(0,0,0,0.15); */
+      transition: transform 0.4s ease;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      
+    }
+    </style>
+    
+    <script>
+    const imgs = document.querySelectorAll(".twistable");
+    
+    imgs.forEach(img => {
+      img.addEventListener("click", (e) => {
+        const rect = img.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+    
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+    
+        // الاتجاه نفسه من البلاصة لي ضغطتي عليها
+        const rotateX = ((y - centerY) / centerY) * -12;
+        const rotateY = ((x - centerX) / centerX) * 12;
+    
+        img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    
+        // ترجع للصورة الأصلية بعد 300ms
+        setTimeout(() => {
+          img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+        }, 300);
+      });
+    });
+    </script>
+    
+    
 
 
                 </div>
@@ -581,64 +626,8 @@ top: 100%;
       </div>
     
     </div>
-      <!-- <style>
-        /* Animated background with stronger contrast */
-        .animated-bg {
-          background: linear-gradient(
-            -45deg,
-            #3C3D1D,
-            #5c5f2d,
-            #1f2010,
-            #3C3D1D
-          );
-          background-size: 300% 300%;
-          animation: gradientShift 10s ease infinite;
-          color: white;
-        }
-        
-        @keyframes gradientShift {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        </style> -->
+     
 
-        
-
-    
-
-        <!-- <style>
-            /* Light luxury gradient with subtle green touch */
-            .luxury-light-green-bg {
-              position: relative;
-              background: linear-gradient(
-                -45deg,
-                #fdfbfb,  /* base light */
-                #f6f6e5,  
-                #e8e6d0,
-                #e3e6c8,  /* subtle greenish touch */
-                #fdfdfb
-              );
-              background-size: 300% 300%;
-              animation: softGreenGradient 20s ease infinite;
-              color: #222;
-              overflow: hidden;
-              border-top: 1px solid #ddd;
-              border-bottom: 1px solid #ddd;
-            }
-            
-            @keyframes softGreenGradient {
-              0%   { background-position: 0% 50%; }
-              50%  { background-position: 100% 50%; }
-              100% { background-position: 0% 50%; }
-            }
-            </style> -->
 
             <style>
 /* Luxury Gradient Animation - Visible */
@@ -646,14 +635,14 @@ top: 100%;
   position: relative;
   background: linear-gradient(
     -45deg,
-    #f7f6f4,  /* slightly darker than #fdfbfb */
+    #fffff2,  /* slightly darker than #fdfbfb */
     #e9e6d2,  /* visible beige */
     #d6d3b8,  /* soft olive/beige */
     #bfc3a0,  /* more greenish touch */
     #f7f6f4
   );
   background-size: 300% 300%;
-  animation: luxuryFlow 12s ease infinite;
+  animation: luxuryFlow 7s ease infinite;
   color: #222;
   overflow: hidden;
   border-top: 1px solid rgba(0,0,0,0.1);
@@ -863,8 +852,10 @@ top: 100%;
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100" src="imgs/contactImg.jpg" alt="">
-                </div>
+                    <img class="img-fluid w-100 img-luxury" src="imgs/contactImg.jpg" alt="">
+                    <br><br>
+                  </div>
+                  
                 <div class="col-lg-6">
                     <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Témoignages</h6>
                     <h1 class="mb-4">Ce que disent nos clients!</h1>
@@ -872,41 +863,78 @@ top: 100%;
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
+                                <img class="img-fluid rounded-circle" src="imgs/Mohamed.jpg" style="width: 60px; height: 60px;" alt="">
                                 <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
+                                    <h6 class="text-uppercase">Mohamed R.</h6>
+                                    <span>Client</span>
                                 </div>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+                            <p class="m-0">Au début j’étais sceptique, mais en trois mois mes revenus ont augmenté. Je reçois chaque mois un rapport clair et je n’ai plus à gérer les réservations ni le calendrier.</p>
                         </div>
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
+                                <img class="img-fluid rounded-circle" src="imgs/YoussefPics.jpg" style="width: 60px; height: 60px;" alt="">
                                 <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
+                                    <h6 class="text-uppercase">Youssef K.</h6>
+                                    <span>Client</span>
                                 </div>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+                            <p class="m-0">Avant, je devais toujours préparer l’appartement moi-même. Maintenant, tout est pris en charge : le logement est propre, les serviettes repassées, et les voyageurs sont ravis.</p>
                         </div>
                         <div class="position-relative">
                             <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="">
+                                <img class="img-fluid rounded-circle" src="imgs/fatima.jpg" style="width: 60px; height: 60px;" alt="">
                                 <div class="ml-3">
-                                    <h6 class="text-uppercase">Client Name</h6>
-                                    <span>Profession</span>
+                                    <h6 class="text-uppercase">Fatima A.</h6>
+                                    <span>Client</span>
                                 </div>
                             </div>
-                            <p class="m-0">Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
+                            <p class="m-0">Les activités proposées aux voyageurs font vraiment la différence : excursions, sorties en mer et location de voitures. Les locataires adorent et ça se voit dans les avis.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    
+    <style>
+        .img-luxury {
+          display: block;
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          transition: transform 0.4s ease;
+          transform-style: preserve-3d;
+          cursor: pointer;
+        }
+        </style>
+        
+        <script>
+        const img = document.querySelector(".img-luxury");
+        
+        img.addEventListener("click", (e) => {
+          const rect = img.getBoundingClientRect();
+          const x = e.clientX - rect.left; // position inside image (X)
+          const y = e.clientY - rect.top;  // position inside image (Y)
+        
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+        
+          // هاد المرة نفس الاتجاه (ماشي العكس)
+          const rotateX = ((y - centerY) / centerY) * -12; // up/down
+          const rotateY = ((x - centerX) / centerX) * 12;  // left/right
+        
+          img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+        
+          // reset after 400ms
+          setTimeout(() => {
+            img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+          }, 400);
+        });
+        </script>
     <!-- Testimonial End -->
 
 
@@ -933,6 +961,7 @@ top: 100%;
                 <div class="col-lg-6 pl-lg-5">
                     <div class="row">
                         <div class="col-sm-6 mb-5">
+                            <br>
                             <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                             <div class="d-flex flex-column justify-content-start">
                                 <a href="index.html" class="nav-item nav-link active">Accueil</a>

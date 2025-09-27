@@ -2,6 +2,13 @@
     "use strict";
     
 
+document.addEventListener('contextmenu', function(e) {
+    if(e.target.tagName === 'IMG') {
+        e.preventDefault(); // يمنع قائمة right-click
+    }
+});
+
+
     // navbarCollapse
     $(document).ready(function () {
         var checkbox = $('#check'); // hamburger checkbox
