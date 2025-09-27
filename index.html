@@ -8,9 +8,10 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <!-- Favicon -->
-    <link href="imgs/logoPng.png "  rel="icon">
+    <link href="imgs/logoPng.png"  rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -555,7 +556,7 @@ top: 100%;
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center bg-appointment mx-0 btn-contact-services">
+        <!-- <div class="row justify-content-center bg-appointment mx-0 btn-contact-services">
             <div class="col-lg-6 py-5">
                 <br>
                 <br>
@@ -565,12 +566,113 @@ top: 100%;
                 <br>
             </div>
         </div>
+    </div> -->
+    <div class="row justify-content-center luxury-light-green-bg mx-0 btn-contact-services">
+        <div class="col-lg-6 py-5">
+          <br>
+          <h1 class=" text-center mb-4 text-serv">
+            Si vous avez une question<br> contactez-nous à tout moment 24/7
+          </h1>
+          <a class="btn btn-outline-dark py-3 px-4 mt-3 animate__animated animate__fadeInUp btn-serv" href="#">
+            Contactez-nous
+          </a>
+          <br>
+        </div>
+      </div>
+    
     </div>
-
-
-    <style>
+      <!-- <style>
+        /* Animated background with stronger contrast */
+        .animated-bg {
+          background: linear-gradient(
+            -45deg,
+            #3C3D1D,
+            #5c5f2d,
+            #1f2010,
+            #3C3D1D
+          );
+          background-size: 300% 300%;
+          animation: gradientShift 10s ease infinite;
+          color: white;
+        }
         
-    </style>
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        </style> -->
+
+        
+
+    
+
+        <!-- <style>
+            /* Light luxury gradient with subtle green touch */
+            .luxury-light-green-bg {
+              position: relative;
+              background: linear-gradient(
+                -45deg,
+                #fdfbfb,  /* base light */
+                #f6f6e5,  
+                #e8e6d0,
+                #e3e6c8,  /* subtle greenish touch */
+                #fdfdfb
+              );
+              background-size: 300% 300%;
+              animation: softGreenGradient 20s ease infinite;
+              color: #222;
+              overflow: hidden;
+              border-top: 1px solid #ddd;
+              border-bottom: 1px solid #ddd;
+            }
+            
+            @keyframes softGreenGradient {
+              0%   { background-position: 0% 50%; }
+              50%  { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+            </style> -->
+
+            <style>
+/* Luxury Gradient Animation - Visible */
+.luxury-light-green-bg {
+  position: relative;
+  background: linear-gradient(
+    -45deg,
+    #f7f6f4,  /* slightly darker than #fdfbfb */
+    #e9e6d2,  /* visible beige */
+    #d6d3b8,  /* soft olive/beige */
+    #bfc3a0,  /* more greenish touch */
+    #f7f6f4
+  );
+  background-size: 300% 300%;
+  animation: luxuryFlow 12s ease infinite;
+  color: #222;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.006);
+}
+
+@keyframes luxuryFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+}
+
+
+            </style>
+
+            
+
+
+
+
 
     <!-- Service End -->
 
@@ -898,6 +1000,9 @@ top: 100%;
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+
+    <!-- css animation background -->
+ 
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

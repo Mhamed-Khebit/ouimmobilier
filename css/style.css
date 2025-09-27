@@ -43,7 +43,7 @@ img, a {
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  user-drag: none;
+  -webkit-user-drag: none;
 }
 /* منع التحديد (الكوبي) */
 /* body {
@@ -53,6 +53,7 @@ img, a {
   user-select: none;
 } */
 
+/* nav */
 a, button, .btn {
   -webkit-tap-highlight-color: transparent; /* يحيد الإفكت فالموبايل */
 }
@@ -90,6 +91,11 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+
+html, body {
+  height: 100%;
+}
+
 
 hr {
   box-sizing: content-box;
@@ -4066,6 +4072,13 @@ input[type="button"].btn-block {
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: top 0.3s ease;
+
+
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+
 }
 
 body {
@@ -9723,7 +9736,7 @@ h6,
 }
 
 .bg-appointment {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../imgs/background.jpg) no-repeat center center;
+  /* background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../imgs/background.jpg) no-repeat center center; */
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.7px black;
@@ -9836,6 +9849,7 @@ h6,
 .text-serv {
   font-size: 1.5rem !important;
   font-weight: 600 !important;
+  color: black;
 }
 .btn-serv {
   font-size: 15px;
