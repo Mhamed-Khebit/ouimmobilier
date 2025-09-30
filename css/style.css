@@ -309,6 +309,21 @@ button::-moz-focus-inner,
   border-style: none;
 }
 
+
+
+
+
+/* .btn-outline-light {
+  display: block; 
+  margin: 0 auto; 
+}
+
+.p-3{
+  text-align: center;
+}
+ */
+
+
 input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
