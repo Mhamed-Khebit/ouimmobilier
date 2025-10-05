@@ -9685,7 +9685,7 @@ h6,
 }
 
 .bg-appointment {
-  /* background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../imgs/background.jpg) no-repeat center center; */
+  /* background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/cta-bg.jpg) no-repeat center center; */
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.7px black;
@@ -9702,6 +9702,7 @@ h6,
   background-position: center;
   background-repeat: no-repeat;
 }
+
 
 @media (min-width: 992px) {
   .hours-text,
