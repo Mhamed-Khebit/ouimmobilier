@@ -227,20 +227,92 @@ window.addEventListener("load", () => {
       </button>
 
       <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-          <div class="navbar-nav m-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Accueil</a>
-              <a href="#A propos" class="nav-item nav-link">A propos</a>
-              <a href="#services" class="nav-item nav-link">Nos services</a>
-              <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
-              <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
-          </div>
-          <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block">Contactez-nous</a>
-      </div>
+        <ul class="navbar-nav m-auto py-0 lux-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
+            <li class="nav-item"><a href="#A propos" class="nav-link">A propos</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Nos services</a></li>
+            <li class="nav-item"><a href="propriétés.html" class="nav-link">Nos propriétés</a></li>
+            <li class="nav-item"><a href="contact-fr.html" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
+    </div>
+    
   </nav>
 </div>
 <!-- Navbar End -->
 
 <style>
+  /* Menu links luxury style */
+.lux-menu .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #060E25; /* dark blue luxury color */
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 12px;
+}
+
+/* Animated underline on hover */
+.lux-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: #060E25;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.lux-menu .nav-link:hover::after {
+    width: 50%;
+}
+
+/* Subtle hover effect */
+.lux-menu .nav-link:hover {
+    color: #060E25;
+    transform: translateY(-2px);
+}
+
+/* Luxury button */
+.lux-btn {
+    font-weight: 600;
+    padding: 0.5rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(6,14,37,0.2);
+}
+
+.lux-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+    background-color: #060E25;
+    color: #fff;
+}
+
+/* Mobile menu - fade & slide animation */
+@media (max-width: 992px) {
+    .collapse.navbar-collapse {
+        transition: all 0.5s ease;
+    }
+
+    .lux-menu .nav-link {
+        font-size: 1.2rem;
+        padding: 12px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .lux-btn {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
 .hamburger-svg {
   height: 3em;
   width: 4em;
