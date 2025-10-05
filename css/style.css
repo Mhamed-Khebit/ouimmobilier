@@ -37,7 +37,6 @@
 }
 
 
-
 /* منع التحديد (الكوبي) */
 /* * {
   -webkit-user-select: none;
@@ -77,9 +76,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #3C3D1D;
+  color: #060E25;
   text-align: left;
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
   
 }
 
@@ -405,7 +404,7 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: #3C3D1D;
+  color: #060E25;
 }
 
 h1, .h1 {
@@ -493,7 +492,7 @@ h6, .h6 {
 
 @media (max-width: 1200px) {
   .display-3 {
-    font-size: calc(1rem + 3.9vw) ;
+    font-size: calc(1.5rem + 3.7vw) ;
   }
 }
 
@@ -2407,7 +2406,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #212529;
-  background-color: #BDA36A;
+  background-color: #BB9C5A;
   border-color: #BDA36A;
 }
 
@@ -4401,30 +4400,30 @@ input[type]:checked ~ span.middle {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #BB9C5A;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #BB9C5A;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: #BB9C5A;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.7);
+  color: #bdb29a;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
-  color: rgba(0, 0, 0, 0.3);
+  color: #BB9C5A;
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: rgba(0, 0, 0, 0.9);
+  color: #BB9C5A;
 }
 
 .navbar-light .navbar-toggler {
@@ -6302,7 +6301,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #211E1C !important;
+  background-color: #060E25 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -6312,7 +6311,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #3C3D1D !important ;
+  background-color: #060E25 !important ;
 }
 .bg-services {
   background-color: #FFF9EE !important;
@@ -7680,7 +7679,7 @@ button.bg-dark:focus {
 
 .pt-3,
 .py-3 {
-  padding-top: 0.5rem !important;
+  padding-top: 0.6rem !important;
 }
 
 .pr-3,
@@ -7690,7 +7689,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-  padding-bottom: 0.8rem !important;
+  padding-bottom: 0.9rem !important;
 }
 
 .pl-3,
@@ -7740,7 +7739,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 1.2rem !important;
+  padding-bottom: rem !important;
 }
 
 .btn-contact-services{
@@ -9409,9 +9408,15 @@ button.bg-dark:focus {
 .text-white {
   color: #fff !important;
 }
+.text-title {
+  font-family: 'cinzel', serif;
+  letter-spacing: 1.5px !important;
+  font-weight: 500 !important;
+  color: #BB9C5A;
+}
 
 .text-primary {
-  color: #3C3D1D !important;
+  color: #060E25 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9758,8 +9763,10 @@ h6,
 }
 
 .bg-jumbotron {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../imgs/agadirImgContact.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/headerBg.jpg), no-repeat center center;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {

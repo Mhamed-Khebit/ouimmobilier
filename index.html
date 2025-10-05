@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Agadir Keys</title>
+    <title>BOOKDARI</title>
     <meta property="og:title" content="Agadir Keys">
     <meta property="og:description" content="Chez Agadir Keys Conciergerie gestion complète de vos locations saisonnières + support 24/7, sérénité et confort garantis.">
     <meta property="og:image" content="imgs/logoPng.png">
@@ -86,7 +86,7 @@
     position: absolute;
     width: 30%;
     height: 100%;
-    background: #3C3D1D; 
+    background: #060E25; 
     border-radius: 3px;
     transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
     animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
@@ -238,7 +238,7 @@ window.addEventListener("load", () => {
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
             <a href="index.html" >
-                <img src="imgs/logo.png " width="130px">
+                <img src="img/logoPng.png" width="110px">
             </a>
             
              <!-- Start--> 
@@ -255,15 +255,15 @@ window.addEventListener("load", () => {
                     <a href="index.html" class="nav-item nav-link active">Accueil</a>
                     <a href="#A propos" class="nav-item nav-link">A propos</a>
                     <a href="#services" class="nav-item nav-link">Nos services</a>
-                    <a href="#propriétés" class="nav-item nav-link">Nos propriétés </a>
+                    <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
                     <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Traduction</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="index.html" class="dropdown-item"><img src="imgs/fr.png" width="20px"> Francais</a>
                             <a href="index-en.html" class="dropdown-item"><img src="imgs/en.png" width="20px"> Anglais</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block">Contactez-nous</a>
             </div>
@@ -275,216 +275,400 @@ window.addEventListener("load", () => {
 
 
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5 pb-5">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="10000">
-            <ol class="carousel-indicators">
-                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#header-carousel" data-slide-to="1"></li>
-                <li data-target="#header-carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item position-relative active" style="min-height: 100vh;">
-                    <img class="position-absolute w-100 h-100" src="imgs/roomLight.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Agadir Keys</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Votre Clé Pour Une Gestion Immobilière Sereine</h3>
-                            <p class="mx-md-5 px-5">Nous gérons votre bien de A à Z de la publicité à la gestion des réservations, en passant par l'entretien et le support client.</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#services">Découvrir Nos Services</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item position-relative" style="min-height: 100vh;">
-                    <img class="position-absolute w-100 h-100" src="imgs/trafics.png" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Agadir Keys</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Boostez Vos Revenus Avec Une Tarification Intelligente</h3>
-                            <p class="mx-md-5 px-5">Nous utilisons une stratégie de tarification dynamique et un marketing efficace pour maximiser le taux d'occupation et les revenus de votre bien</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="contact-fr.html">Contactez-nous</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item position-relative" style="min-height: 100vh;">
-                    <img class="position-absolute w-100 h-100" src="imgs/activitieQuads.jpg" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Agadir Keys</h6>
-                            <h3 class="display-3 text-capitalize text-white mb-3">Une Expérience Inoubliable Pour Vos Locataires</h3>
-                            <p class="mx-md-5 px-5">Nous mettons à la disposition de vos locataires un catalogue d'activités variées et un support disponible 24/7 pour assurer un séjour agréable et réussi à Agadir</p>
-                            <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#A propos">À propos de nous</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0 pb-5">
+  <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="7000">
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#header-carousel" data-slide-to="1"></li>
+      <li data-target="#header-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item position-relative animated-slide active" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100 zoom-slide" src="img/slideImg1.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Votre Confort Commence Ici</h3>
+            <p class="mx-md-5 px-5">Gestion complète de votre bien avec des services premium répondant à tous vos besoins.</p>
+            <button class="c-button c-button--gooey">Découvrir Nos Services
+              <div class="c-button__blobs">
+                <div></div><div></div><div></div>
+              </div>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item position-relative animated-slide" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100 zoom-slide" src="img/slideImg2.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Louez Sans Souci</h3>
+            <p class="mx-md-5 px-5">De la publication sur Airbnb et Booking à l’accueil, le ménage et la maintenance… nous prenons tout en charge.</p>
+            <button class="c-button c-button--gooey">À propos de nous
+              <div class="c-button__blobs">
+                <div></div><div></div><div></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item position-relative animated-slide" style="min-height: 100vh;">
+        <img class="position-absolute w-100 h-100 zoom-slide" src="img/slideImg3.jpg" style="object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
+          <div class="p-3" style="max-width: 900px;">
+            <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
+            <h3 class="display-3 text-capitalize text-white mb-3">Votre bien entre de bonnes mains</h3>
+            <p class="mx-md-5 px-5">Nettoyage régulier, maintenance complète et optimisation de votre propriété pour attirer davantage de clients.</p>
+            <button class="c-button c-button--gooey">Contactez-nous
+              <div class="c-button__blobs">
+                <div></div><div></div><div></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!-- Carousel End -->
+  </div>
+  
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+</div>
+
+<style>
+/* === Continuous Slow Zoom/Move Effect (like video) === */
+.zoom-slide {
+  animation: cinematicZoom 25s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes cinematicZoom {
+  0% { transform: scale(1) translate(0,0); }
+  25% { transform: scale(1.05) translate(-10px,-5px); }
+  50% { transform: scale(1.1) translate(10px,5px); }
+  75% { transform: scale(1.05) translate(-5px,10px); }
+  100% { transform: scale(1) translate(0,0); }
+}
+
+/* === Animated Text/Title/Paragraph/Button === */
+.animated-slide .text-title,
+.animated-slide h3,
+.animated-slide p {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 0.9s ease;
+}
+.animated-slide .c-button {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.carousel-item.active .text-title { animation: titleDrop 1s forwards 0.3s; }
+.carousel-item.active h3 { animation: titleDrop 1s forwards 0.6s; }
+.carousel-item.active p { animation: fadeIn 1s forwards 0.9s; }
+.carousel-item.active .c-button { animation: buttonRise 1s forwards 1.2s; }
+
+@keyframes titleDrop { to { opacity: 1; transform: translateY(0); } }
+@keyframes buttonRise { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+/* === Luxury Paragraph === */
+.carousel-caption p {
+  color: #f8f8f8;
+  font-size: 17px;
+  line-height: 1.9;
+  max-width: 750px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  background: #050c213c;
+  padding: 15px 25px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 35px #bb9c5a3b;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+
+/* Hover luxury glow */
+.carousel-caption p:hover {
+  box-shadow: 0 0 50px #bb9c5a5e;
+  transform: scale(1.02);
+  transition: all 0.4s ease;
+}
+
+/* Button Gooey (Professional) */
+.c-button { color: #000; background: transparent; font-weight: 600; font-size: 13px; padding: 0.7em 1.4em; cursor: pointer; position: relative; z-index: 1; }
+.c-button--gooey { color: #fff; text-transform: uppercase; letter-spacing: 1px; border: 3px solid #BB9C5A; transition: all 700ms ease; }
+.c-button--gooey .c-button__blobs { height: 100%; filter: url(#goo); overflow: hidden; position: absolute; top: 0; left: 0; bottom: -3px; right: -1px; z-index: -1; }
+.c-button--gooey .c-button__blobs div { background-color: #BB9C5A; width: 34%; height: 100%; border-radius: 100%; position: absolute; transform: scale(1.4) translateY(125%) translateZ(0); transition: all 700ms ease; }
+.c-button--gooey .c-button__blobs div:nth-child(1) { left: -5%; }
+.c-button--gooey .c-button__blobs div:nth-child(2) { left: 30%; transition-delay: 60ms; }
+.c-button--gooey .c-button__blobs div:nth-child(3) { left: 66%; transition-delay: 25ms; }
+.c-button--gooey:hover { color: #fff; }
+.c-button--gooey:hover .c-button__blobs div { transform: scale(1.4) translateY(0) translateZ(0); }
+
+</style>
+
+<script>
+/* Reset animation on slide change */
+// Reset animation on slide change + smooth parallax
+$('#header-carousel').on('slide.bs.carousel', function () {
+  $('.animated-slide .text-title, .animated-slide h3, .animated-slide p').css({opacity:0, transform:'translateY(-50px)'});
+  $('.animated-slide .c-button').css({opacity:0, transform:'translateY(50px)'});
+});
+
+</script>
+
+
+
+
+
+
+
+
 
 
     
+
+
+    
+    
     <!-- About Start -->
-    <div class="container-fluid py-5" id="A propos">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
+    <div class="about-section container-fluid" id="A propos">
+      <div class="container container-ab-sec py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-6 pb-5 pb-lg-0">
 
 
-                    <div class="gallery-container">
-                        <div class="gallery-card">
-                            <img class="twistable" src="imgs/marinaAbout.png" alt="Resort Poolside View">
-                        </div>
-                        <div class="gallery-card tall-card">
-                            <img class="twistable" src="imgs/aboutPics2.jpg" alt="Lush Poolside with Huts">
-                        </div>
-                        <div class="gallery-card">
-                            <img class="twistable" src="imgs/aboutPics3.jpg" alt="Resort Building by the Pool">
-                        </div>
-                    </div>
+                  <div class="gallery-container">
+                      <div class="gallery-card">
+                          <img class="twistable" src="img/AboutImg2.jpg" alt="Resort Poolside View">
+                      </div>
+                      <div class="gallery-card tall-card">
+                          <img class="twistable" src="img/AboutImg1.jpg" alt="Lush Poolside with Huts">
+                      </div>
+                      <div class="gallery-card">
+                          <img class="twistable" src="img/AboutImg7.jpg" alt="Resort Building by the Pool">
+                      </div>
+                  </div>
 
 
-                    <style>
-
-                   .gallery-container {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        grid-gap: 15px;
-                        max-width: 600px;
-                        margin: 50px auto;
-                    
-                    }
-                    .gallery-card {
-                        overflow: hidden;
-                        border-radius: 10px;
-                        transform: scale(0.85);
-                        transition: transform 0.6s ease-out;
-                        background-color:  transparent !important;
-                    }
-                    .gallery-card.in-view {
-                        transform: scale(1);
-                    }
-                    .tall-card {
-                        grid-row: span 2;
-                    }
-                    .gallery-card img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        display: block;
+                  <style>
+                    .about-section {
+                      background-color: #F9F9F9;
+                      padding-bottom: 60px;
+                      padding-top: 60px;
                     }
 
+                 .gallery-container {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      grid-gap: 15px;
+                      max-width: 600px;
+                      margin: 50px auto;
+                  
+                  }
+                  .gallery-card {
+                      overflow: hidden;
+                      border-radius: 10px;
+                      transform: scale(0.85);
+                      transition: transform 0.6s ease-out;
+                      background-color:  transparent !important;
+                  }
+                  .gallery-card.in-view {
+                      transform: scale(1);
+                  }
+                  .tall-card {
+                      grid-row: span 2;
+                  }
+                  .gallery-card img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                  }
 
-                    </style>
+
+                  </style>
 
 <script>
-    const cards = document.querySelectorAll('.gallery-card');
+  const cards = document.querySelectorAll('.gallery-card');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-            } else {
-                entry.target.classList.remove('in-view');
-            }
-        });
-    }, { threshold: 0.9 }); 
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+          } else {
+              entry.target.classList.remove('in-view');
+          }
+      });
+  }, { threshold: 0.9 }); 
 
-    cards.forEach(card => {
-        observer.observe(card);
-    });
+  cards.forEach(card => {
+      observer.observe(card);
+   });
 </script>
 
 
 <!-- effect images -->
 
 <style>
-    /* Twist effect style */
-    .twistable {
-      display: block;
-      width: 100%;
-      border-radius: 12px;
-      transition: transform 0.4s ease;
-      transform-style: preserve-3d;
-      cursor: pointer;
-      
-    }
-    </style>
+  /* Twist effect style */
+  .twistable {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
     
-    <script>
-    const imgs = document.querySelectorAll(".twistable");
-    
-    imgs.forEach(img => {
-      img.addEventListener("click", (e) => {
-        const rect = img.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-    
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-    
-        const rotateX = ((y - centerY) / centerY) * -12;
-        const rotateY = ((x - centerX) / centerX) * 12;
-    
-        img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-    
-        setTimeout(() => {
-          img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-        }, 300);
-      });
+  }
+  </style>
+  
+  <script>
+  const imgs = document.querySelectorAll(".twistable");
+  
+  imgs.forEach(img => {
+    img.addEventListener("click", (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+  
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+  
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+  
+      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+  
+      setTimeout(() => {
+        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+      }, 300);
     });
-    </script>
-    
-    
+  });
+</script>
+
+<!-- Coursell End -->
 
 
-                </div>
-                <div class="col-lg-6">
-                    
-                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">À propos de nous</h6>
-                    <h1 class="mb-4">Gestion complète des biens & séjours exceptionnels</h1>
-                    <div class="about-container animated-line-div">
-                        <div class="animated-line-vertical"></div>
-                        <p class="pl-4 border-left border-primary">Chez Agadir Keys Conciergerie, nous prenons en charge la gestion complète de vos biens en location saisonnière, de l’annonce aux réservations jusqu’à l’entretien et le support 24/7, pour offrir aux propriétaires sérénité et aux voyageurs des séjours confortables et mémorables à Agadir.</p>
 
+
+
+
+  
+  
+
+
+              </div>
+              <div class="col-lg-6">
+                  
+                  <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">À propos de nous</h6>
+                  <h1 class="about-title mb-4">Conciergerie premium & revenus optimisés</h1>
+                  <div class="about-container animated-line-div">
+                      <div class="animated-line-vertical"></div>
+                      <p class=" about-text pl-4 border-left border-primary">BOOKDARI est une conciergerie immobilière haut de gamme basée à Kénitra. Nous accompagnons les propriétaires et investisseurs dans la gestion locative complète, en courte et longue durée. De la création et l’optimisation des annonces sur Airbnb et Booking aux check‑in/out professionnels, ménage hôtelier et maintenance, nous protégeons votre bien tout en offrant une expérience client irréprochable. Nos équipes optimisent les photos, la description et la tarification pour booster la visibilité, l’occupation et les revenus. Votre bien, notre priorité.
+
+                      </p>
+
+                  </div>
+                  <!-- <div class="row pt-3">
+
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Gestion complète</h6>
                     </div>
-                    <div class="row pt-3">
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <img src="imgs/gestion1.png" width="40px">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up"></h3>
-                                <h6 class="text-uppercase">Gestion complète</h6>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <img src="imgs/support.png" width="40px">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up"></h3>
-                                <h6 class="text-uppercase">Service Client 24/7</h6>
-                            </div>
-                        </div>
-                        
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.3s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Tranquillité d’esprit</h6>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.5s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Service Client 24/7</h6>
+                    </div>
+                      
+                  </div> -->
 
-    <style>
+                  <div class="d-flex justify-content-start mt-4 social-icons-lux">
+                    <a href="" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+                  </div>
+                  
+                  
 
-        .about-container {
-            display: flex;
-        }
+              </div>
+          </div>
+      </div>
+  </div>
 
-        .animated-line-vertical {
-            position: relative;
-            width: 20px;       
-            height: auto;    
-            background-color: #3C3D1D;
-            overflow: hidden;
-            border-radius: 2px;
-            margin-left: 2px;
-        }
+  <style>
+
+    /* .container-ab-sec {
+      background-color: #060e250b;
+      border-radius: 20px;
+  
+    } */
+
+
+    /* Text */
+.about-section .about-text {
+  
+    text-align: justify;           /* neat block alignment */
+    text-justify: inter-word;      /* spacing between words */
+    hyphens: auto;                 /* automatic word breaks */
+    letter-spacing: 0.5px;         /* elegant spacing */
+    word-spacing: 1px;             /* clean text flow */
+
+}
+.about-section .about-title ,.about-title{
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: relative;
+}
+
+
+
+
+
+    .bg-light{
+      background-color: #d5b163a8 !important;
+      border-radius: 20px !important;
+    }
+
+      .about-container {
+          display: flex;
+      }
+
+      .animated-line-vertical {
+          position: relative;
+          width: 30px;       
+          height: auto;    
+          background-color: #BB9C5A;
+          overflow: hidden;
+          border-radius: 2px;
+          margin-left: 2px;
+      }
 
 .animated-line-vertical::after {
 content: "";
@@ -509,554 +693,543 @@ top: 100%;
 
 /* CSS */
 .col-6 img {
-  transition: transform 0.8s ease-in-out;
-  cursor: pointer;
+transition: transform 0.8s ease-in-out;
+cursor: pointer;
+}
+
+.btn-primary-iconsAb {
+  border: 10px black;
+}
+
+
+
+.fa-check {
+  color: #BB9C5A !important;
+}
+
+
+
+
+/* icons style */
+
+
+.social-icons-lux {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social-icons-lux .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #BB9C5A;   /* border color */
+  /* border-radius: 12px;          مربعة بزاوية شوي round */
+  font-size: 22px;
+  color: #BB9C5A;              /* icon color */
+  background: transparent;     /* خلفية شفافة */
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+/* Hover effect أنيق */
+.social-icons-lux .icon:hover {
+  background: #BB9C5A;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(187,156,90,0.4);
 }
 
 
 
 
 
-    </style>
+
+  </style>
 
 <script>
-    document.querySelectorAll(".col-6").forEach(col => {
-      const img = col.querySelector("img");
-      let angle = 0;
-  
-      // دوران مع click (موبايل + PC)
-      col.addEventListener("click", () => {
+  document.querySelectorAll(".col-6").forEach(col => {
+    const img = col.querySelector("img");
+    let angle = 0;
+
+    // دوران مع click (موبايل + PC)
+    col.addEventListener("click", () => {
+      angle += 360;
+      img.style.transform = `rotate(${angle}deg)`;
+    });
+
+    // دوران مع hover (غير فالـPC)
+    col.addEventListener("mouseenter", () => {
+      if (!/Mobi|Android/i.test(navigator.userAgent)) { 
         angle += 360;
         img.style.transform = `rotate(${angle}deg)`;
-      });
-  
-      // دوران مع hover (غير فالـPC)
-      col.addEventListener("mouseenter", () => {
-        if (!/Mobi|Android/i.test(navigator.userAgent)) { 
-          angle += 360;
-          img.style.transform = `rotate(${angle}deg)`;
-        }
-      });
+      }
     });
-  </script>
-  
-  
-  
-      
- 
-
-    <!-- About End -->
-
-
-
-    <!-- Service Start -->
-    <div id="services" class="container-fluid px-0 py-5 my-5">
-        <div class="row mx-0 justify-content-center text-center">
-            <div class="col-lg-6">
-                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Nos Services</h6>
-                <h2>Des solutions sur mesure pour vos biens et vos séjours</h2>
-            </div>
-        </div>
-        <div class="owl-carousel service-carousel">
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service1.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services  text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service2.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service3.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service4.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service5.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-            <div class="service-item position-relative">
-                <img class="img-fluid" src="imgs/service6.jpg" loading="lazy" alt="">
-                <div class="service-text text-center">
-                    
-                    <div class="w-100 bg-services text-center p-4" >
-                        <a class="btn btn-primary" href="contact-fr.html">Contactez-nous</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="row justify-content-center bg-appointment mx-0 btn-contact-services">
-            <div class="col-lg-6 py-5">
-                <br>
-                <br>
-                    <h1 class="text-white text-center mb-4 text-serv">Si vous avez une question<br> contactez-nous à tout moment 24/7</h1>
-                    <a class="btn  btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp btn-serv" href="#">Contactez-nous</a>
-               <br>
-                <br>
-            </div>
-        </div>
-    </div> -->
-    <div class="row justify-content-center luxury-light-green-bg mx-0 btn-contact-services">
-        <div class="col-lg-6 py-5">
-          <br>
-          <h1 class=" text-center mb-4 text-serv">
-            Si vous avez une question<br> contactez-nous à tout moment 24/7
-          </h1>
-          <a class="btn btn-outline-dark py-3 px-4 mt-3 animate__animated animate__fadeInUp btn-serv" href="contact-fr.html">
-            Contactez-nous
-          </a>
-          <br>
-        </div>
-      </div>
-    
-    </div>
-     
-
-
-            <style>
-/* Gradient Animation - Visible */
-.luxury-light-green-bg {
-  position: relative;
-  background: linear-gradient(
-    -45deg,
-    #fffff2,  /* slightly darker than #fdfbfb */
-    #e9e6d2,  /* visible beige */
-    #d6d3b8,  /* soft olive/beige */
-    #bfc3a0,  /* more greenish touch */
-    #f7f6f4
-  );
-  background-size: 300% 300%;
-  animation: luxuryFlow 7s ease infinite;
-  color: #222;
-  overflow: hidden;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.006);
-}
-
-@keyframes luxuryFlow {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-}
-
-
-            </style>
-
-            
-
-
-
-
-
-    <!-- Service End -->
-
+  });
+</script>
 
 
 
     
 
 
+  <!-- About End -->
 
 
 
 
 
-<!-- PROPERTIES Section Start -->
-<div class="container-fluid py-5 bg-prop" id="propriétés">
-  <br><br><br>
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h6 class="d-inline-block bg-primary-title text-uppercase py-1 px-3 rounded">Nos propriétés</h6>
-      <h2 class="mt-3 fw-bold">Sélection exclusive de propriétés d’exception</h2>
-    </div>
-
-    <div class="row g-4">
 
 
-  
-      <!-- Property Card 1 Start -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card-col card border-0">
-          <!-- Image Carousel Start -->
-          <div id="property1Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-            <ol class="carousel-indicators">
-              <li data-target="#property1Carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#property1Carousel" data-slide-to="1"></li>
-              <li data-target="#property1Carousel" data-slide-to="2"></li>
-              <li data-target="#property1Carousel" data-slide-to="3"></li>
-              <li data-target="#property1Carousel" data-slide-to="4"></li>
-              <li data-target="#property1Carousel" data-slide-to="5"></li>
-              <li data-target="#property1Carousel" data-slide-to="6"></li>
-              <li data-target="#property1Carousel" data-slide-to="7"></li>
 
-            </ol>
-            <div class="carousel-inner rounded-top overflow-hidden">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="imgs/Appart1/principaleImg.jpg" alt="Property Image 1">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img1.jpg" alt="Property Image 2">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img2.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img3.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img4.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img5.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img6.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img7.jpg" alt="Property Image 3">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#property1Carousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#property1Carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-          </div>
-          <!-- Image Carousel End -->
 
-          <div class="card-body">
-           
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <!-- <span class="badge bg-warning text-dark fs-6">2000 DH / Day</span> -->
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fa fa-map-marker-alt text-primary me-2"></i> Agadir bay
-              </h6>
 
-              <span class="text-warning fs-5">★★★★★</span>
-            </div>
+  <!-- Why Choose Us Start -->
+<section class="why-choose section-padding text-center">
+  <div class="container">
+    <h2 class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+      Pourquoi choisir <span class="about-title">BOOKDARI</span>
+    </h2>
 
-            <!-- Features as badges -->
-            <div class="d-flex gap-2 flex-wrap mb-3">
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bed text-primary me-1"></i> 2 chambres
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-utensils text-primary me-1"></i> Cuisine
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bath text-primary me-1"></i> Salle De Bain
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-ruler-combined text-primary me-1"></i> 85m²
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-person-swimming text-primary me-1"></i> piscine
-                </span>
-              </div>
-            </div>
-
-            <p class="card-text text-muted">Appartement exceptionnel au design élégant et aux couleurs apaisantes.</p>
-            <div class="d-flex justify-content-center mt-3">
-              <a href="https://wa.me/+212649332163" target="_blank" class="btn btn-prop-contact btn-primary px-4">
-                <i class="fab fa-whatsapp me-2"></i> Réserver Maintenant
-              </a>
-            </div>
-          </div>
+    <div class="why-grid">
+      <!-- Card 1 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.3s">
+        <div class="icon-box">
+          <i class="fas fa-key"></i>
         </div>
+        <h4>Gestion clé en main</h4>
+        <p>
+          Nous prenons tout en charge, de la publicité à la maintenance,
+          pour que vous puissiez profiter d’une tranquillité totale.
+        </p>
       </div>
-      <!-- Property Card 1 End -->
 
-
-
-
-      <!-- Property Card 2 Start -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card-col card border-0">
-          <!-- Image Carousel Start -->
-          <div id="property2Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-            <ol class="carousel-indicators">
-              <li data-target="#property2Carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#property2Carousel" data-slide-to="1"></li>
-              <li data-target="#property2Carousel" data-slide-to="2"></li>
-              <li data-target="#property2Carousel" data-slide-to="3"></li>
-              <li data-target="#property2Carousel" data-slide-to="4"></li>
-              <li data-target="#property2Carousel" data-slide-to="5"></li>
-              <li data-target="#property2Carousel" data-slide-to="6"></li>
-
-            </ol>
-            <div class="carousel-inner rounded-top overflow-hidden">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="imgs/Appart2/principaleImg.jpg" alt="Property Image 1">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img1.jpg" alt="Property Image 2">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img2.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img3.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img4.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img5.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img6.jpg" alt="Property Image 3">
-              </div>
-              
-            </div>
-            <a class="carousel-control-prev" href="#property2Carousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#property2Carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-          </div>
-          <!-- Image Carousel End -->
-
-          <div class="card-body">
-           
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <!-- <span class="badge bg-warning text-dark fs-6">2000 DH / Day</span> -->
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fa fa-map-marker-alt text-primary me-2"></i> Avenue Hassan 2
-              </h6>
-
-              <span class="text-warning fs-5">★★★★★</span>
-            </div>
-
-            <!-- Features as badges -->
-            <div class="d-flex gap-2 flex-wrap mb-3">
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bed text-primary me-1"></i> 2 chambres
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-utensils text-primary me-1"></i> Cuisine
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bath text-primary me-1"></i> Salle De Bain
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-ruler-combined text-primary me-1"></i> 90m²
-                </span>
-              </div>
-              
-            </div>
-
-            <p class="card-text text-muted">Superbe appartement au design moderne et élégant, offrant une ambiance lumineuse et sereine.</p>
-            <div class="d-flex justify-content-center mt-3">
-              <a href="https://wa.me/+212649332163" target="_blank" class="btn btn-prop-contact btn-primary px-4">
-                <i class="fab fa-whatsapp me-2"></i> Réserver Maintenant
-              </a>
-            </div>
-          </div>
+      <!-- Card 2 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.5s">
+        <div class="icon-box">
+          <i class="fas fa-chart-line"></i>
         </div>
+        <h4>Optimisation des revenus</h4>
+        <p>
+          Nous améliorons vos photos, descriptions et tarifs pour maximiser la visibilité,
+          l’occupation et vos profits.
+        </p>
       </div>
-      <!-- Property Card 2 End -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-       <!-- 🔁 Repeat more cards with unique IDs: property2Carousel, property3Carousel... -->
-
-
-<!-- Modal Start -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content border-0 bg-transparent">
-      <div class="modal-body p-0 text-center position-relative">
-
-        <div class="modal-image-wrapper position-relative d-inline-block">
-
-          <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
-            &times;
-          </button>          
-
-          <img id="modalImage" src="" alt="Property Image" class="modal-img">
+      <!-- Card 3 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.7s">
+        <div class="icon-box">
+          <i class="fas fa-headset"></i>
         </div>
-
-        <a class="carousel-control-prev" href="#" role="button" id="prevImage">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#" role="button" id="nextImage">
-          <span class="carousel-control-next-icon"></span>
-        </a>
+        <h4>Service client 24/7</h4>
+        <p>
+          Support continu pour les clients et investisseurs à tout moment,
+          garantissant une expérience fluide et professionnelle.
+        </p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-</div>
-</div>
+<!-- === STYLE === -->
+<style>
+.why-choose {
+  background: #0b132b;
+  color: #fff;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.why-choose::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(187,156,90,0.1), transparent 70%);
+  animation: rotateBg 20s linear infinite;
+}
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-</div>
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-title span {
+  color: #BB9C5A;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(187,156,90,0.25);
+  border-radius: 18px;
+  padding: 40px 25px;
+  text-align: center;
+  max-width: 340px;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(187,156,90,0.12);
+}
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(187,156,90,0.25);
+}
+
+.icon-box {
+  background: linear-gradient(135deg, #BB9C5A, #d4af37);
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b132b;
+  font-size: 28px;
+  box-shadow: 0 0 25px rgba(187,156,90,0.5);
+  animation: floatIcon 3s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.why-card h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.why-card p {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+</style>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
 
 <style>
-/* Card Styles */
-
-.card-col {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border-radius: 10px;
-  margin-bottom: 45px; 
-}
-.card-col:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-
-.carousel-inner img { object-fit: cover; height: 250px; }
-.btn-primary { border-radius:10px; font-weight:500; }
-.badge { border-radius:12px; padding:0.5em 0.75em; }
-
-/* Small carousel arrows */
-.small-arrow { width: 25px; height: 25px; background-size: 100% 100%; }
-
-.bg-primary-title {
-    background-color: #fff5e2;
-}
-
-.bg-prop {
-    margin-top: -70px;
-    background-color: #f9ffee4e;
-}
-
-.modal-image-wrapper {
-  display: inline-block;
+/* ===== Luxury Pro Divider ===== */
+.luxury-divider {
   position: relative;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #060E25, #0A1B3D, #060E25);
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(6, 14, 37, 0.6); /* subtle glow */
 }
 
-.modal-img {
-  max-width: 100%;
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.close-btn {
+/* Shine effect */
+.luxury-divider::before {
+  content: "";
   position: absolute;
-  top: 10px;
-  right: 10px; 
-  font-size: 28px;
-  color: white;
-  background: rgba(0, 0, 0, 0.14);
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1051;
-}
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.304);
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    #BB9C5A 50%,  /* golden reflection */
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shineMove 3s infinite linear;
 }
 
+/* Moving shine */
+@keyframes shineMove {
+  0% { left: -40%; }
+  100% { left: 120%; }
+}
 
 
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services Section Start -->
+<section id="services" class="py-services">
+  <div class="container">
+    <div class="row mx-0 justify-content-center text-center">
+      <div class="col-lg-6">
+          <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Nos Services</h6>
+          <h2>Des solutions sur mesure pour vos biens et vos séjours</h2>
+
+          <br>
+      </div>
+      
+  </div>    <div class="services-slider swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img1.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-key"></i>
+            </div> -->
+            <h4>Gestion locative clé en main</h4>
+            <p>Nous prenons tout en charge, de la mise en ligne à la gestion complète de vos locations, pour une rentabilité sans stress.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/slideImg3.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-chart-line"></i>
+            </div> -->
+            <h4>Location saisonnière et longue durée</h4>
+            <p>Profitez d’une gestion fluide pour vos locations courtes ou longues, avec un suivi professionnel et des locataires fiables.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img3.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-headset"></i>
+            </div> -->
+            <h4>Check-in / Check-out professionnels</h4>
+            <p>Accueil chaleureux, départ organisé — vos clients profitent d’une expérience 5 étoiles dès leur arrivée.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img4.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-broom"></i>
+            </div> -->
+            <h4>Ménage</h4>
+            <p>Service de nettoyage impeccable pour garantir un logement toujours propre et prêt à accueillir vos hôtes.</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img5.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-tools"></i>
+            </div> -->
+            <h4>Maintenance</h4>
+            <p>Interventions rapides et efficaces pour entretenir votre bien et assurer son bon fonctionnement à tout moment.</p>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img6.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-gem"></i>
+            </div> -->
+            <h4>Valorisation de votre bien</h4>
+            <p>Nous mettons en avant le potentiel de votre propriété pour maximiser sa valeur et attirer plus de clients.</p>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img7.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-bullseye"></i>
+            </div> -->
+            <h4>Optimisation des annonces</h4>
+            <p>Des annonces attractives et bien positionnées grâce à des visuels professionnels et une stratégie tarifaire adaptée.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Swiper JS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Custom CSS -->
+<style>
+  .py-services {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+.service-slide {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content {
+  background: rgba(6,14,37,0.75); /* overlay dark */
+  color: #fff;
+  text-align: center;
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 90%;
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-content .icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  background: linear-gradient(135deg, #BB9C5A, #d4af37);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #060E25; /* icon color */
+}
+
+.slide-content h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.slide-content p {
+  font-size: 14px;
+  margin: 0;
+  color: #ffffff9a;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next, .swiper-button-prev {
+  color: #060E25;
+}
+.swiper-pagination-bullet {
+  background: #060E25;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+<!-- Swiper JS Initialization -->
 <script>
-// Modal Image Script (works with any number of images)
-document.addEventListener('DOMContentLoaded', function() {
-  let currentImages = [];
-  let currentIndex = 0;
-
-  document.querySelectorAll('.carousel-item img').forEach(img => {
-    img.addEventListener('click', function() {
-      const carousel = this.closest('.carousel-inner');
-      currentImages = Array.from(carousel.querySelectorAll('img')).map(el => el.src);
-      currentIndex = currentImages.indexOf(this.src);
-      const modalImage = document.getElementById('modalImage');
-      modalImage.src = this.src;
-
-      // Show modal (Bootstrap 4)
-      if (typeof $ !== 'undefined') { $('#imageModal').modal('show'); }
-    });
-  });
-
-  document.getElementById('prevImage').addEventListener('click', function(e) {
-    e.preventDefault();
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    document.getElementById('modalImage').src = currentImages[currentIndex];
-  });
-
-  document.getElementById('nextImage').addEventListener('click', function(e) {
-    e.preventDefault();
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    document.getElementById('modalImage').src = currentImages[currentIndex];
-  });
+const swiper = new Swiper('.services-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    992: { slidesPerView: 3 },
+    1200: { slidesPerView: 4 },
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
 });
 </script>
 
+<!-- section services End -->
 
-<!-- PROPERTIES Section End -->
 
-  
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
@@ -1161,10 +1334,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="row">
                 <div class="col-lg-6 pr-lg-5 mb-5">
                     <a href="index.html" class="navbar-brand">
-                        <img src="imgs/logo.png" loading="lazy" width="130px">   
-                        <br><br>         
+                        <img src="img/logo.png" loading="lazy" width="130px">   
+                        <br>
                     </a>
-                    <p>Chez Agadir Keys Conciergerie, nous prenons en charge la gestion complète de vos biens en location saisonnière, de l’annonce aux réservations jusqu’à l’entretien et le support 24/7, pour offrir aux propriétaires sérénité et aux voyageurs des séjours confortables et mémorables à Agadir.</p>
+                    <p>
+                      BOOKDARI est une conciergerie immobilière haut de gamme basée à Kénitra. Nous accompagnons les propriétaires et investisseurs dans la gestion locative complète, en courte et longue durée. De la création et l’optimisation des annonces sur Airbnb et Booking aux check‑in/out professionnels, ménage hôtelier et maintenance, nous protégeons votre bien tout en offrant une expérience client irréprochable. Nos équipes optimisent les photos, la description et la tarification pour booster la visibilité, l’occupation et les revenus. Votre bien, notre priorité.</p>
                     <p><i class="fa fa-map-marker-alt mr-2"></i> Agadir, Morocco</p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+212649332163</p>
                     <p><i class="fa fa-envelope mr-2"></i> agadirkeys@gmail.com</p>
@@ -1184,6 +1358,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="#" class="nav-item nav-link active">Accueil</a>
                                 <a href="#A propos" class="nav-item nav-link">A propos</a>
                                 <a href="#services" class="nav-item nav-link">Nos services</a>
+                                <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
                                 <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
                             </div>
                         </div>
@@ -1215,7 +1390,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                    <p class="m-0 text-white">&copy; <a href="#">Agadir Keys</a>. All Rights Reserved.</p>
+                    <p class="m-0 text-white">&copy; <a href="#">BOOKDARI</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
                     <p class="m-0 text-white">Developed by <a href="">Mhamed</a></p>
