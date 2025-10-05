@@ -199,46 +199,102 @@ window.addEventListener("load", () => {
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" >
-                <img src="img/logoPng.png" width="110px">
-            </a>
-            
-             <!-- Start--> 
-            <label class="bar" for="check" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                 <input type="checkbox" id="check">
-                     <span class="top"></span>
-                     <span class="middle"></span>
-                     <span class="bottom"></span>
-             </label>
-             <!-- end--> 
-
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                    <a href="#A propos" class="nav-item nav-link">A propos</a>
-                    <a href="#services" class="nav-item nav-link">Nos services</a>
-                    <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
-                    <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Traduction</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="index.html" class="dropdown-item"><img src="imgs/fr.png" width="20px"> Francais</a>
-                            <a href="index-en.html" class="dropdown-item"><img src="imgs/en.png" width="20px"> Anglais</a>
-                        </div>
-                    </div> -->
-                </div>
-                <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block">Contactez-nous</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
 
 
 
 
+
+
+
+
+
+
+
+
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+      <a href="index.html">
+          <img src="img/logoPng.png" width="110px">
+      </a>
+
+      <!-- Hamburger SVG with white lines and no background -->
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="background: none; border: none;">
+          <svg viewBox="0 0 32 32" class="hamburger-svg">
+              <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+              <path class="line" d="M7 16 27 16"></path>
+          </svg>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <div class="navbar-nav m-auto py-0">
+              <a href="index.html" class="nav-item nav-link active">Accueil</a>
+              <a href="#A propos" class="nav-item nav-link">A propos</a>
+              <a href="#services" class="nav-item nav-link">Nos services</a>
+              <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
+              <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block">Contactez-nous</a>
+      </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+<style>
+.hamburger-svg {
+  height: 3em;
+  width: 4em;
+  cursor: pointer;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: #f9f9f9; /* White lines */
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
+              stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+/* Animate X only when open */
+.navbar-toggler.collapsed svg {
+  transform: rotate(0); /* normal hamburger */
+}
+
+.navbar-toggler:not(.collapsed) svg {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler:not(.collapsed) .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Show only on mobile */
+@media (max-width: 992px) {
+.navbar-toggler {
+  display: block;
+  background: none; /* ensure no background */
+  border: none;
+}
+}
+</style>
+
+
+
+
+
+
+
+
+
+    
 
 
 <!-- Carousel Start -->
