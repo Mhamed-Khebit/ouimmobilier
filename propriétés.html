@@ -5,21 +5,22 @@
     <meta charset="utf-8">
 
     <title>BOOKDARI</title>
-    <meta property="og:title" content="Agadir Keys">
-    <meta property="og:description" content="Chez Agadir Keys Conciergerie gestion complète de vos locations saisonnières + support 24/7, sérénité et confort garantis.">
-    <meta property="og:image" content="imgs/logoPng.png">
+    <meta property="og:title" content="BOOKDARI">
+    <meta property="og:description" content="BOOKDARI est une conciergerie immobilière premium à Kénitra, spécialisée dans la gestion locative courte et longue durée.
+    Nous optimisons vos annonces, photos et tarifs sur Airbnb et Booking, assurons les check-in/out, le ménage hôtelier et la maintenance — pour une expérience client impeccable et des revenus maximisés.">
+    <meta property="og:image" content="img/logo.png">
     <meta property="og:url" content="https://agadirkeys.vercel.app">
     <meta property="og:type" content="website">
 
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Agadir Keys" name="keywords">
-    <meta content="Agadir Keys" name="description">
+    <meta content="BOOKDARI" name="keywords">
+    <meta content="BOOKDARI" name="description">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <!-- Favicon -->
-    <link href="imgs/logoPng.png"  rel="icon">
+    <link href="img/logo.png"  rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -45,7 +46,7 @@
 
 
   <!-- WhatsApp Button Start-->
-<a href="https://wa.me/+212649332163" class="whatsapp-button" target="_blank">
+<a href="https://wa.me/+212688427362" class="whatsapp-button" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp"/>
   </a>
   
@@ -104,14 +105,14 @@
   <div class="row py-2 px-lg-5">
       <div class="col-lg-6 text-left mb-2 mb-lg-0">
           <div class="d-inline-flex align-items-center">
-              <small><i class="fa fa-phone-alt mr-2"></i>+212649332163</small>
+              <small><i class="fa fa-phone-alt mr-2"></i>+212688427362</small>
               <small class="px-3">|</small>
-              <small><i class="fa fa-envelope mr-2"></i>agadirkeys@gmail.com</small>
+              <small><i class="fa fa-envelope mr-2"></i>bookdari.conciergerie@gmail.com</small>
           </div>
       </div>
       <div class="col-lg-6 text-right">
           <div class="d-inline-flex align-items-center">
-              <a class="text-primary px-2" href="https://wa.me/+212649332163">
+              <a class="text-primary px-2" href="https://wa.me/+212688427362">
                   <i class="fab fa-whatsapp"></i>
               </a>
               <a class="text-primary px-2" href="">
@@ -138,111 +139,158 @@
 <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" >
-                <img src="img/logoPng.png" width="110px">
-            </a>
-            
-             <!-- Start--> 
-            <label class="bar" for="check" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-                 <input type="checkbox" id="check">
-                     <span class="top"></span>
-                     <span class="middle"></span>
-                     <span class="bottom"></span>
-             </label>
-             <style>
-              
-/* start bar */ 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  display: none;
-  visibility: hidden;
-}
+<!-- Navbar Start -->
+<div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+    <a href="index.html">
+      <img src="img/logoPng.png" width="110px">
+    </a>
 
-.bar {
-  display: none;
-  position: relative;
+    <!-- Hamburger SVG -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <svg viewBox="0 0 32 32" class="hamburger-svg">
+        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+        <path class="line" d="M7 16 27 16"></path>
+      </svg>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+      <ul class="navbar-nav m-auto py-0 lux-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link">A propos</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Nos services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Nos propriétés</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
+    </div>
+  </nav>
+</div>
+
+
+<style>
+/* Hamburger SVG */
+.hamburger-svg {
+  height: 3em;
+  width: 3em;
   cursor: pointer;
-  width: 40px;   /* أصغر قليلاً */
-  height: 26px;  /* أصغر قليلاً */
-  margin-top: 12px; 
+  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
 }
 
-.bar span {
-  position: absolute;
-  width: 30px;   /* أصغر قليلاً */
-  height: 4px;   /* أنحف قليلاً */
-  background: #ffffffc6;
-  border-radius: 100px;
-  display: inline-block;
-  transition: 0.3s ease;
-  left: 0;
+.line {
+  fill: none;
+  stroke: #f9f9f9df;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
+              stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
 }
 
-.bar span.top {
-  top: 0;
+.line-top-bottom {
+  stroke-dasharray: 12 63;
 }
 
-.bar span.middle {
-  top: 11px; /* متناسق بعد التصغير */
+/* Hamburger open/close animation */
+.navbar-toggler.collapsed svg {
+  transform: rotate(0);
 }
 
-.bar span.bottom {
-  bottom: 0;
-}
-
-input[type]:checked ~ span.top {
-  transform: rotate(45deg);
-  transform-origin: top left;
-  width: 32px; 
-  left: 3px;
-}
-
-input[type]:checked ~ span.bottom {
+.navbar-toggler:not(.collapsed) svg {
   transform: rotate(-45deg);
-  transform-origin: top left;
-  width: 32px;
-  bottom: -1px;
-  box-shadow: 0 0 5px #495057;
 }
 
-input[type]:checked ~ span.middle {
-  transform: translateX(-20px);
-  opacity: 0;
+.navbar-toggler:not(.collapsed) .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
 }
 
+/* Navbar links - luxury style */
+.lux-menu .nav-link {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #060E25;
+  position: relative;
+  margin: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.lux-menu .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background: #060E25;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.lux-menu .nav-link:hover::after {
+  width: 50%;
+}
+
+.lux-menu .nav-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Luxury button */
+.lux-btn {
+  font-weight: 600;
+  padding: 0.5rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(6,14,37,0.2);
+}
+
+.lux-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+  background-color: #060E25;
+  color: #fff;
+}
+
+/* Mobile adjustments */
 @media (max-width: 992px) {
-  .bar {
+  .navbar-toggler {
     display: block;
+    background: none;
+    border: none;
+  }
+
+  .collapse.navbar-collapse {
+    transition: all 0.5s ease;
+  }
+
+  .lux-menu .nav-link {
+    font-size: 1.2rem;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+  }
+
+  .lux-btn {
+    display: block;
+    margin: 20px auto;
   }
 }
-/* end bar */
+</style>
 
-             </style>
-             <!-- end--> 
 
-            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-                <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Accueil</a>
-                    <a href="index.html" class="nav-item nav-link">A propos</a>
-                    <a href="index.html" class="nav-item nav-link">Nos services</a>
-                    <a href="propriétés.html" class="nav-item nav-link active">Nos propriétés </a>
-                    <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Traduction</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="index.html" class="dropdown-item"><img src="imgs/fr.png" width="20px"> Francais</a>
-                            <a href="index-en.html" class="dropdown-item"><img src="imgs/en.png" width="20px"> Anglais</a>
-                        </div>
-                    </div> -->
-                </div>
-                <a href="contact-fr.html" class="btn btn-primary d-none d-lg-block">Contactez-nous</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+
+<!-- Navbar End -->
+
+
+
+
+
+
+
 
 
 
@@ -275,6 +323,15 @@ input[type]:checked ~ span.middle {
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- PROPERTIES Section Start -->
 <div class="container-fluid py-5 bg-prop" id="propriétés">
   <br>
@@ -282,14 +339,29 @@ input[type]:checked ~ span.middle {
     <div class="text-center mb-5">
       <!-- <h6 class="d-inline-block bg-primary-title bg-light text-uppercase py-1 px-3 rounded">Nos propriétés</h6> -->
       <h2 class="mt-3 fw-bold">Sélection exclusive de propriétés d’exception</h2>
+      <br>
+      <!-- Filter Buttons Start -->
+      <div class="filter-buttons d-flex justify-content-center flex-wrap gap-3 mt-3">
+        <button class="btn btn-outline-primary active" data-filter="all">
+          <i class="fas fa-th-large me-1"></i> Tous
+        </button>
+        &nbsp;
+        <button class="btn btn-outline-primary" data-filter="long">
+          <i class="fas fa-calendar-alt me-1"></i> Location Longue Durée
+        </button>
+        &nbsp;
+        <button class="btn btn-outline-primary" data-filter="short">
+          <i class="fas fa-clock me-1"></i> Location Courte Durée
+        </button>
+        &nbsp;
+      </div>
+      <!-- Filter Buttons End -->
+
     </div>
 
     <div class="row g-4">
-
-
-  
       <!-- Property Card 1 Start -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 property-card" data-category="long">
         <div class="card-col card border-0">
           <!-- Image Carousel Start -->
           <div id="property1Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -302,33 +374,16 @@ input[type]:checked ~ span.middle {
               <li data-target="#property1Carousel" data-slide-to="5"></li>
               <li data-target="#property1Carousel" data-slide-to="6"></li>
               <li data-target="#property1Carousel" data-slide-to="7"></li>
-
             </ol>
             <div class="carousel-inner rounded-top overflow-hidden">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="imgs/Appart1/principaleImg.jpg" alt="Property Image 1">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img1.jpg" alt="Property Image 2">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img2.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img3.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img4.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img5.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img6.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart1/img7.jpg" alt="Property Image 3">
-              </div>
+              <div class="carousel-item active"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 1"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 2"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
             </div>
             <a class="carousel-control-prev" href="#property1Carousel" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon"></span>
@@ -340,52 +395,23 @@ input[type]:checked ~ span.middle {
           <!-- Image Carousel End -->
 
           <div class="card-body">
-           
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <!-- <span class="badge bg-warning text-dark fs-6">2000 DH / Day</span> -->
               <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fa fa-map-marker-alt text-primary me-2"></i> Agadir bay
-              </h6>
-
+                <i class="fa fa-map-marker-alt text-primary me-2"></i> Address</h6>
               <span class="text-warning fs-5">★★★★★</span>
             </div>
 
-            <!-- Features as badges -->
             <div class="d-flex gap-2 flex-wrap mb-3">
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bed text-primary me-1"></i> 2 chambres
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-utensils text-primary me-1"></i> Cuisine
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bath text-primary me-1"></i> Salle De Bain
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-ruler-combined text-primary me-1"></i> 85m²
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-person-swimming text-primary me-1"></i> piscine
-                </span>
-              </div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-bed text-primary me-1"></i> 2 chambres</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fas fa-utensils text-primary me-1"></i> Cuisine</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-bath text-primary me-1"></i> Salle De Bain</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-ruler-combined text-primary me-1"></i> 85m²</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fas fa-person-swimming text-primary me-1"></i> piscine</span></div>
             </div>
 
             <p class="card-text text-muted">Appartement exceptionnel au design élégant et aux couleurs apaisantes.</p>
             <div class="d-flex justify-content-center mt-3">
-              <a href="https://wa.me/+212649332163" target="_blank" class="btn btn-prop-contact btn-primary px-4">
+              <a href="https://wa.me/+212688427362" target="_blank" class="btn btn-prop-contact px-4">
                 <i class="fab fa-whatsapp me-2"></i> Réserver Maintenant
               </a>
             </div>
@@ -396,9 +422,10 @@ input[type]:checked ~ span.middle {
 
 
 
+      
 
       <!-- Property Card 2 Start -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6 property-card" data-category="long short">
         <div class="card-col card border-0">
           <!-- Image Carousel Start -->
           <div id="property2Carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -410,83 +437,37 @@ input[type]:checked ~ span.middle {
               <li data-target="#property2Carousel" data-slide-to="4"></li>
               <li data-target="#property2Carousel" data-slide-to="5"></li>
               <li data-target="#property2Carousel" data-slide-to="6"></li>
-
             </ol>
             <div class="carousel-inner rounded-top overflow-hidden">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="imgs/Appart2/principaleImg.jpg" alt="Property Image 1">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img1.jpg" alt="Property Image 2">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img2.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img3.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img4.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img5.jpg" alt="Property Image 3">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Appart2/img6.jpg" alt="Property Image 3">
-              </div>
-              
+              <div class="carousel-item active"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 1"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 2"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
+              <div class="carousel-item"><img class="d-block w-100" src="img/slideImg3.jpg" alt="Property Image 3"></div>
             </div>
-            <a class="carousel-control-prev" href="#property2Carousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#property2Carousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
+            <a class="carousel-control-prev" href="#property2Carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+            <a class="carousel-control-next" href="#property2Carousel" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
           </div>
           <!-- Image Carousel End -->
 
           <div class="card-body">
-           
             <div class="d-flex justify-content-between align-items-center mb-2">
-              <!-- <span class="badge bg-warning text-dark fs-6">2000 DH / Day</span> -->
-              <h6 class="card-subtitle mb-2 text-muted">
-                <i class="fa fa-map-marker-alt text-primary me-2"></i> Avenue Hassan 2
-              </h6>
-
+              <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker-alt text-primary me-2"></i> Address</h6>
               <span class="text-warning fs-5">★★★★★</span>
             </div>
 
-            <!-- Features as badges -->
             <div class="d-flex gap-2 flex-wrap mb-3">
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bed text-primary me-1"></i> 2 chambres
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fas fa-utensils text-primary me-1"></i> Cuisine
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-bath text-primary me-1"></i> Salle De Bain
-                </span>
-              </div>
-              &nbsp;
-              <div>
-                <span class="badge bg-light text-dark border">
-                  <i class="fa fa-ruler-combined text-primary me-1"></i> 90m²
-                </span>
-              </div>
-              
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-bed text-primary me-1"></i> 2 chambres</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fas fa-utensils text-primary me-1"></i> Cuisine</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-bath text-primary me-1"></i> Salle De Bain</span></div>
+              <div><span class="badge bg-light-badge text-dark border"><i class="fa fa-ruler-combined text-primary me-1"></i> 90m²</span></div>
             </div>
 
             <p class="card-text text-muted">Superbe appartement au design moderne et élégant, offrant une ambiance lumineuse et sereine.</p>
             <div class="d-flex justify-content-center mt-3">
-              <a href="https://wa.me/+212649332163" target="_blank" class="btn btn-prop-contact btn-primary px-4">
+              <a href="https://wa.me/+212688427362" target="_blank" class="btn btn-prop-contact px-4">
                 <i class="fab fa-whatsapp me-2"></i> Réserver Maintenant
               </a>
             </div>
@@ -494,113 +475,86 @@ input[type]:checked ~ span.middle {
         </div>
       </div>
       <!-- Property Card 2 End -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <!-- 🔁 Repeat more cards with unique IDs: property2Carousel, property3Carousel... -->
-
+    </div>
+  </div>
+</div>
 
 <!-- Modal Start -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content border-0 bg-transparent">
       <div class="modal-body p-0 text-center position-relative">
-
         <div class="modal-image-wrapper position-relative d-inline-block">
-
-          <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
-            &times;
-          </button>          
-
+          <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">&times;</button>          
           <img id="modalImage" src="" alt="Property Image" class="modal-img">
         </div>
-
-        <a class="carousel-control-prev" href="#" role="button" id="prevImage">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#" role="button" id="nextImage">
-          <span class="carousel-control-next-icon"></span>
-        </a>
+        <a class="carousel-control-prev" href="#" role="button" id="prevImage"><span class="carousel-control-prev-icon"></span></a>
+        <a class="carousel-control-next" href="#" role="button" id="nextImage"><span class="carousel-control-next-icon"></span></a>
       </div>
     </div>
   </div>
 </div>
 
-</div>
-</div>
-
-</div>
-
-
-
-
 <style>
 /* Card Styles */
-
-.card-col {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border-radius: 10px;
-  margin-bottom: 45px; 
-}
+.card-col { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; border-radius: 10px; margin-bottom: 50px; }
 .card-col:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
-
 .carousel-inner img { object-fit: cover; height: 250px; }
 .btn-primary { border-radius:10px; font-weight:500; }
 .badge { border-radius:12px; padding:0.5em 0.75em; }
+.bg-primary-title { background-color: #fff5e2; }
+.bg-prop { margin-top: -70px; background-color: #F9F9F9; }
+.modal-image-wrapper { display: inline-block; position: relative; }
+.modal-img { max-width: 100%; max-height: 500px; object-fit: contain; border-radius: 10px; }
+.close-btn { position: absolute; top: 10px; right: 10px; font-size: 28px; color: white; background: rgba(0, 0, 0, 0.14); border: none; border-radius: 50%; width: 35px; height: 35px; line-height: 30px; text-align: center; cursor: pointer; z-index: 1051; }
+.close-btn:hover { background: rgba(0, 0, 0, 0.304); }
 
-/* Small carousel arrows */
-.small-arrow { width: 25px; height: 25px; background-size: 100% 100%; }
+/* Filter Styles */
+.filter-buttons .btn { border-radius: 50px; padding: 0.6em 1.5em; font-weight: 500; transition: all 0.3s ease; margin-bottom: 7px; }
+.filter-buttons .btn i { font-size: 0.9em; }
+.filter-buttons .btn:hover,
+.filter-buttons .btn.active { background-color: #BB9C5A; color: #fff; border-color: #BB9C5A; }
 
-.bg-primary-title {
-    background-color: #fff5e2;
-}
+/* Fade Animation */
+.property-card { transition: all 0.5s ease; opacity: 1; }
+.property-card.hide { opacity: 0; transform: scale(0.95); pointer-events: none; position: absolute; }
 
-.bg-prop {
-    margin-top: -70px;
-    background-color: #F9F9F9;
-}
-
-.modal-image-wrapper {
-  display: inline-block;
-  position: relative;
-}
-
-.modal-img {
-  max-width: 100%;
-  max-height: 500px;
-  object-fit: contain;
+.btn-prop-contact {
+  background-color: #060e25df;
+  border-color: #060e25d6;
+  color: white;
   border-radius: 10px;
 }
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px; 
-  font-size: 28px;
+.btn-prop-contact:hover {
+  background-color: #060e25eb !important;
   color: white;
-  background: rgba(0, 0, 0, 0.14);
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1051;
 }
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.304);
+
+
+.bg-light-badge {
+  background-color: #f9f9f9;
+}
+
+
+
+/* Carousel Indicators Simple & Equal Style */
+.carousel-indicators {
+  bottom: 10px;
+}
+
+.carousel-indicators li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.678);
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #BB9C5A;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 
@@ -608,42 +562,62 @@ input[type]:checked ~ span.middle {
 </style>
 
 <script>
-// Modal Image Script (works with any number of images)
-document.addEventListener('DOMContentLoaded', function() {
-  let currentImages = [];
-  let currentIndex = 0;
-
-  document.querySelectorAll('.carousel-item img').forEach(img => {
-    img.addEventListener('click', function() {
-      const carousel = this.closest('.carousel-inner');
-      currentImages = Array.from(carousel.querySelectorAll('img')).map(el => el.src);
-      currentIndex = currentImages.indexOf(this.src);
-      const modalImage = document.getElementById('modalImage');
-      modalImage.src = this.src;
-
-      // Show modal (Bootstrap 4)
-      if (typeof $ !== 'undefined') { $('#imageModal').modal('show'); }
+  document.addEventListener('DOMContentLoaded', function() {
+    let currentImages = [];
+    let currentIndex = 0;
+  
+    // Modal Images
+    document.querySelectorAll('.carousel-item img').forEach(img => {
+      img.addEventListener('click', function() {
+        const carousel = this.closest('.carousel-inner');
+        currentImages = Array.from(carousel.querySelectorAll('img')).map(el => el.src);
+        currentIndex = currentImages.indexOf(this.src);
+        document.getElementById('modalImage').src = this.src;
+        if (typeof $ !== 'undefined') { $('#imageModal').modal('show'); }
+      });
+    });
+  
+    document.getElementById('prevImage').addEventListener('click', function(e) {
+      e.preventDefault();
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      document.getElementById('modalImage').src = currentImages[currentIndex];
+    });
+  
+    document.getElementById('nextImage').addEventListener('click', function(e) {
+      e.preventDefault();
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      document.getElementById('modalImage').src = currentImages[currentIndex];
+    });
+  
+    // Filter Script with multiple categories support
+    const buttons = document.querySelectorAll('.filter-buttons button');
+    const cards = document.querySelectorAll('.property-card');
+  
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        buttons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+  
+        const filter = this.getAttribute('data-filter');
+        cards.forEach(card => {
+          const categories = card.getAttribute('data-category')?.split(' ') || []; // ["long", "short"]
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hide');
+          } else {
+            card.classList.add('hide');
+          }
+        });
+      });
     });
   });
-
-  document.getElementById('prevImage').addEventListener('click', function(e) {
-    e.preventDefault();
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    document.getElementById('modalImage').src = currentImages[currentIndex];
-  });
-
-  document.getElementById('nextImage').addEventListener('click', function(e) {
-    e.preventDefault();
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    document.getElementById('modalImage').src = currentImages[currentIndex];
-  });
-});
-</script>
-
-
+  </script>
+  
 <!-- PROPERTIES Section End -->
 
-  
+
+
+
+
 
 
 
@@ -659,7 +633,7 @@ document.addEventListener('DOMContentLoaded', function() {
 .luxury-divider {
   position: relative;
   width: 100%;
-  height: 10px;
+  height: 7px;
   background: linear-gradient(90deg, #060E25, #0A1B3D, #060E25);
   overflow: hidden;
   box-shadow: 0 0 15px rgba(6, 14, 37, 0.6); /* subtle glow */
@@ -690,7 +664,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </style>
-<br>
 
 
 
@@ -698,96 +671,485 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <br><br>
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 img-luxury" src="imgs/contactImg.jpg" loading="lazy" alt="">
-                    <br><br>
-                  </div>
-                  
-                <div class="col-lg-6">
-                    <h6 class="d-inline-block text-primary text-uppercase bg-ttl-style py-1 px-2">Témoignages</h6>
-                    <h1 class="mb-4">Ce que disent nos clients!</h1>
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="imgs/Mohamed.jpg" loading="lazy" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Mohamed R.</h6>
-                                    <span>Client</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Au début j’étais sceptique, mais en trois mois mes revenus ont augmenté. Je reçois chaque mois un rapport clair et je n’ai plus à gérer les réservations ni le calendrier.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="imgs/YoussefPics.jpg" loading="lazy" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Youssef K.</h6>
-                                    <span>Client</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Avant, je devais toujours préparer l’appartement moi-même. Maintenant, tout est pris en charge : le logement est propre, et les voyageurs sont ravis.</p>
-                        </div>
-                        <div class="position-relative">
-                            <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
-                            <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="imgs/fatima.jpg" loading="lazy" style="width: 60px; height: 60px;" alt="">
-                                <div class="ml-3">
-                                    <h6 class="text-uppercase">Fatima A.</h6>
-                                    <span>Client</span>
-                                </div>
-                            </div>
-                            <p class="m-0">Les activités proposées aux voyageurs font vraiment la différence : excursions, sorties en mer et location de voitures. Les locataires adorent et ça se voit dans les avis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contactez-nous Section  -->
+<section class="cta-lux-section">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay">
+    <div class="container text-center">
+      <h2 class="cta-title">Contactez-nous pour toute demande ou information</h2>
+      <a href="contact.html" class="cta-btn">Contactez-nous</a>
     </div>
+  </div>
+</section>
+
+<style>
+
+.cta-lux-section {
+  position: relative;
+  width: 100%;
+  height: 250px; /* section height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%; /* extra height for parallax */
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateY(0) scale(1.1);
+  will-change: transform; /* GPU acceleration */
+}
+
+.cta-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(6,14,37,0.35); /* subtle overlay for lux look */
+}
+
+.cta-title {
+  color: #fff; /* updated color */
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.3;
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.cta-btn {
+  padding: 10px 40px;
+  background-color: #BB9C5A; /* updated button color */
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  text-decoration: none !important;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+  background-color: #060E25;
+  color: #fff;
+}
 
 
-    
-    <style>
-        .img-luxury {
-          display: block;
-          border-radius: 12px;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-          transition: transform 0.4s ease;
-          transform-style: preserve-3d;
-          cursor: pointer;
-        }
-        </style>
+/* Responsive */
+@media (max-width:768px){
+  .cta-title{ font-size:1.8rem; }
+  .cta-btn{ padding:12px 30px; }
+}
+</style>
+
+<script>
+// Smooth parallax inside section
+const ctaBg = document.querySelector('.cta-bg');
+const ctaSection = document.querySelector('.cta-lux-section');
+
+window.addEventListener('scroll', () => {
+  const rect = ctaSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if(rect.bottom > 0 && rect.top < windowHeight){
+    // calculate parallax offset based on section center
+    const sectionCenter = rect.top + rect.height / 2 - windowHeight / 2;
+    const offset = sectionCenter * -0.2; // negative for natural parallax
+    ctaBg.style.transform = `translateY(${offset}px) scale(1.1)`;
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Testimonial Section Start -->
+<section class="luxury-testimonial-section">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <!-- Left: Image -->
+      <div class="col-lg-6 col-md-10  mb-lg-0 text-center">
+        <img
+          class="img-fluid img-luxury"
+          src="img/955870e5a6cf0d44663672a153426f0a.jpg"
+          alt="Luxury happy clients"
+          loading="lazy"
+        />
+      </div>
+
+      <br>
+      <!-- Right: Testimonials -->
+      <div class="col-lg-6 col-md-10">
+        <div class="text-center ">
+          <h6 class="luxury-subtitle bg-light">Témoignages</h6>
+          <h2 class="luxury-title">Ce que disent nos clients</h2>
+        </div>
         
-        <script>
-        const img = document.querySelector(".img-luxury");
-        
-        img.addEventListener("click", (e) => {
-          const rect = img.getBoundingClientRect();
-          const x = e.clientX - rect.left; // position inside image (X)
-          const y = e.clientY - rect.top;  // position inside image (Y)
-        
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-        
-          // هاد المرة نفس الاتجاه (ماشي العكس)
-          const rotateX = ((y - centerY) / centerY) * -12; // up/down
-          const rotateY = ((x - centerX) / centerX) * 12;  // left/right
-        
-          img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-        
-          // reset after 400ms
-          setTimeout(() => {
-            img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-          }, 400);
-        });
-        </script>
-    <!-- Testimonial End -->
+        <br>
+
+        <div class="lux-slider">
+          <div class="lux-slide active">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Au début j’étais sceptique, mais en trois mois mes revenus ont
+              augmenté considérablement. Le service est fluide, transparent et sans stress.”
+            </p>
+            <h5>— Mohamed R.</h5>
+          </div>
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Avant, je devais tout gérer seul. Maintenant, tout est automatisé et
+              mes clients sont toujours satisfaits. Je recommande vivement !”
+            </p>
+            <h5>— Youssef K.</h5>
+          </div>
+
+          <!-- <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Les activités proposées font toute la différence : excursions, mer,
+              location... mes voyageurs adorent ! Une expérience premium.”
+            </p>
+            <h5>— Fatima A.</h5>
+          </div> -->
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Un service irréprochable. Tout est clair, rapide et très professionnel.
+              C’est un vrai gain de temps et de sérénité.”
+            </p>
+            <h5>— Karim L.</h5>
+          </div>
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Une équipe à l’écoute et un résultat à la hauteur. Mes revenus ont
+              doublé depuis que j’ai fait confiance à cette agence.”
+            </p>
+            <h5>— Nadia M.</h5>
+          </div>
+
+          <!-- Controls (inside slider for z-index fix) -->
+          <div class="lux-slider-controls text-center">
+            <span class="lux-prev">‹</span>
+            <span class="lux-next">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* --- Image Animation --- */
+.img-luxury {
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* --- Section --- */
+.luxury-testimonial-section {
+  background: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px !important;
+}
+
+.luxury-subtitle {
+  display: inline-block;
+  color: #060E25;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: rgba(6, 14, 37, 0.06);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.luxury-title {
+  color: #060E25;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-top: 2px;
+}
+
+/* --- Slider --- */
+.lux-slider {
+  position: relative;
+  perspective: 1200px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lux-slide {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  /* box-shadow: 0 10px 40px rgba(6, 14, 37, 0.12); */
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  width: 85%;
+  max-width: 700px;
+  text-align: center;
+  transform: rotateY(80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.lux-slide.active {
+  transform: rotateY(0deg) translateZ(0px) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.lux-slide.prev {
+  transform: rotateY(-80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+}
+
+.lux-slide.next {
+  transform: rotateY(80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+}
+
+/* --- Stars --- */
+.lux-stars {
+  color: #f4b400;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  animation: glowStars 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowStars {
+  from {
+    text-shadow: 0 0 5px #f4b400, 0 0 15px #f4b400;
+  }
+  to {
+    text-shadow: 0 0 15px #ffd95a, 0 0 25px #f4b400;
+  }
+}
+
+.lux-slide p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.lux-slide h5 {
+  color: #060E25;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- Controls --- */
+.lux-slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.lux-slider-controls span {
+  font-size: 2rem;
+  color: #060E25;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.lux-slider-controls span:hover {
+  color: #0d1a4f;
+  transform: scale(1.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .lux-slider {
+    height: auto;
+    min-height: 280px;
+  }
+  .lux-slide {
+    width: 95%;
+    padding: 1.8rem;
+  }
+  .luxury-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .img-luxury {
+    margin-bottom: 2rem;
+  }
+  .lux-slide {
+    width: 100%;
+    padding: 1.6rem;
+  }
+}
+</style>
+
+<script>
+/* Image Animation */
+const img = document.querySelector(".img-luxury");
+if (img) {
+  img.addEventListener("click", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -12;
+    const rotateY = ((x - centerX) / centerX) * 12;
+    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    setTimeout(() => {
+      img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+    }, 400);
+  });
+}
+
+/* Testimonial Slider */
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".lux-slide");
+  const next = document.querySelector(".lux-next");
+  const prev = document.querySelector(".lux-prev");
+  let index = 0;
+
+  function showSlide(newIndex) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active", "prev", "next");
+      if (i === newIndex) slide.classList.add("active");
+      else if (i === (newIndex - 1 + slides.length) % slides.length) slide.classList.add("prev");
+      else if (i === (newIndex + 1) % slides.length) slide.classList.add("next");
+    });
+  }
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5500);
+
+  showSlide(index);
+});
+</script>
+<!-- Testimonial Section End -->
+
+
+
+
      
 
 
@@ -812,12 +1174,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <br>
                 </a>
                 <p>
-                  BOOKDARI est une conciergerie immobilière haut de gamme basée à Kénitra. Nous accompagnons les propriétaires et investisseurs dans la gestion locative complète, en courte et longue durée. De la création et l’optimisation des annonces sur Airbnb et Booking aux check‑in/out professionnels, ménage hôtelier et maintenance, nous protégeons votre bien tout en offrant une expérience client irréprochable. Nos équipes optimisent les photos, la description et la tarification pour booster la visibilité, l’occupation et les revenus. Votre bien, notre priorité.</p>
-                <p><i class="fa fa-map-marker-alt mr-2"></i> Agadir, Morocco</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+212649332163</p>
-                <p><i class="fa fa-envelope mr-2"></i> agadirkeys@gmail.com</p>
+                  BOOKDARI est une conciergerie immobilière premium à Kénitra, spécialisée dans la gestion locative courte et longue durée. Nous optimisons vos annonces, photos et tarifs sur Airbnb et Booking, assurons les check-in/out, le ménage hôtelier et la maintenance — pour une expérience client impeccable et des revenus maximisés.</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Rue de Khenifra, 10052 Rabat, Maroc</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+212688427362</p>
+                <p><i class="fa fa-envelope mr-2"></i> bookdari.conciergerie@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://wa.me/+212649332163"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://wa.me/+212688427362"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a class="btn btn-lg btn-primary btn-lg-square" href="https://www.instagram.com/agadirkeys"><i class="fab fa-instagram"></i></a>
@@ -829,11 +1191,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         <br>
                         <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a href="#" class="nav-item nav-link active">Accueil</a>
-                            <a href="#A propos" class="nav-item nav-link">A propos</a>
-                            <a href="#services" class="nav-item nav-link">Nos services</a>
+                            <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                            <a href="index.html" class="nav-item nav-link">A propos</a>
+                            <a href="index.html" class="nav-item nav-link">Nos services</a>
                             <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
-                            <a href="contact-fr.html" class="nav-item nav-link">Contact</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                     <!-- <div class="col-sm-6 mb-5">

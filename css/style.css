@@ -45,7 +45,6 @@
   user-select: none;
 } */
 
-
 * {
   -webkit-tap-highlight-color: transparent; /* iOS/Android blue highlight */
   outline: none !important; /* remove focus outline */
@@ -177,13 +176,13 @@ sup {
 }
 
 a {
-  color: #BDA36A;
+  color: #BB9C5A;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #a99059;
+  color: #BB9C5A;
   text-decoration: underline;
 }
 
@@ -307,7 +306,6 @@ button::-moz-focus-inner,
   padding: 0;
   border-style: none;
 }
-
 
 
 
@@ -2408,6 +2406,11 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #BB9C5A;
   border-color: #BDA36A;
+
+}
+
+.back-to-top {
+  border-radius: 10px !important;
 }
 
 .btn-primary:hover {
@@ -7613,7 +7616,7 @@ button.bg-dark:focus {
 
 .pt-3,
 .py-3 {
-  padding-top: 0.6rem !important;
+  padding-top: 0.7rem !important;
 }
 
 .pr-3,
@@ -7623,7 +7626,7 @@ button.bg-dark:focus {
 
 .pb-3,
 .py-3 {
-  padding-bottom: 0.9rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .pl-3,
@@ -9807,4 +9810,22 @@ h6,
   font-size: 15px;
   color: black;
   background-color: #FFF9EE;
+}
+
+.bg-light {
+  background-color: #d5b163a8 !important;
+  border-radius: 20px !important;
+}
+
+
+.luxury-subtitle {
+  display: inline-block;
+  color: #060E25;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: rgba(6, 14, 37, 0.06);
+  padding: 6px 14px;
+  border-radius: 20px;
+  
 }
