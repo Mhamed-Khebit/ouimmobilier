@@ -139,147 +139,206 @@
 <!-- Topbar End -->
 
 
-<!-- Navbar Start -->
-<div class="container-fluid p-0">
-  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-    <a href="index.html">
-      <img src="img/logoPng.png" width="110px">
-    </a>
 
-    <!-- Hamburger SVG -->
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <svg viewBox="0 0 32 32" class="hamburger-svg">
-        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-        <path class="line" d="M7 16 27 16"></path>
-      </svg>
-    </button>
 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-      <ul class="navbar-nav m-auto py-0 lux-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-        <li class="nav-item"><a href="index.html" class="nav-link">A propos</a></li>
-        <li class="nav-item"><a href="index.html" class="nav-link">Nos services</a></li>
-        <li class="nav-item"><a href="#" class="nav-link active">Nos propriétés</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
+
+
+
+
+
+
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html">
+          <img src="img/logoPng.png" width="110px">
+        </a>
+    
+        <!-- Hamburger SVG -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <svg viewBox="0 0 32 32" class="hamburger-svg">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </button>
+    
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <ul class="navbar-nav m-auto py-0 lux-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
+            <li class="nav-item"><a href="#A propos" class="nav-link">A propos</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Nos services</a></li>
+            <li class="nav-item"><a href="propriétés.html" class="nav-link">Nos propriétés</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
-
-
-<style>
-/* Hamburger SVG */
-.hamburger-svg {
-  height: 3em;
-  width: 3em;
-  cursor: pointer;
-  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
-}
-
-.line {
-  fill: none;
-  stroke: #f9f9f9df;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
-              stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
-}
-
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-
-/* Hamburger open/close animation */
-.navbar-toggler.collapsed svg {
-  transform: rotate(0);
-}
-
-.navbar-toggler:not(.collapsed) svg {
-  transform: rotate(-45deg);
-}
-
-.navbar-toggler:not(.collapsed) .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
-
-/* Navbar links - luxury style */
-.lux-menu .nav-link {
-  font-family: 'Space Grotesk', sans-serif !important;
-  font-weight: 500;
-  font-size: 1.05rem;
-  color: #060E25;
-  position: relative;
-  margin: 0 12px;
-  transition: all 0.3s ease;
-}
-
-.lux-menu .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  transform: translateX(-50%);
-  width: 0%;
-  height: 2px;
-  background: #060E25;
-  border-radius: 2px;
-  transition: width 0.4s ease;
-}
-
-.lux-menu .nav-link:hover::after {
-  width: 50%;
-}
-
-.lux-menu .nav-link:hover {
-  transform: translateY(-2px);
-}
-
-/* Luxury button */
-.lux-btn {
-  font-weight: 600;
-  padding: 0.5rem 1.8rem;
-  font-size: 1rem;
-  border-radius: 50px;
-  transition: all 0.4s ease;
-  box-shadow: 0 5px 15px rgba(6,14,37,0.2);
-}
-
-.lux-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(6,14,37,0.35);
-  background-color: #060E25;
-  color: #fff;
-}
-
-/* Mobile adjustments */
-@media (max-width: 992px) {
-  .navbar-toggler {
-    display: block;
-    background: none;
-    border: none;
-  }
-
-  .collapse.navbar-collapse {
-    transition: all 0.5s ease;
-  }
-
-  .lux-menu .nav-link {
-    font-size: 1.2rem;
-    padding: 12px 0;
-    display: block;
-    text-align: center;
-  }
-
-  .lux-btn {
-    display: block;
-    margin: 20px auto;
-  }
-}
-</style>
+    
+    <style>
+    /* Hamburger SVG */
+    .hamburger-svg {
+      height: 3em;
+      width: 3em;
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    
+    .line {
+      fill: none;
+      stroke: #f9f9f9df;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
+                  stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    
+    .line-top-bottom {
+      stroke-dasharray: 12 63;
+    }
+    
+    /* Hamburger open/close animation */
+    .navbar-toggler.collapsed svg {
+      transform: rotate(0);
+    }
+    
+    .navbar-toggler:not(.collapsed) svg {
+      transform: rotate(-45deg);
+    }
+    
+    .navbar-toggler:not(.collapsed) .line-top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+    }
+    
+    /* Navbar links - luxury style */
+    .lux-menu .nav-link {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 500;
+      font-size: 1.05rem;
+      color: #060E25;
+      position: relative;
+      margin: 0 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .lux-menu .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 2px;
+      background: #060E25;
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+    
+    .lux-menu .nav-link:hover::after {
+      width: 50%;
+    }
+    
+    .lux-menu .nav-link:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Luxury button */
+    .lux-btn {
+      font-weight: 600;
+      padding: 0.5rem 1.8rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(6,14,37,0.2);
+    }
+    
+    .lux-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+      background-color: #060E25;
+      color: #fff;
+    }
+    
+    /* Overlay effect */
+    body.menu-open-overlay::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.25);
+      z-index: 998;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 1;
+    }
+    
+    body {
+      transition: all 0.4s ease;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 992px) {
+      .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+      }
+    
+      .collapse.navbar-collapse {
+        transition: all 0.5s ease;
+        position: relative;
+        z-index: 1001; /* above overlay */
+        background: inherit; /* keep navbar color */
+        padding: 15px 0;
+      }
+    
+      .lux-menu .nav-link {
+        font-size: 1.2rem;
+        padding: 12px 0;
+        display: block;
+        text-align: center;
+      }
+    
+      .lux-btn {
+        display: block;
+        margin: 20px auto;
+      }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarCollapse = document.getElementById('navbarCollapse');
+      const body = document.body;
+    
+      const updateBodyOverlay = () => {
+        if (navbarCollapse.classList.contains('show')) {
+          body.classList.add('menu-open-overlay');
+        } else {
+          body.classList.remove('menu-open-overlay');
+        }
+      }
+    
+      // Observe menu open/close
+      navbarCollapse.addEventListener('show.bs.collapse', updateBodyOverlay);
+      navbarCollapse.addEventListener('hide.bs.collapse', updateBodyOverlay);
+    
+      // Close overlay when link clicked inside menu
+      document.querySelectorAll('#navbarCollapse .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navbarCollapse.classList.contains('show')) {
+            $(navbarCollapse).collapse('hide'); // Bootstrap collapse
+          }
+        });
+      });
+    });
+    </script>
+    
 
 
 
