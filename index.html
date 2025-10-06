@@ -217,7 +217,7 @@ window.addEventListener("load", () => {
 
 
 
-<!-- Navbar Start -->
+    <!-- Navbar Start -->
 <div class="container-fluid p-0">
   <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
     <a href="index.html">
@@ -245,7 +245,6 @@ window.addEventListener("load", () => {
     </div>
   </nav>
 </div>
-
 
 <style>
 /* Hamburger SVG */
@@ -333,6 +332,23 @@ window.addEventListener("load", () => {
   color: #fff;
 }
 
+/* Overlay effect */
+body.menu-open-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.25);
+  z-index: 998;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+body {
+  transition: all 0.4s ease;
+}
+
 /* Mobile adjustments */
 @media (max-width: 992px) {
   .navbar-toggler {
@@ -343,6 +359,10 @@ window.addEventListener("load", () => {
 
   .collapse.navbar-collapse {
     transition: all 0.5s ease;
+    position: relative;
+    z-index: 1001; /* above overlay */
+    background: inherit; /* keep navbar color */
+    padding: 15px 0;
   }
 
   .lux-menu .nav-link {
@@ -359,9 +379,39 @@ window.addEventListener("load", () => {
 }
 </style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbarCollapse = document.getElementById('navbarCollapse');
+  const body = document.body;
+
+  const updateBodyOverlay = () => {
+    if (navbarCollapse.classList.contains('show')) {
+      body.classList.add('menu-open-overlay');
+    } else {
+      body.classList.remove('menu-open-overlay');
+    }
+  }
+
+  // Observe menu open/close
+  navbarCollapse.addEventListener('show.bs.collapse', updateBodyOverlay);
+  navbarCollapse.addEventListener('hide.bs.collapse', updateBodyOverlay);
+
+  // Close overlay when link clicked inside menu
+  document.querySelectorAll('#navbarCollapse .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        $(navbarCollapse).collapse('hide'); // Bootstrap collapse
+      }
+    });
+  });
+});
+</script>
 
 
-<!-- Navbar End -->
+
+
+
+
 
 
 
@@ -507,7 +557,7 @@ window.addEventListener("load", () => {
 }
 
 /* Hover luxury glow */
-.carousel-caption p:hover {
+.carousel-caption p:active {
   box-shadow: 0 0 50px #bb9c5a5e;
   transform: scale(1.02);
   transition: all 0.4s ease;
@@ -561,6 +611,9 @@ window.addEventListener("load", () => {
   transition: all 0.3s ease;
 }
 
+.c-button--gooey {
+  border-radius: 5px;
+}
 
 
 </style>

@@ -4,66 +4,60 @@
 
 document.addEventListener('contextmenu', function(e) {
     if(e.target.tagName === 'IMG') {
-        e.preventDefault(); // يمنع قائمة right-click
+        e.preventDefault(); // kimnna3 right-click
     }
 });
 
 
-    // navbarCollapse
     $(document).ready(function () {
-        var checkbox = $('#check'); // hamburger checkbox
+    var checkbox = $('#check'); // if you have hamburger checkbox
     
-        function closeNavbar() {
-            $('.navbar-collapse').collapse('hide');
-            if (checkbox.length) {
-                checkbox.prop('checked', false); // reset hamburger
-            }
-            $('.navbar-toggler').addClass('collapsed');
-            $('.navbar-toggler').attr('aria-expanded', 'false'); 
+    function closeNavbar() {
+        $('.navbar-collapse').collapse('hide');
+        if (checkbox.length) {
+            checkbox.prop('checked', false); // reset hamburger
         }
-    
-        // Close menu when clicking on links (except Traduction)
-        $('.navbar-nav a').on('click', function(e) {
-            var link = $(this);
-            if(!link.hasClass('dropdown-toggle')) {
-                if($('.navbar-collapse').hasClass('show')) {
-                    closeNavbar();
-                }
-            }
-        });
-    
-        // Close menu when clicking outside
-        $(document).on('click', function(e) {
-            var target = $(e.target);
-            if(!target.closest('.navbar').length && $('.navbar-collapse').hasClass('show')) {
-                closeNavbar();
-            }
-        });
-    
-        // Close menu when scrolling
-        $(window).on('scroll', function() {
+        $('.navbar-toggler').addClass('collapsed').attr('aria-expanded', 'false');
+        $('body').removeClass('menu-open-overlay');
+    }
+
+    // Toggle overlay on menu open/close
+    $('#navbarCollapse').on('show.bs.collapse', function() {
+        $('body').addClass('menu-open-overlay');
+    });
+    $('#navbarCollapse').on('hide.bs.collapse', function() {
+        $('body').removeClass('menu-open-overlay');
+    });
+
+    // Close menu when clicking on links
+    $('.navbar-nav a').on('click', function(e) {
+        var link = $(this);
+        if(!link.hasClass('dropdown-toggle')) {
             if($('.navbar-collapse').hasClass('show')) {
                 closeNavbar();
             }
-        });
-    });
-    
-    
-
-    $(document).ready(function(){
-        function adjustPadding(){
-          var topbarHeight = $('.topbar').outerHeight() || 0;
-          var navbarHeight = $('.navbar').outerHeight() || 0;
-          $('body').css('padding-top', topbarHeight + navbarHeight + 'px');
         }
-      
-        adjustPadding();
-        $(window).resize(adjustPadding); // update f resize
-      });
-      
+    });
 
+    // Close menu when clicking outside
+    $(document).on('click', function(e) {
+        var target = $(e.target);
+        if(!target.closest('.navbar').length && $('.navbar-collapse').hasClass('show')) {
+            closeNavbar();
+        }
+    });
+
+    // Close menu when scrolling
+    $(window).on('scroll', function() {
+        if($('.navbar-collapse').hasClass('show')) {
+            closeNavbar();
+        }
+    });
+});
 
     
+
+
 
 
 
