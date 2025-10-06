@@ -325,13 +325,13 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6" style="min-height: 500px;">
-                <div class="position-relative h-100">
+                <div class="position-relative map-wrapper" style="height:480px;">
                     <iframe class="position-absolute w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.1358629040838!2d-6.825451325059736!3d34.01472337317119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b9b67c54329%3A0xb6af4309d2543450!2sRue%20de%20Kh%C3%A9nifra%2C%20Rabat!5e0!3m2!1sen!2sma!4v1759760684351!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade" frameborder="0" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.1358629040838!2d-6.825451325059736!3d34.01472337317119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b9b67c54329%3A0xb6af4309d2543450!2sRue%20de%20Kh%C3%A9nifra%2C%20Rabat!5e0!3m2!1sen!2sma!4v1759760684351!5m2!1sen!2sma"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+                  </div>
+                  
             </div>
             <div class="col-lg-6 pt-5 pb-lg-5">
                 <div class="contact-form bg-contact-light p-4 p-lg-5 my-lg-5">
@@ -389,7 +389,7 @@
 <style>
     .bg-contact-light{
         background-color: #f4f6f8;
-        border: 1px solid #00000009 !important;
+        border: 1px solid #00000010 !important;
     }
     #contactForm {
         font-family: 'Space Grotesk', sans-serif;
@@ -403,6 +403,30 @@
         border-radius: 3px;
         resize: none;
     }
+
+
+    /* Responsive Map */
+@media (max-width: 768px) {
+  .map-wrapper {
+    height: 300px; /* t9ll l-height f mobile */
+  }
+}
+
+
+/* Default: Mobile */
+.map-wrapper {
+  height: 300px; /* mobile height */
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .map-wrapper {
+    height: 600px; /* PC / large screen height */
+  }
+}
+
+
+
 </style>
 
 
@@ -467,7 +491,7 @@
   .contact-info-section {
     width: 100%;
     background-color: #f9f9f9;
-    padding: 80px 20px;
+    padding: 20px 20px;
     display: flex;
     justify-content: center;
   }
@@ -484,7 +508,8 @@
   .contact-box {
     display: flex;
     align-items: center;
-    background: #f8f9fc;
+    background-color: #f4f6f8;
+    border: 1px solid #00000010 !important;    
     border-radius: 12px;
     padding: 25px 30px;
     transition: all 0.3s ease;
