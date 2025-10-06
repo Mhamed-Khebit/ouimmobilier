@@ -61,9 +61,7 @@ input,
 textarea,
 select,
 button {
-  border: none !important;
   outline: none !important;
-  box-shadow: none !important;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
@@ -75,20 +73,17 @@ textarea:focus,
 select:focus,
 button:focus {
   outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
 }
 
 /* Remove borders from iframes (like Google Maps) */
 iframe {
-  border: 0 !important;
   outline: none !important;
 }
 
 /* Remove extra border from fieldsets/legends (Safari/Firefox) */
-fieldset {
+/* fieldset {
   border: none !important;
-}
+} */
 
 /* For Chrome autofill yellow background */
 input:-webkit-autofill {
