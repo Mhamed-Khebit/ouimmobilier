@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       subject: subject || "Contact Form Message",
           html: `
     <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-      <h2 style="color: #007BFF;">New Contact from Agadir Keys Website</h2>
+      <h2 style="color: #007BFF;">New Contact from BOOKDARI Website</h2>
       <table style="width: 100%; border-collapse: collapse;">
         <tr>
           <td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Name:</td>
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
         </tr>
       </table>
       <p style="font-size: 12px; color: #777; margin-top: 20px;">
-        This message was sent from the contact form on Agadir Keys Website.
+        This message was sent from the contact form on BOOKDARI Website.
       </p>
     </div>
     `

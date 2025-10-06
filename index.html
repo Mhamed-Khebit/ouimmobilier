@@ -14,8 +14,8 @@
 
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Agadir Keys" name="keywords">
-    <meta content="Agadir Keys" name="description">
+    <meta content="BOOKDARI" name="keywords">
+    <meta content="BOOKDARI" name="description">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
@@ -1272,67 +1272,76 @@ cursor: pointer;
     padding-top: 90px;
     padding-bottom: 60px;
   }
-.service-slide {
-  position: relative;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.slide-content {
-  background: rgba(6,14,37,0.75); /* overlay dark */
-  color: #fff;
-  text-align: center;
-  padding: 25px 30px;
-  border-radius: 15px;
-  max-width: 90%;
-  animation: fadeIn 1s ease forwards;
-}
+  .service-slide {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.slide-content .icon-box {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
-  background: linear-gradient(135deg, #BB9C5A, #d4af37);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: #060E25; /* icon color */
-}
+  .slide-content {
+    background: rgba(6,14,37,0.75);
+    color: #fff;
+    text-align: center;
+    padding: 25px 30px;
+    border-radius: 15px;
+    max-width: 90%;
+  }
 
-.slide-content h4 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #fff;
-}
+  .slide-content .icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #BB9C5A, #d4af37);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #060E25;
+  }
 
-.slide-content p {
-  font-size: 14px;
-  margin: 0;
-  color: #ffffff9a;
-}
+  .slide-content h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
 
-/* Swiper navigation buttons */
-.swiper-button-next, .swiper-button-prev {
-  color: #060E25;
-}
-.swiper-pagination-bullet {
-  background: #060E25;
-}
+  .slide-content p {
+    font-size: 14px;
+    margin: 0;
+    color: #ffffff9a;
+  }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #060E25;
+  }
+
+  .swiper-pagination-bullet {
+    background: #060E25;
+  }
+
+  /* Fade-up animation only on mobile */
+  @media (max-width: 768px) {
+    .slide-content.fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
 </style>
 
-<!-- Swiper JS Initialization -->
 <script>
 const swiper = new Swiper('.services-slider', {
   slidesPerView: 1,
@@ -1357,7 +1366,23 @@ const swiper = new Swiper('.services-slider', {
     disableOnInteraction: false,
   },
 });
+
+//  Fade-up on mobile for all slides
+if (window.innerWidth <= 768) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-up');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.slide-content').forEach(el => observer.observe(el));
+}
 </script>
+
+
+
 <br><br>
 
 <!-- section services End -->
