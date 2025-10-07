@@ -6,7 +6,7 @@
 
     <title>Ouimmobilier Marrakech</title>
     <meta property="og:title" content="Ouimmobilier">
-    <meta property="og:description" content="Ouimmobilier">
+    <meta property="og:description" content="Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.">
     <meta property="og:image" content="imgs/logo.png">
     <meta property="og:url" content="https://ouimmobilier.vercel.app">
     <meta property="og:type" content="website">
@@ -240,11 +240,11 @@ window.addEventListener("load", () => {
         <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
         <li class="nav-item"><a href="#A propos" class="nav-link">A propos</a></li>
         <li class="nav-item"><a href="#services" class="nav-link">Nos services</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Nos propriétés</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Ajouter un bien</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="propriétés.html" class="nav-link">Nos propriétés</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Déposer un bien</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
-      <a href="" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
+      <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
     </div>
   </nav>
 </div>
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- <h6 class="text-title mb-3">Ouimmobilier</h6> -->
             <h3 class="display-3 text-capitalize text-white mb-3">Votre partenaire immobilier à Marrakech</h3>
             <p class="mx-md-5 px-5">Vente, location et gestion de biens avec un service professionnel et transparent</p>
-            <a href="" class="c-button c-button--gooey">
+            <a href="#A propos" class="c-button c-button--gooey">
               Découvrir plus
               <div class="c-button__blobs">
                 <div></div><div></div><div></div>
@@ -467,13 +467,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <!-- Slide 2 -->
       <div class="carousel-item position-relative animated-slide" style="min-height: 100vh;">
-        <img class="position-absolute w-100 h-100 zoom-slide" src="imgs/slideImg3.jpg" style="object-fit: cover;">
+        <img class="position-absolute w-100 h-100 zoom-slide" src="imgs/slideImg2.jpg" style="object-fit: cover;">
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <div class="p-3" style="max-width: 900px;">
             <!-- <h6 class="text-title mb-3">Ouimmobilier</h6> -->
             <h3 class="display-3 text-capitalize text-white mb-3">Vous avez un bien à vendre ou à louer ?</h3>
             <p class="mx-md-5 px-5">Remplissez notre formulaire, on s’occupe du reste.</p>
-            <a href="" class="c-button c-button--gooey">
+            <a href="#services" class="c-button c-button--gooey">
               Déposer un bien
               <div class="c-button__blobs">
                 <div></div><div></div><div></div>
@@ -485,14 +485,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <!-- Slide 3 -->
       <div class="carousel-item position-relative animated-slide" style="min-height: 100vh;">
-        <img class="position-absolute w-100 h-100 zoom-slide" src="imgs/slideImg2.jpg" style="object-fit: cover;">
+        <img class="position-absolute w-100 h-100 zoom-slide" src="imgs/slideImg3.jpg" style="object-fit: cover;">
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center text-center">
           <div class="p-3" style="max-width: 900px;">
-            <!-- <h6 class="text-title mb-3">Ouimmobilier</h6> -->
             <h3 class="display-3 text-capitalize text-white mb-3">Nos biens et avis clients</h3>
             <p class="mx-md-5 px-5">Découvrez nos offres actuelles et les retours de nos clients satisfaits.            </p>
-            <a href="" class="c-button c-button--gooey">
-              Voir les offres
+            <a href="contact.html" class="c-button c-button--gooey">
+              Voir les avis
               <div class="c-button__blobs">
                 <div></div><div></div><div></div>
               </div>
@@ -672,6 +671,484 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
     
     
+    <!-- About Start -->
+    <div class="about-section container-fluid" id="A propos">
+      <div class="container container-ab-sec py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-6 pb-5 pb-lg-0">
+
+
+                  <div class="gallery-container">
+                      
+                      <div class="gallery-card tall-card">
+                          <img class="twistable" src="imgs/aboutImg1.jpg" alt="Lush Poolside with Huts">
+                      </div>
+                      <div class="gallery-card">
+                          <img class="twistable" src="imgs/aboutImg2.jpg" alt="Resort Building by the Pool">
+                      </div>
+
+                      <div class="gallery-card">
+                        <img class="twistable" src="imgs/aboutImg3.jpg" alt="Resort Poolside View">
+                    </div>
+                  </div>
+
+
+                  <style>
+                    .about-section {
+                      background-color: #F9F9F9;
+                      padding-bottom: 60px;
+                      padding-top: 60px;
+                    }
+
+                 .gallery-container {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      grid-gap: 15px;
+                      max-width: 600px;
+                      margin: 50px auto;
+                  
+                  }
+                  .gallery-card {
+                      overflow: hidden;
+                      border-radius: 10px;
+                      transform: scale(0.85);
+                      transition: transform 0.6s ease-out;
+                      background-color:  transparent !important;
+                  }
+                  .gallery-card.in-view {
+                      transform: scale(1);
+                  }
+                  .tall-card {
+                      grid-row: span 2;
+                  }
+                  .gallery-card img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                  }
+
+
+                  </style>
+
+<script>
+  const cards = document.querySelectorAll('.gallery-card');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+          } else {
+              entry.target.classList.remove('in-view');
+          }
+      });
+  }, { threshold: 0.9 }); 
+
+  cards.forEach(card => {
+      observer.observe(card);
+   });
+</script>
+
+
+<!-- effect images -->
+
+<style>
+  /* Twist effect style */
+  .twistable {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    
+  }
+  </style>
+  
+  <script>
+  const imgs = document.querySelectorAll(".twistable");
+  
+  imgs.forEach(img => {
+    img.addEventListener("click", (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+  
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+  
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+  
+      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+  
+      setTimeout(() => {
+        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+      }, 300);
+    });
+  });
+</script>
+
+              </div>
+              <div class="col-lg-6">
+                  
+                  <h6 class="d-inline-block text-primary text-uppercase bg-light luxury-subtitle py-1 px-2">À propos de nous</h6>
+                  <h1 class="about-title mb-4">Votre partenaire immobilier à Marrakech</h1>
+                  <div class="about-container animated-line-div">
+                      <div class="animated-line-vertical"></div>
+                      <p class=" about-text pl-4 border-left border-primary">Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.</p>
+                  </div>
+                  <!-- <div class="row pt-3">
+
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Gestion complète</h6>
+                    </div>
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.3s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Tranquillité d’esprit</h6>
+                    </div>
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.5s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Service Client 24/7</h6>
+                    </div>
+                      
+                  </div> -->
+
+                  <div class="d-flex justify-content-start mt-4 social-icons-lux">
+                    <a href="https://wa.me/+212774658208" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+                  </div>
+                  
+                  
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <style>
+
+    /* .container-ab-sec {
+      background-color: #112E4C0b;
+      border-radius: 20px;
+  
+    } */
+
+
+    /* Text */
+.about-section .about-text {
+  
+    text-align: justify;           /* neat block alignment */
+    text-justify: inter-word;      /* spacing between words */
+    hyphens: auto;                 /* automatic word breaks */
+    letter-spacing: 0.5px;         /* elegant spacing */
+    word-spacing: 1px;             /* clean text flow */
+
+}
+.about-section .about-title ,.about-title{
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  position: relative;
+}
+
+
+
+
+
+    .bg-light{
+      background-color: #d5b163a8 !important;
+      border-radius: 20px !important;
+    }
+
+      .about-container {
+          display: flex;
+      }
+
+      .animated-line-vertical {
+          position: relative;
+          width: 30px;       
+          height: auto;    
+          background-color: #112E4C;
+          overflow: hidden;
+          border-radius: 2px;
+          margin-left: 2px;
+      }
+
+.animated-line-vertical::after {
+content: "";
+position: absolute;
+top: -50%;
+left: 0;
+width: 100%;
+height: 60%;
+background: rgba(255, 255, 255, 0.7); 
+animation: slide-vertical 2s linear infinite;
+}
+
+@keyframes slide-vertical {
+0% {
+top: -50%;
+}
+100% {
+top: 100%;
+}
+}
+
+
+/* CSS */
+.col-6 img {
+transition: transform 0.8s ease-in-out;
+cursor: pointer;
+}
+
+.btn-primary-iconsAb {
+  border: 10px black;
+}
+
+
+
+.fa-check {
+  color: #BB9C5A !important;
+}
+
+
+
+
+/* icons style */
+
+
+.social-icons-lux {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social-icons-lux .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00ADE7;   /* border color */
+  /* border-radius: 12px;          مربعة بزاوية شوي round */
+  font-size: 22px;
+  color: #00ADE7;              /* icon color */
+  background: transparent;     /* خلفية شفافة */
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+/* active effect  */
+.social-icons-lux .icon:active {
+  background: #00ADE7;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(187,156,90,0.4);
+}
+
+
+
+
+
+
+  </style>
+
+<script>
+  document.querySelectorAll(".col-6").forEach(col => {
+    const img = col.querySelector("img");
+    let angle = 0;
+
+    col.addEventListener("click", () => {
+      angle += 360;
+      img.style.transform = `rotate(${angle}deg)`;
+    });
+
+    col.addEventListener("mouseenter", () => {
+      if (!/Mobi|Android/i.test(navigator.userAgent)) { 
+        angle += 360;
+        img.style.transform = `rotate(${angle}deg)`;
+      }
+    });
+  });
+</script>
+
+
+
+  
+  <!-- About End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Why Choose Us Start -->
+<section class="why-choose section-padding text-center">
+  <div class="container">
+    <h2 class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+      Pourquoi choisir <span class="about-title">BOOKDARI</span>
+    </h2>
+
+    <div class="why-grid">
+      <!-- Card 1 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.3s">
+        <div class="icon-box">
+          <i class="fas fa-key"></i>
+        </div>
+        <h4>Gestion clé en main</h4>
+        <p>
+          Nous prenons tout en charge, de la publicité à la maintenance,
+          pour que vous puissiez profiter d’une tranquillité totale.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.5s">
+        <div class="icon-box">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h4>Optimisation des revenus</h4>
+        <p>
+          Nous améliorons vos photos, descriptions et tarifs pour maximiser la visibilité,
+          l’occupation et vos profits.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="why-card wow fadeInUp" data-wow-delay="0.7s">
+        <div class="icon-box">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h4>Service client 24/7</h4>
+        <p>
+          Support continu pour les clients et investisseurs à tout moment,
+          garantissant une expérience fluide et professionnelle.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === STYLE === -->
+<style>
+.why-choose {
+  background: #0b132b;
+  color: #fff;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.why-choose::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(187,156,90,0.1), transparent 70%);
+  animation: rotateBg 20s linear infinite;
+}
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-title span {
+  color: #BB9C5A;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(187,156,90,0.25);
+  border-radius: 18px;
+  padding: 40px 25px;
+  text-align: center;
+  max-width: 340px;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(187,156,90,0.12);
+}
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(187,156,90,0.25);
+}
+
+.icon-box {
+  background: linear-gradient(135deg, #BB9C5A, #d4af37);
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b132b;
+  font-size: 28px;
+  box-shadow: 0 0 25px rgba(187,156,90,0.5);
+  animation: floatIcon 3s ease-in-out infinite;
+}
+@keyframes floatIcon {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.why-card h4 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.why-card p {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0;
+}
+</style>
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
 
 
 
@@ -702,7 +1179,7 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 .luxury-divider {
   position: relative;
   width: 100%;
-  height: 3px;
+  height: 6px;
   background: linear-gradient(90deg, #163454, #112E4C, #173759);
   overflow: hidden;
   box-shadow: 0 0 15px rgba(6, 14, 37, 0.6); /* subtle glow */
@@ -745,6 +1222,375 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
 
 
+
+
+<!-- Services Section Start -->
+<section id="services" class="py-services">
+  <div class="container">
+    <div class="row mx-0 justify-content-center text-center">
+      <div class="col-lg-6">
+          <h6 class="d-inline-block bg-light luxury-subtitle text-primary text-uppercase py-1 px-2">Nos Services</h6>
+          <h2>Nos services de gestion immobilière premium</h2>
+
+          <br>
+      </div>
+      
+  </div>    <div class="services-slider swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img1.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-key"></i>
+            </div> -->
+            <h4>Gestion locative clé en main</h4>
+            <p>Nous prenons tout en charge, de la mise en ligne à la gestion complète de vos locations, pour une rentabilité sans stress.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/slideImg3.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-chart-line"></i>
+            </div> -->
+            <h4>Location saisonnière et longue durée</h4>
+            <p>Profitez d’une gestion fluide pour vos locations courtes ou longues, avec un suivi professionnel et des locataires fiables.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img3.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-headset"></i>
+            </div> -->
+            <h4>Check-in / Check-out professionnels</h4>
+            <p>Accueil chaleureux, départ organisé — vos clients profitent d’une expérience 5 étoiles dès leur arrivée.</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img4.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-broom"></i>
+            </div> -->
+            <h4>Ménage</h4>
+            <p>Service de nettoyage impeccable pour garantir un logement toujours propre et prêt à accueillir vos hôtes.</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img5.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-tools"></i>
+            </div> -->
+            <h4>Maintenance</h4>
+            <p>Interventions rapides et efficaces pour entretenir votre bien et assurer son bon fonctionnement à tout moment.</p>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img6.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-gem"></i>
+            </div> -->
+            <h4>Valorisation de votre bien</h4>
+            <p>Nous mettons en avant le potentiel de votre propriété pour maximiser sa valeur et attirer plus de clients.</p>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide service-slide" style="background-image: url('img/img7.jpg');">
+          <div class="slide-content">
+            <!-- <div class="icon-box">
+              <i class="fas fa-bullseye"></i>
+            </div> -->
+            <h4>Optimisation des annonces</h4>
+            <p>Des annonces attractives et bien positionnées grâce à des visuels professionnels et une stratégie tarifaire adaptée.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section End -->
+
+<!-- Swiper JS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Custom CSS -->
+<style>
+  .py-services {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+
+  .service-slide {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide-content {
+    background: rgba(6,14,37,0.75);
+    color: #fff;
+    text-align: center;
+    padding: 25px 30px;
+    border-radius: 15px;
+    max-width: 90%;
+  }
+
+  .slide-content .icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #BB9C5A, #d4af37);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #112E4C;
+  }
+
+  .slide-content h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+    margin: 0;
+    color: #ffffff9a;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #112E4C;
+  }
+
+  .swiper-pagination-bullet {
+    background: #112E4C;
+  }
+
+  /* Fade-up animation only on mobile */
+  @media (max-width: 768px) {
+    .slide-content.fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  }
+</style>
+
+<script>
+const swiper = new Swiper('.services-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    576: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    992: { slidesPerView: 3 },
+    1200: { slidesPerView: 4 },
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
+
+//  Fade-up on mobile for all slides
+if (window.innerWidth <= 768) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-up');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.slide-content').forEach(el => observer.observe(el));
+}
+</script>
+
+
+
+<br><br>
+
+<!-- section services End -->
+
+
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contactez-nous Section  -->
+<section class="cta-lux-section">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay">
+    <div class="container text-center">
+      <h2 class="cta-title">Contactez-nous pour toute demande ou information</h2>
+      <a href="contact.html" class="cta-btn">Contactez-nous</a>
+    </div>
+  </div>
+</section>
+
+<style>
+
+.cta-lux-section {
+  position: relative;
+  width: 100%;
+  height: 250px; /* section height */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%; /* extra height for parallax */
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transform: translateY(0) scale(1.1);
+  will-change: transform; /* GPU acceleration */
+}
+
+.cta-overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: rgba(6,14,37,0.35); /* subtle overlay for lux look */
+}
+
+.cta-title {
+  color: #fff; /* updated color */
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.3;
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.cta-btn {
+  padding: 10px 40px;
+  background-color: #BB9C5A; /* updated button color */
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  text-decoration: none !important;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+  background-color: #112E4C;
+  color: #fff;
+}
+
+
+/* Responsive */
+@media (max-width:768px){
+  .cta-title{ font-size:1.8rem; }
+  .cta-btn{ padding:12px 30px; }
+}
+</style>
+
+<script>
+// Smooth parallax inside section
+const ctaBg = document.querySelector('.cta-bg');
+const ctaSection = document.querySelector('.cta-lux-section');
+
+window.addEventListener('scroll', () => {
+  const rect = ctaSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if(rect.bottom > 0 && rect.top < windowHeight){
+    // calculate parallax offset based on section center
+    const sectionCenter = rect.top + rect.height / 2 - windowHeight / 2;
+    const offset = sectionCenter * -0.2; // negative for natural parallax
+    ctaBg.style.transform = `translateY(${offset}px) scale(1.1)`;
+  }
+});
+</script>
+
+
+
+
+
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+
     
 
 
@@ -756,6 +1602,317 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
 
 
+
+
+
+<!-- Testimonial Section Start -->
+<section class="luxury-testimonial-section">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <!-- Left: Image -->
+      <div class="col-lg-6 col-md-10  mb-lg-0 text-center">
+        <img
+          class="img-fluid img-luxury"
+          src="img/955870e5a6cf0d44663672a153426f0a.jpg"
+          alt="Luxury happy clients"
+          loading="lazy"
+        />
+      </div>
+
+      <br>
+      <!-- Right: Testimonials -->
+      <div class="col-lg-6 col-md-10">
+        <div class="text-center ">
+          <h6 class="luxury-subtitle bg-light">Témoignages</h6>
+          <h2 class="luxury-title">Ce que disent nos clients</h2>
+        </div>
+        
+        <br>
+
+        <div class="lux-slider">
+          <div class="lux-slide active">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Au début, j’étais un peu hésitant à confier mon appartement. 
+      Mais dès le premier mois, j’ai constaté une vraie différence : 
+      plus de réservations, une meilleure gestion et zéro tracas.”
+            </p>
+            <h5>— Mohamed R.</h5>
+          </div>
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Service impeccable ! L’équipe s’occupe de tout : annonces, check-in, ménage… 
+      Je reçois mes revenus sans le moindre souci. 
+      C’est exactement ce qu’il me fallait.”
+            </p>
+            <h5>— Youssef K.</h5>
+          </div>
+
+          <!-- <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Les activités proposées font toute la différence : excursions, mer,
+              location... mes voyageurs adorent ! Une expérience premium.”
+            </p>
+            <h5>— Fatima A.</h5>
+          </div> -->
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Une gestion très professionnelle et transparente. 
+      Mon bien est toujours impeccable, et mes locataires sont ravis. 
+      Je me sens enfin serein.”
+            </p>
+            <h5>— Karim L.</h5>
+          </div>
+
+          <div class="lux-slide">
+            <div class="lux-stars">★★★★★</div>
+            <p>
+              “Une équipe à l’écoute, réactive et disponible. 
+      Depuis que j’ai confié mes biens à BOOKDARI, mes revenus ont littéralement doublé. 
+      Je recommande sans hésiter.”
+            </p>
+            <h5>— Nadia M.</h5>
+          </div>
+
+          <!-- Controls (inside slider for z-index fix) -->
+          <div class="lux-slider-controls text-center">
+            <span class="lux-prev">‹</span>
+            <span class="lux-next">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* --- Image Animation --- */
+.img-luxury {
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* --- Section --- */
+.luxury-testimonial-section {
+  background: #f9f9f9;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-top: 100px !important;
+}
+
+.luxury-subtitle {
+  display: inline-block;
+  color: #112E4C;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: rgba(6, 14, 37, 0.06);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.luxury-title {
+  color: #112E4C;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-top: 2px;
+}
+
+/* --- Slider --- */
+.lux-slider {
+  position: relative;
+  perspective: 1200px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lux-slide {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  /* box-shadow: 0 10px 40px rgba(6, 14, 37, 0.12); */
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  width: 85%;
+  max-width: 700px;
+  text-align: center;
+  transform: rotateY(80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.lux-slide.active {
+  transform: rotateY(0deg) translateZ(0px) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.lux-slide.prev {
+  transform: rotateY(-80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+}
+
+.lux-slide.next {
+  transform: rotateY(80deg) translateZ(-200px) scale(0.8);
+  opacity: 0;
+}
+
+/* --- Stars --- */
+.lux-stars {
+  color: #f4b400;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  animation: glowStars 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowStars {
+  from {
+    text-shadow: 0 0 5px #f4b400, 0 0 15px #f4b400;
+  }
+  to {
+    text-shadow: 0 0 15px #ffd95a, 0 0 25px #f4b400;
+  }
+}
+
+.lux-slide p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.lux-slide h5 {
+  color: #112E4C;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --- Controls --- */
+.lux-slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.lux-slider-controls span {
+  font-size: 2rem;
+  color: #112E4C;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.lux-slider-controls span:hover {
+  color: #0d1a4f;
+  transform: scale(1.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .lux-slider {
+    height: auto;
+    min-height: 280px;
+  }
+  .lux-slide {
+    width: 95%;
+    padding: 1.8rem;
+  }
+  .luxury-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .img-luxury {
+    margin-bottom: 2rem;
+  }
+  .lux-slide {
+    width: 100%;
+    padding: 1.6rem;
+  }
+}
+</style>
+
+<script>
+/* Image Animation */
+const img = document.querySelector(".img-luxury");
+if (img) {
+  img.addEventListener("click", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -12;
+    const rotateY = ((x - centerX) / centerX) * 12;
+    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    setTimeout(() => {
+      img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+    }, 400);
+  });
+}
+
+/* Testimonial Slider */
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".lux-slide");
+  const next = document.querySelector(".lux-next");
+  const prev = document.querySelector(".lux-prev");
+  let index = 0;
+
+  function showSlide(newIndex) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active", "prev", "next");
+      if (i === newIndex) slide.classList.add("active");
+      else if (i === (newIndex - 1 + slides.length) % slides.length) slide.classList.add("prev");
+      else if (i === (newIndex + 1) % slides.length) slide.classList.add("next");
+    });
+  }
+
+  next.addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  prev.addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5500);
+
+  showSlide(index);
+});
+</script>
+<!-- Testimonial Section End -->
 
 
 
@@ -774,6 +1931,81 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
 
 
+
+
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+  
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6 pr-lg-5 mb-5">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="imgs/logo.png" loading="lazy" width="130px">   
+                        
+                    </a>
+                    <p>
+                      Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Rue de Khenifra, 10052 Rabat, Maroc</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>+212774658208</p>
+                    <p><i class="fa fa-envelope mr-2"></i> ouimmobiliermarrakech@gmail.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://wa.me/+212774658208"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <br>
+                            <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                                <a href="#A propos" class="nav-item nav-link">A propos</a>
+                                <a href="#services" class="nav-item nav-link">Nos services</a>
+                                <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Our Services</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>servece 1</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 2</a>
+                                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 3</a>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-sm-12 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                            <div class="w-100">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary px-4">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#">Ouimmobilier</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0 text-white">Developed by <a href="">Mhamed</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
