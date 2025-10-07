@@ -429,7 +429,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 
-
 <!-- Carousel Start -->
 <div class="container-fluid p-0 pb-5">
   <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="8000">
@@ -452,14 +451,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
             <h3 class="display-3 text-capitalize text-white mb-3">Votre Confort Commence Ici</h3>
             <p class="mx-md-5 px-5">Gestion complète de votre bien avec des services premium répondant à tous vos besoins.</p>
-            <a href="#services" class="c-button c-button--gooey">Découvrir Nos Services<div class="c-button__blobs">
+            <a href="#services" class="c-button c-button--gooey">
+              Découvrir Nos Services
+              <div class="c-button__blobs">
                 <div></div><div></div><div></div>
               </div>
             </a>
-                          <div class="c-button__blobs">
-                <div></div><div></div><div></div>
-              </div>
-            </button>
           </div>
         </div>
       </div>
@@ -472,14 +469,12 @@ document.addEventListener('DOMContentLoaded', function() {
             <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
             <h3 class="display-3 text-capitalize text-white mb-3">Louez Sans Souci</h3>
             <p class="mx-md-5 px-5">De la publication sur Airbnb et Booking à l’accueil, le ménage et la maintenance… nous prenons tout en charge.</p>
-            <a href="#A propos" class="c-button c-button--gooey">À propos de nous<div class="c-button__blobs">
+            <a href="#Apropos" class="c-button c-button--gooey">
+              À propos de nous
+              <div class="c-button__blobs">
                 <div></div><div></div><div></div>
               </div>
             </a>
-                          <div class="c-button__blobs">
-                <div></div><div></div><div></div>
-              </div>
-            </button>
           </div>
         </div>
       </div>
@@ -492,27 +487,25 @@ document.addEventListener('DOMContentLoaded', function() {
             <h6 class="text-title text-uppercase mb-3">BOOKDARI</h6>
             <h3 class="display-3 text-capitalize text-white mb-3">Votre bien entre de bonnes mains</h3>
             <p class="mx-md-5 px-5">Nettoyage régulier, maintenance complète et optimisation de votre propriété pour attirer davantage de clients.</p>
-            <a href="contact.html" class="c-button c-button--gooey">Contactez-nous<div class="c-button__blobs">
+            <a href="contact.html" class="c-button c-button--gooey">
+              Contactez-nous
+              <div class="c-button__blobs">
                 <div></div><div></div><div></div>
               </div>
             </a>
-                          <div class="c-button__blobs">
-                <div></div><div></div><div></div>
-              </div>
-            </button>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-  
-<!-- Section Divider -->
-<div class="luxury-divider"></div>
+
+  <!-- Section Divider -->
+  <div class="luxury-divider"></div>
 </div>
 
 <style>
-/* === Continuous Slow Zoom/Move Effect (like video) === */
+/* === Continuous Slow Zoom/Move Effect === */
 .zoom-slide {
   animation: cinematicZoom 15s ease-in-out infinite alternate;
   transform-origin: center center;
@@ -548,7 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
 @keyframes buttonRise { to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-/* === Luxury Paragraph === */
+/* === Paragraph Style === */
 .carousel-caption p {
   color: #f8f8f8;
   font-size: 15px;
@@ -565,45 +558,68 @@ document.addEventListener('DOMContentLoaded', function() {
   font-weight: 400;
 }
 
-/* Hover luxury glow */
-.carousel-caption p:active {
-  box-shadow: 0 0 50px #bb9c5a5e;
-  transform: scale(1.02);
-  transition: all 0.4s ease;
+/* === Gooey Button === */
+.c-button {
+  color: #000;
+  background: transparent;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0.7em 1.4em;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+}
+.c-button--gooey {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #BB9C5A;
+  transition: all 700ms ease;
+  border-radius: 5px;
+}
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0; left: 0; bottom: -3px; right: -1px;
+  z-index: -1;
+}
+.c-button--gooey .c-button__blobs div {
+  background-color: #BB9C5A;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+.c-button--gooey:hover {
+  color: #fff;
+  background-color: rgba(187,156,90,0.1);
+  box-shadow: 0 0 25px #bb9c5a4f;
 }
 
-/* Button Gooey (Professional) */
-.c-button { color: #000; background: transparent; font-weight: 600; font-size: 13px; padding: 0.7em 1.4em; cursor: pointer; position: relative; z-index: 1; }
-.c-button--gooey { color: #fff; text-transform: uppercase; letter-spacing: 1px; border: 3px solid #BB9C5A; transition: all 700ms ease; }
-.c-button--gooey .c-button__blobs { height: 100%; filter: url(#goo); overflow: hidden; position: absolute; top: 0; left: 0; bottom: -3px; right: -1px; z-index: -1; }
-.c-button--gooey .c-button__blobs div { background-color: #BB9C5A; width: 34%; height: 100%; border-radius: 100%; position: absolute; transform: scale(1.4) translateY(125%) translateZ(0); transition: all 700ms ease; }
-/* .c-button--gooey .c-button__blobs div:nth-child(1) { left: -5%; }
-.c-button--gooey .c-button__blobs div:nth-child(2) { left: 30%; transition-delay: 60ms; }
-.c-button--gooey .c-button__blobs div:nth-child(3) { left: 66%; transition-delay: 25ms; } */
-.c-button--gooey:hover { color: #fff; }
-/* .c-button--gooey:hover .c-button__blobs div { transform: scale(1.4) translateY(0) translateZ(0); } */
-
-
-
-/* --- Carousel Indicators Luxury Style --- */
+/* === Indicators === */
 .carousel-indicators {
   bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 10px; /* spacing between squares */
+  gap: 10px;
 }
 
 .carousel-indicators li {
   width: 14px;
   height: 14px;
-  border-radius: 4px; /* rounded squares */
+  border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.4s ease;
   cursor: pointer;
   border: 1px solid #BB9C5A;
   transform: scale(1);
 }
-
 .carousel-indicators li.active {
   background-color: #BB9C5A;
   width: 18px;
@@ -612,33 +628,18 @@ document.addEventListener('DOMContentLoaded', function() {
   box-shadow: 0 0 12px #BB9C5A80;
   transform: scale(1.2);
 }
-
-/* Hover effect for non-active indicators */
 .carousel-indicators li:hover {
   transform: scale(1.1);
   background-color: rgba(187, 156, 90, 0.8);
-  transition: all 0.3s ease;
 }
-
-.c-button--gooey {
-  border-radius: 5px;
-}
-
-
-
 </style>
 
 <script>
-/* Reset animation on slide change */
-// Reset animation on slide change + smooth parallax
 $('#header-carousel').on('slide.bs.carousel', function () {
   $('.animated-slide .text-title, .animated-slide h3, .animated-slide p').css({opacity:0, transform:'translateY(-50px)'});
   $('.animated-slide .c-button').css({opacity:0, transform:'translateY(50px)'});
 });
-
 </script>
- 
-<!-- coursell End -->
 
 
 
