@@ -810,25 +810,22 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 220px;
+  grid-auto-rows: 200px; /* base height for small cards */
   gap: 15px;
   max-width: 600px;
   margin: 50px auto;
 }
+
 .gallery-card {
   overflow: hidden;
   border-radius: 10px;
-  transform: scale(0.9);
-  transition: transform 0.6s ease-out;
-  background-color: transparent !important;
 }
-.gallery-card.in-view {
-  transform: scale(1);
-}
+
 .tall-card {
-  grid-row: span 2;
-  height: auto;
+  grid-row: span 2;       /* tall card spans 2 rows */
+  height: 100%;           /* takes the combined height of 2 rows */
 }
+
 .gallery-card img {
   width: 100%;
   height: 100%;
@@ -836,6 +833,23 @@ $('#header-carousel').on('slide.bs.carousel', function () {
   display: block;
   border-radius: 10px;
 }
+
+/* responsive */
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-auto-rows: 140px; /* small rows for mobile */
+  }
+  .tall-card {
+    grid-row: span 2;
+  }
+}
+
+
+
+.gallery-card.in-view {
+  transform: scale(1);
+}
+
 
 /* Twist effect */
 .twistable {
