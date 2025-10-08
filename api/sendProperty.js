@@ -1,87 +1,76 @@
 import nodemailer from "nodemailer";
-import formidable from "formidable";
-import fs from "fs";
-
-export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
-  if (req.method !== "POST")
+  if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
 
-  const form = formidable({ multiples: true, maxFileSize: 5 * 1024 * 1024 }); // 5MB limit
+  const {
+    name,
+    email,
+    phone,
+    propertyType,
+    transactionType,
+    price,
+    location,
+    description,
+    images,
+  } = req.body;
 
-  form.parse(req, async (err, fields, files) => {
-    if (err) {
-      console.error("Formidable error:", err);
-      return res.status(500).json({ error: "Error parsing form data" });
-    }
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER, // your Gmail
+        pass: process.env.EMAIL_PASS, // Gmail App Password
+      },
+    });
 
-    const {
-      name,
-      email,
-      phone,
-      propertyType,
-      transaction,
-      location,
-      surface,
-      price,
-      description,
-    } = fields;
+    const mailOptions = {
+      from: email,
+      to: "mhamedkbt@gmail.com",
+      subject: `🟦 Nouvelle soumission de bien — ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
+          <h2 style="color: #00ADE7;">Nouveau bien soumis sur BOOKDARI</h2>
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Nom:</td><td style="padding: 5px; border: 1px solid #ddd;">${name}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Email:</td><td style="padding: 5px; border: 1px solid #ddd;">${email}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Téléphone:</td><td style="padding: 5px; border: 1px solid #ddd;">${phone}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Type de bien:</td><td style="padding: 5px; border: 1px solid #ddd;">${propertyType}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Transaction:</td><td style="padding: 5px; border: 1px solid #ddd;">${transactionType}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Prix:</td><td style="padding: 5px; border: 1px solid #ddd;">${price}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Localisation:</td><td style="padding: 5px; border: 1px solid #ddd;">${location}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Description:</td><td style="padding: 5px; border: 1px solid #ddd;">${description}</td></tr>
+          </table>
 
-    // 🧩 Convert fields (because Formidable gives arrays)
-    const clean = (val) => (Array.isArray(val) ? val[0] : val || "");
+          ${
+            images && images.length > 0
+              ? `
+            <h3 style="color:#112E4C; margin-top:20px;">📸 Photos du bien</h3>
+            ${images
+              .slice(0, 3)
+              .map(
+                (img) =>
+                  `<img src="${img}" alt="Property Image" style="max-width:200px; margin:5px; border-radius:8px;">`
+              )
+              .join("")}
+          `
+              : ""
+          }
 
-    try {
-      const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS,
-        },
-      });
+          <p style="font-size:12px; color:#777; margin-top:20px;">
+            Ce message a été envoyé automatiquement depuis le site BOOKDARI.
+          </p>
+        </div>
+      `,
+    };
 
-      const attachments = [];
-      for (const key in files) {
-        const file = Array.isArray(files[key]) ? files[key][0] : files[key];
-        if (file && fs.existsSync(file.filepath)) {
-          attachments.push({
-            filename: file.originalFilename,
-            path: file.filepath,
-          });
-        }
-      }
+    await transporter.sendMail(mailOptions);
 
-      const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: "mhamedkbt@gmail.com",
-        subject: `📄 Formulaire Vente/Location - ${clean(propertyType)}`,
-        html: `
-          <h2>Nouveau formulaire reçu</h2>
-          <p><strong>Nom :</strong> ${clean(name)}</p>
-          <p><strong>Email :</strong> ${clean(email)}</p>
-          <p><strong>Téléphone :</strong> ${clean(phone)}</p>
-          <p><strong>Type de bien :</strong> ${clean(propertyType)}</p>
-          <p><strong>Transaction :</strong> ${clean(transaction)}</p>
-          <p><strong>Localisation :</strong> ${clean(location)}</p>
-          <p><strong>Surface :</strong> ${clean(surface)} m²</p>
-          <p><strong>Prix :</strong> ${clean(price)} MAD</p>
-          <p><strong>Description :</strong><br>${clean(description)}</p>
-        `,
-        attachments,
-      };
-
-      // ✅ wrap sendMail in Promise (Vercel needs this)
-      await new Promise((resolve, reject) => {
-        transporter.sendMail(mailOptions, (error, info) => {
-          if (error) return reject(error);
-          resolve(info);
-        });
-      });
-
-      return res.status(200).json({ message: "Formulaire envoyé avec succès !" });
-    } catch (error) {
-      console.error("SMTP Error:", error);
-      return res.status(500).json({ error: "Erreur lors de l'envoi du mail !" });
-    }
-  });
+    return res.status(200).json({ message: "Email envoyé avec succès !" });
+  } catch (err) {
+    console.error("Erreur SMTP:", err);
+    return res.status(500).json({ error: "Échec de l’envoi de l’email" });
+  }
 }
