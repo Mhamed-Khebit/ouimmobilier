@@ -247,8 +247,7 @@ window.addEventListener("load", () => {
         <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
         <li class="nav-item"><a href="#A propos" class="nav-link">A propos</a></li>
         <li class="nav-item"><a href="#services" class="nav-link">Nos services</a></li>
-        <li class="nav-item"><a href="propriétés.html" class="nav-link">Nos propriétés</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Déposer un bien</a></li>
+        <li class="nav-item"><a href="#deposer" class="nav-link">Déposer un bien</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a>
@@ -480,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- <h6 class="text-title mb-3">Ouimmobilier</h6> -->
             <h3 class="display-3 text-capitalize text-white mb-3">Vous avez un bien à vendre ou à louer ?</h3>
             <p class="mx-md-5 px-5">Remplissez notre formulaire, on s’occupe du reste.</p>
-            <a href="#services" class="c-button c-button--gooey">
+            <a href="#deposer" class="c-button c-button--gooey">
               Déposer un bien
               <div class="c-button__blobs">
                 <div></div><div></div><div></div>
@@ -497,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="p-3" style="max-width: 900px;">
             <h3 class="display-3 text-capitalize text-white mb-3">Nos biens et avis clients</h3>
             <p class="mx-md-5 px-5">Découvrez nos offres actuelles et les retours de nos clients satisfaits.            </p>
-            <a href="contact.html" class="c-button c-button--gooey">
+            <a href="#termoignages" class="c-button c-button--gooey">
               Voir les avis
               <div class="c-button__blobs">
                 <div></div><div></div><div></div>
@@ -1606,7 +1605,7 @@ const swiper = new Swiper('.services-slider', {
   left: 0;
   width: 100%;
   height: 130%;
-  background-image: url('img/cta-bg.jpg');
+  background-image: url('imgs/cta-bg.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -1713,7 +1712,7 @@ window.addEventListener('scroll', () => {
 
 
 <!-- Responsive Formulaire Vente/Location -->
-<section id="contact" class="form-section py-services">
+<section id="deposer" class="form-section py-services">
   <div class="container container-form">
     <div class="row justify-content-center text-center mb-5">
       <div class="col-lg-8">
@@ -1940,7 +1939,7 @@ async function emailSendProperty() {
 
 
 <!-- New Testimonial Slider Section with Image Start -->
-<section class="new-testimonial-section">
+<section id="termoignages" class="new-testimonial-section">
   <br>
   <div class="container">
     <div class="row align-items-center justify-content-center">
@@ -2279,7 +2278,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <a href="index.html" class="nav-item nav-link active">Accueil</a>
                                 <a href="#A propos" class="nav-item nav-link">A propos</a>
                                 <a href="#services" class="nav-item nav-link">Nos services</a>
-                                <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
+                                <a href="#deposer" class="nav-item nav-link">Déposer un bien</a>
                                 <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                         </div>
