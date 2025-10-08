@@ -1783,42 +1783,34 @@ window.addEventListener('scroll', () => {
   
   // Submit form
   async function emailSendProperty() {
-    const formData = new FormData(document.getElementById('propertyForm'));
-  
-    try {
-      const res = await fetch('/api/sendProperty', {
-        method: 'POST',
-        body: formData
-      });
-      const data = await res.json();
-      if(data.message) {
-        Swal.fire({
-          icon: "success",
-          title: "Succès !",
-          text: data.message,
-          confirmButtonColor: "#112E4C"
-        });
-        document.getElementById('propertyForm').reset();
-        fileList.innerHTML = '';
-        fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Erreur !",
-          text: data.error || "Erreur lors de l'envoi !",
-          confirmButtonColor: "#112E4C"
-        });
-      }
-    } catch(err) {
-      console.error(err);
-      Swal.fire({
-        icon: "error",
-        title: "Erreur !",
-        text: "Erreur lors de l'envoi !",
-        confirmButtonColor: "#112E4C"
-      });
+  const form = document.getElementById('propertyForm');
+  const formData = new FormData(form);
+
+  const data = Object.fromEntries(formData.entries()); // convert to JSON
+
+  try {
+    const res = await fetch('/api/sendProperty', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (result.message) {
+      swal("Succès", result.message, "success");
+      form.reset();
+      document.getElementById("file-list").innerHTML = "";
+      document.getElementById("file-counter").textContent = "0 / 3 photos ajoutées";
+    } else {
+      swal("Erreur", result.error || "Erreur lors de l'envoi !", "error");
     }
+  } catch (err) {
+    console.error("Error:", err);
+    swal("Erreur", "Échec de l'envoi de l'email !", "error");
   }
+}
+
   </script>
   
   

@@ -5,49 +5,47 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  try {
-    const { name, email, phone, propertyType, location, price, description } = req.body;
+  const { name, email, phone, propertyType, transaction, location, surface, price, description } = req.body;
 
-    // ✅ create transporter
+  try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: process.env.EMAIL_USER, // set in Vercel env
+        pass: process.env.EMAIL_PASS, // Gmail app password
       },
     });
 
-    // ✅ format mail
     const mailOptions = {
-      from: email || process.env.EMAIL_USER,
-      to: "mhamedkbt@gmail.com",
-      subject: "Nouvelle propriété soumise sur BOOKDARI",
+      from: email,
+      to: "mhamedkbt@gmail.com", // your inbox
+      subject: `Nouveau formulaire de ${transaction || "propriété"} - ${propertyType || "Bien"}`,
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-          <h2 style="color: #007BFF;">Nouvelle Propriété Reçue</h2>
+          <h2 style="color: #007BFF;">Nouvelle propriété soumise sur BOOKDARI</h2>
           <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="font-weight:bold;padding:5px;">Nom:</td><td>${name || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Email:</td><td>${email || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Téléphone:</td><td>${phone || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Type de bien:</td><td>${propertyType || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Localisation:</td><td>${location || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Prix:</td><td>${price || "N/A"}</td></tr>
-            <tr><td style="font-weight:bold;padding:5px;">Description:</td><td>${description || "N/A"}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Nom:</td><td>${name}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Email:</td><td>${email}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Téléphone:</td><td>${phone}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Type de bien:</td><td>${propertyType}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Transaction:</td><td>${transaction}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Localisation:</td><td>${location}</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Surface:</td><td>${surface} m²</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Prix:</td><td>${price} MAD</td></tr>
+            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Description:</td><td>${description}</td></tr>
           </table>
           <p style="font-size: 12px; color: #777; margin-top: 20px;">
-            Ce message a été envoyé depuis le formulaire de dépôt de bien sur OUImmobilier.
+            Ce message a été envoyé depuis le formulaire de dépôt de bien sur BOOKDARI.
           </p>
         </div>
-      `,
+      `
     };
 
-    // ✅ send mail
     await transporter.sendMail(mailOptions);
 
-    return res.status(200).json({ message: "Email envoyé avec succès !" });
-
-  } catch (error) {
-    console.error("Erreur SMTP:", error);
-    return res.status(500).json({ error: "Échec de l'envoi de l'email" });
+    return res.status(200).json({ message: "Formulaire envoyé avec succès !" });
+  } catch (err) {
+    console.error("SMTP Error:", err);
+    return res.status(500).json({ error: "Erreur lors de l'envoi du mail" });
   }
 }
