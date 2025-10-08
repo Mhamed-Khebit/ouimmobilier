@@ -855,8 +855,10 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
 }
 .about-section .about-title ,.about-title{
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   position: relative;
 }
 
@@ -1001,53 +1003,212 @@ cursor: pointer;
 
 
 
+<!-- Founder Section Start -->
+<section id="founder" class="founder-section py-5">
+  <div class="container text-center" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="lux-title mb-5">À propos du fondateur</h2>
+
+    <div class="founder-card mx-auto">
+      <div class="founder-logo mb-4">
+        <img src="imgs/fondImg.jpg" alt="Fondateur" />
+      </div>
+      <h4 class="founder-name mb-3">Mohamed <span>El Amrani</span></h4>
+      <p class="founder-text">
+        Avec plus de 8 ans d’expérience dans l’immobilier, dont 4 chez
+        <strong>Mubawab</strong>, je mets mon expertise du marché au service de mes clients
+        pour les accompagner efficacement dans leurs projets d’achat, de vente
+        ou de location.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.founder-section {
+  background: #f9f9f9;
+  position: relative;
+  padding-top: 20px !important;
+  padding-bottom: 90px !important;
+}
+
+/* Titre élégant */
+.lux-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  color: #112E4C;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.lux-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #00ADE7;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* Carte principale */
+.founder-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 40px 30px;
+  max-width: 600px;
+  transition: all 0.5s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 173, 231, 0.117);
+}
+
+/* Logo circulaire */
+.founder-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #00ADE7;
+  padding: 5px;
+  background: #fff;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.founder-logo img:active {
+  transform: scale(1.05);
+}
+
+/* Nom */
+.founder-name {
+  font-family: "Poppins", sans-serif;
+  color: #112E4C;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.founder-name span {
+  color: #00ADE7;
+  font-weight: 500;
+}
+
+/* Texte */
+.founder-text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto;
+}
+</style>
+
+<!-- Animation on Scroll (if not already in project) -->
+<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init(); -->
+</script>
 
 
 
 
-  <!-- Why Choose Us Start -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Why Choose Ouimmobilier Start -->
 <section class="why-choose section-padding text-center">
-  <div class="container">
-    <h2 class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
-      Pourquoi choisir <span class="about-title">BOOKDARI</span>
+  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="section-title mb-5">
+      Pourquoi choisir <span class="about-title">Ouimmobilier</span>
     </h2>
 
+    <p class="intro-text mb-5">
+      Chez <strong>Ouimmobilier Marrakech</strong>, nous mettons notre expertise au service de vos projets immobiliers à Marrakech.  
+      Que vous souhaitiez vendre, acheter ou louer un bien, notre équipe vous accompagne à chaque étape pour un service personnalisé, efficace et sécurisé.
+    </p>
+
     <div class="why-grid">
-      <!-- Card 1 -->
-      <div class="why-card wow fadeInUp" data-wow-delay="0.3s">
-        <div class="icon-box">
-          <i class="fas fa-key"></i>
-        </div>
-        <h4>Gestion clé en main</h4>
+
+      <!-- Vente de biens -->
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon-box"><i class="fas fa-home"></i></div>
+        <h4>Vente de biens immobiliers</h4>
         <p>
-          Nous prenons tout en charge, de la publicité à la maintenance,
-          pour que vous puissiez profiter d’une tranquillité totale.
+          Évaluation du prix selon le marché local, mise en valeur du bien (photos, diffusion sur plateformes),
+          prospection d’acheteurs, négociation et accompagnement jusqu’à la signature.
         </p>
       </div>
 
-      <!-- Card 2 -->
-      <div class="why-card wow fadeInUp" data-wow-delay="0.5s">
-        <div class="icon-box">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <h4>Optimisation des revenus</h4>
+      <!-- Location -->
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon-box"><i class="fas fa-building"></i></div>
+        <h4>Location longue durée</h4>
         <p>
-          Nous améliorons vos photos, descriptions et tarifs pour maximiser la visibilité,
-          l’occupation et vos profits.
+          Recherche de locataires fiables, rédaction de contrats conformes à la loi marocaine
+          et gestion complète des états des lieux d’entrée et de sortie.
         </p>
       </div>
 
-      <!-- Card 3 -->
-      <div class="why-card wow fadeInUp" data-wow-delay="0.7s">
-        <div class="icon-box">
-          <i class="fas fa-headset"></i>
-        </div>
-        <h4>Service client 24/7</h4>
+      <!-- Estimation -->
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+        <h4>Estimation précise</h4>
         <p>
-          Support continu pour les clients et investisseurs à tout moment,
-          garantissant une expérience fluide et professionnelle.
+          Évaluation réaliste du prix de votre bien grâce à une connaissance approfondie du marché local
+          pour maximiser vos chances de vente rapide et réussie.
         </p>
       </div>
+
+      <!-- Recherche acheteurs -->
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="icon-box"><i class="fas fa-search-location"></i></div>
+        <h4>Recherche personnalisée</h4>
+        <p>
+          Sélection de biens selon votre budget, localisation et type (villa, riad, appartement, terrain),
+          avec organisation des visites et négociation du meilleur rapport qualité/prix.
+        </p>
+      </div>
+
+      <!-- Accompagnement -->
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="600">
+        <div class="icon-box"><i class="fas fa-handshake"></i></div>
+        <h4>Accompagnement complet</h4>
+        <p>
+          De la première visite jusqu’à la signature, nous assurons un suivi professionnel,
+          transparent et humain à chaque étape de votre projet immobilier.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1055,63 +1216,62 @@ cursor: pointer;
 <!-- === STYLE === -->
 <style>
 .why-choose {
-  background: #0b132b;
-  color: #fff;
-  padding: 70px 20px;
+  background: linear-gradient(180deg, #f9f9f9 0%, #eef9fd 100%);
+  color: #112E4C;
+  padding: 80px 20px;
   position: relative;
   overflow: hidden;
 }
-.why-choose::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(187,156,90,0.1), transparent 70%);
-  animation: rotateBg 20s linear infinite;
-}
-@keyframes rotateBg {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
+/* titre */
 .section-title {
-  font-size: 36px;
-  font-weight: 600;
-  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #112E4C;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.section-title span {
-  color: #BB9C5A;
+  margin-bottom: 20px;
 }
 
+.section-title span {
+  color: #00ADE7;
+}
+
+.intro-text {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* grid */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
+  gap: 35px;
   justify-items: center;
 }
 
+/* cards */
 .why-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(187,156,90,0.25);
+  background: #fff;
+  border: 1px solid rgba(0, 173, 231, 0.2);
   border-radius: 18px;
   padding: 40px 25px;
   text-align: center;
-  max-width: 340px;
-  transition: all 0.5s ease;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 0 20px rgba(187,156,90,0.12);
+  max-width: 330px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(17,46,76,0.05);
 }
 .why-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 40px rgba(187,156,90,0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(17,46,76,0.12);
 }
 
+/* icons */
 .icon-box {
-  background: linear-gradient(135deg, #BB9C5A, #d4af37);
+  background: linear-gradient(135deg, #112E4C, #00ADE7);
   width: 70px;
   height: 70px;
   margin: 0 auto 25px auto;
@@ -1119,34 +1279,39 @@ cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0b132b;
+  color: #fff;
   font-size: 28px;
-  box-shadow: 0 0 25px rgba(187,156,90,0.5);
+  box-shadow: 0 0 20px rgba(0,173,231,0.4);
   animation: floatIcon 3s ease-in-out infinite;
 }
+
 @keyframes floatIcon {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
 .why-card h4 {
-  color: #fff;
-  font-size: 20px;
+  color: #112E4C;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .why-card p {
-  color: #ddd;
-  font-size: 15px;
-  line-height: 1.8;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.7;
   margin: 0;
 }
 </style>
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome & AOS -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 
 
