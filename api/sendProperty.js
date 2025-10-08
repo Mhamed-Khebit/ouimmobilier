@@ -1,52 +1,55 @@
 import nodemailer from "nodemailer";
+import formidable from "formidable";
+import fs from "fs";
+
+export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+  if(req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  try {
-    const { data, attachments } = req.body;
+  const form = formidable({ multiples: true, maxFileSize: 10 * 1024 * 1024 }); // 10MB max
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+  form.parse(req, async (err, fields, files) => {
+    if(err) return res.status(500).json({ error: err.message });
 
-    const mailOptions = {
-      from: data.email,
-      to: "mhamedkbt@gmail.com",
-      subject: `Nouvelle soumission de bien (${data.transaction})`,
-      html: `
-      <div style="font-family: Arial, sans-serif; color:#333; line-height:1.6;">
-        <h2 style="color:#112E4C;">Nouvelle soumission de bien via le formulaire Ouimmobilier</h2>
-        <table style="width:100%; border-collapse: collapse;">
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Nom:</td><td style="padding:5px; border:1px solid #ddd;">${data.name}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Email:</td><td style="padding:5px; border:1px solid #ddd;">${data.email}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Téléphone:</td><td style="padding:5px; border:1px solid #ddd;">${data.phone}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Type de bien:</td><td style="padding:5px; border:1px solid #ddd;">${data.propertyType}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Transaction:</td><td style="padding:5px; border:1px solid #ddd;">${data.transaction}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Localisation:</td><td style="padding:5px; border:1px solid #ddd;">${data.location}</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Surface:</td><td style="padding:5px; border:1px solid #ddd;">${data.surface} m²</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Prix:</td><td style="padding:5px; border:1px solid #ddd;">${data.price} MAD</td></tr>
-          <tr><td style="font-weight:bold; padding:5px; border:1px solid #ddd;">Description:</td><td style="padding:5px; border:1px solid #ddd;">${data.description}</td></tr>
-        </table>
-        <p style="font-size:12px; color:#777; margin-top:20px;">Ce message a été envoyé depuis le formulaire Ouimmobilier.</p>
-      </div>
-      `,
-      attachments: attachments.map(file => ({
-        filename: file.filename,
-        content: Buffer.from(file.content.data),
-      })),
-    };
+    const { name, email, phone, propertyType, transaction, location, surface, price, description } = fields;
 
-    await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Email envoyé avec succès !" });
-  } catch (err) {
-    console.error("SMTP Error:", err);
-    res.status(500).json({ error: "Impossible d'envoyer l'email" });
-  }
+    try {
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS }
+      });
+
+      const attachments = [];
+      Object.keys(files).forEach(key => {
+        const file = Array.isArray(files[key]) ? files[key][0] : files[key];
+        attachments.push({ filename: file.originalFilename, path: file.filepath });
+      });
+
+      const mailOptions = {
+        from: email,
+        to: "mhamedkbt@gmail.com",
+        subject: `Formulaire Vente/Location - ${propertyType}`,
+        html: `
+          <h2>Nouveau formulaire de vente/location</h2>
+          <p><strong>Nom:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Téléphone:</strong> ${phone}</p>
+          <p><strong>Type de bien:</strong> ${propertyType}</p>
+          <p><strong>Transaction:</strong> ${transaction}</p>
+          <p><strong>Localisation:</strong> ${location}</p>
+          <p><strong>Surface:</strong> ${surface} m²</p>
+          <p><strong>Prix:</strong> ${price} MAD</p>
+          <p><strong>Description:</strong><br>${description}</p>
+        `,
+        attachments
+      };
+
+      await transporter.sendMail(mailOptions);
+      return res.status(200).json({ message: "Formulaire envoyé avec succès !" });
+    } catch(error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erreur lors de l'envoi du mail !" });
+    }
+  });
 }

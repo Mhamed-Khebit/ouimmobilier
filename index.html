@@ -1614,7 +1614,6 @@ window.addEventListener('scroll', () => {
 
 
 
-
 <!-- Formulaire Vente/Location -->
 <section id="contact" class="form-section py-services">
   <div class="container">
@@ -1629,25 +1628,22 @@ window.addEventListener('scroll', () => {
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <form id="propertyForm" class="property-form" onsubmit="event.preventDefault(); emailSendProperty();">          
-          <!-- Nom et Prénom -->
+
           <div class="form-group">
             <label for="name">Nom et Prénom</label>
             <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
           </div>
 
-          <!-- Email -->
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Votre email" required>
           </div>
 
-          <!-- Téléphone -->
           <div class="form-group">
             <label for="phone">Téléphone</label>
             <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
           </div>
 
-          <!-- Type de bien -->
           <div class="form-group">
             <label for="propertyType">Type de bien</label>
             <select id="propertyType" name="propertyType" required>
@@ -1659,7 +1655,6 @@ window.addEventListener('scroll', () => {
             </select>
           </div>
 
-          <!-- Transaction -->
           <div class="form-group">
             <label for="transaction">Transaction</label>
             <select id="transaction" name="transaction" required>
@@ -1669,46 +1664,40 @@ window.addEventListener('scroll', () => {
             </select>
           </div>
 
-          <!-- Localisation -->
           <div class="form-group">
             <label for="location">Localisation</label>
             <input type="text" id="location" name="location" placeholder="Ville / Quartier" required>
           </div>
 
-          <!-- Surface -->
           <div class="form-group">
             <label for="surface">Surface (m²)</label>
             <input type="number" id="surface" name="surface" placeholder="Ex: 120" required>
           </div>
 
-          <!-- Prix -->
           <div class="form-group">
             <label for="price">Prix (MAD)</label>
             <input type="number" id="price" name="price" placeholder="Ex: 1 500 000" required>
           </div>
 
-          <!-- Description -->
           <div class="form-group">
             <label for="description">Description du bien</label>
-            <textarea id="description" name="description" rows="4" placeholder="Décrivez votre bien..." required></textarea>
+            <textarea id="description" name="description" rows="5" placeholder="Décrivez votre bien..." required></textarea>
           </div>
 
-          <!-- Photo Upload -->
           <div class="form-group">
             <label for="file">Ajouter des photos (max 3)</label>
             <div class="file-drop-area" id="file-drop-area">
               <span class="choose-file-btn"><i class="fas fa-upload"></i> Choisir ou glisser des images</span>
-              <input type="file" id="file" multiple>
+              <input type="file" id="file" name="file" multiple accept="image/*">
               <div class="file-counter" id="file-counter">0 / 3 photos ajoutées</div>
               <div class="file-list" id="file-list"></div>
             </div>
           </div>
 
-          <!-- Submit -->
           <div class="form-group text-center mt-4">
             <button type="submit" class="cta-btn">Envoyer le formulaire</button>
           </div>
-          
+
         </form>
       </div>
     </div>
@@ -1721,39 +1710,16 @@ window.addEventListener('scroll', () => {
   padding-top: 80px;
   padding-bottom: 80px;
   background: #F9F9F9;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
 }
 
-.property-form .form-group {
-  margin-bottom: 20px;
-  text-align: left;
+.property-form .form-group { margin-bottom: 20px; }
+.property-form label { font-weight: 600; color: #112E4C; margin-bottom: 8px; display: block; }
+.property-form input, .property-form select, .property-form textarea {
+  width: 100%; padding: 12px 15px; border-radius: 10px; border: 1px solid #d0d0d0; font-size: 14px; color: #112E4C;
 }
-
-.property-form label {
-  font-weight: 600;
-  color: #112E4C;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.property-form input,
-.property-form select,
-.property-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 10px;
-  border: 1px solid #d0d0d0;
-  font-size: 14px;
-  color: #112E4C;
-}
-
-.property-form input:focus,
-.property-form select:focus,
-.property-form textarea:focus {
-  border-color: #00ADE7;
-  outline: none;
-}
+.property-form input:focus, .property-form select:focus, .property-form textarea:focus { border-color: #00ADE7; outline: none; }
 
 .cta-btn {
   padding: 12px 40px;
@@ -1765,66 +1731,16 @@ window.addEventListener('scroll', () => {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.cta-btn:hover { background-color: #0e2843; }
 
-.cta-btn:hover {
-  background-color: #0e2843;
-}
-
-/* Photo upload styles */
-.file-drop-area {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px dashed #00ADE7;
-  padding: 25px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: #fff;
-}
-
+/* Photo upload */
+.file-drop-area { position: relative; display: flex; flex-direction: column; align-items: center; border: 2px dashed #00ADE7; padding: 25px; border-radius: 15px; cursor: pointer; transition: all 0.3s ease; background: #fff; }
 .file-drop-area:hover { background: #f5f5f5; }
-
-.file-drop-area input[type="file"] {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  left: 0; top: 0;
-}
-
-.choose-file-btn {
-  color: #112E4C;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-}
-
-.file-counter {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #112E4C;
-  font-weight: 500;
-}
-
-.file-list {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.file-list img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #d0d0d0;
-}
+.file-drop-area input[type="file"] { position: absolute; width: 100%; height: 100%; opacity: 0; cursor: pointer; left: 0; top: 0; }
+.choose-file-btn { color: #112E4C; font-weight: 600; display: flex; align-items: center; gap: 10px; font-size: 16px; }
+.file-counter { margin-top: 10px; font-size: 14px; color: #112E4C; font-weight: 500; }
+.file-list { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; }
+.file-list img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; border: 1px solid #d0d0d0; }
 </style>
 
 <!-- Script -->
@@ -1849,23 +1765,53 @@ fileDropArea.addEventListener('drop', (e) => {
 });
 
 function updateFileDisplay() {
-  const files = fileInput.files;
+  const files = Array.from(fileInput.files).slice(0, MAX_FILES); // limit to 3
   fileList.innerHTML = "";
-  if(files.length > MAX_FILES){
-    alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
-    fileInput.value = "";
-    fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
-    return;
-  }
-  Array.from(files).forEach(file => {
+  files.forEach(file => {
     const img = document.createElement('img');
     img.src = URL.createObjectURL(file);
     fileList.appendChild(img);
   });
   fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
 }
-</script>
 
+// Email send function
+async function emailSendProperty() {
+  const formData = new FormData();
+  formData.append('name', document.getElementById('name').value);
+  formData.append('email', document.getElementById('email').value);
+  formData.append('phone', document.getElementById('phone').value);
+  formData.append('propertyType', document.getElementById('propertyType').value);
+  formData.append('transaction', document.getElementById('transaction').value);
+  formData.append('location', document.getElementById('location').value);
+  formData.append('surface', document.getElementById('surface').value);
+  formData.append('price', document.getElementById('price').value);
+  formData.append('description', document.getElementById('description').value);
+
+  Array.from(fileInput.files).forEach((file, i) => {
+    formData.append('file' + i, file);
+  });
+
+  try {
+    const res = await fetch('/api/sendProperty', {
+      method: 'POST',
+      body: formData
+    });
+    const data = await res.json();
+    if(data.message) {
+      alert(data.message);
+      document.getElementById('propertyForm').reset();
+      fileList.innerHTML = '';
+      fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
+    } else {
+      alert(data.error || "Erreur lors de l'envoi !");
+    }
+  } catch(err) {
+    console.error(err);
+    alert("Erreur lors de l'envoi !");
+  }
+}
+</script>
 
 
 
