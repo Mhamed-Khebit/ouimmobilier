@@ -1744,74 +1744,62 @@ window.addEventListener('scroll', () => {
 </style>
 
 <!-- Script -->
+<!-- Script -->
 <script>
-const fileInput = document.getElementById('file');
-const fileList = document.getElementById('file-list');
-const fileDropArea = document.getElementById('file-drop-area');
-const fileCounter = document.getElementById('file-counter');
-const MAX_FILES = 3;
-
-fileInput.addEventListener('change', updateFileDisplay);
-fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
-fileDropArea.addEventListener('drop', (e) => {
-  e.preventDefault();
-  const files = e.dataTransfer.files;
-  if(files.length > MAX_FILES) {
-    alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
-    return;
-  }
-  fileInput.files = files;
-  updateFileDisplay();
-});
-
-function updateFileDisplay() {
-  const files = Array.from(fileInput.files).slice(0, MAX_FILES); // limit to 3
-  fileList.innerHTML = "";
-  files.forEach(file => {
-    const img = document.createElement('img');
-    img.src = URL.createObjectURL(file);
-    fileList.appendChild(img);
-  });
-  fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
-}
-
-// Email send function
-async function emailSendProperty() {
-  const formData = new FormData();
-  formData.append('name', document.getElementById('name').value);
-  formData.append('email', document.getElementById('email').value);
-  formData.append('phone', document.getElementById('phone').value);
-  formData.append('propertyType', document.getElementById('propertyType').value);
-  formData.append('transaction', document.getElementById('transaction').value);
-  formData.append('location', document.getElementById('location').value);
-  formData.append('surface', document.getElementById('surface').value);
-  formData.append('price', document.getElementById('price').value);
-  formData.append('description', document.getElementById('description').value);
-
-  Array.from(fileInput.files).forEach((file, i) => {
-    formData.append('file' + i, file);
-  });
-
-  try {
-    const res = await fetch('/api/sendProperty', {
-      method: 'POST',
-      body: formData
-    });
-    const data = await res.json();
-    if(data.message) {
-      alert(data.message);
-      document.getElementById('propertyForm').reset();
-      fileList.innerHTML = '';
-      fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
-    } else {
-      alert(data.error || "Erreur lors de l'envoi !");
+  const fileInput = document.getElementById('file');
+  const fileList = document.getElementById('file-list');
+  const fileDropArea = document.getElementById('file-drop-area');
+  const fileCounter = document.getElementById('file-counter');
+  const MAX_FILES = 3;
+  
+  fileInput.addEventListener('change', updateFileDisplay);
+  fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
+  fileDropArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    if(files.length > MAX_FILES) {
+      alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
+      return;
     }
-  } catch(err) {
-    console.error(err);
-    alert("Erreur lors de l'envoi !");
+    fileInput.files = files;
+    updateFileDisplay();
+  });
+  
+  function updateFileDisplay() {
+    const files = Array.from(fileInput.files).slice(0, MAX_FILES);
+    fileList.innerHTML = "";
+    files.forEach(file => {
+      const img = document.createElement('img');
+      img.src = URL.createObjectURL(file);
+      fileList.appendChild(img);
+    });
+    fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
   }
-}
-</script>
+  
+  async function emailSendProperty() {
+    const formData = new FormData(document.getElementById('propertyForm'));
+  
+    try {
+      const res = await fetch('/api/sendProperty', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if(data.message) {
+        alert(data.message);
+        document.getElementById('propertyForm').reset();
+        fileList.innerHTML = '';
+        fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
+      } else {
+        alert(data.error || "Erreur lors de l'envoi !");
+      }
+    } catch(err) {
+      console.error(err);
+      alert("Erreur lors de l'envoi !");
+    }
+  }
+  </script>
+  
 
 
 
