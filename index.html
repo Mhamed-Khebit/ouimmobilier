@@ -1603,6 +1603,315 @@ window.addEventListener('scroll', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Formulaire Vente/Location -->
+<section id="contact" class="form-section py-services">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h6 class="subtitle-lux py-1 px-3 mb-3">Formulaire</h6>
+        <h2 style="color:#112E4C;">Vendez ou louez votre bien avec Ouimmobilier</h2>
+        <p style="color:#112E4C;">Remplissez ce formulaire et notre équipe vous contactera pour vous accompagner dans votre projet.</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form id="propertyForm" class="property-form" onsubmit="event.preventDefault(); emailSendProperty();">          
+          <!-- Nom et Prénom -->
+          <div class="form-group">
+            <label for="name">Nom et Prénom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+
+          <!-- Téléphone -->
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+          </div>
+
+          <!-- Type de bien -->
+          <div class="form-group">
+            <label for="propertyType">Type de bien</label>
+            <select id="propertyType" name="propertyType" required>
+              <option value="">Sélectionnez le type</option>
+              <option value="appartement">Appartement</option>
+              <option value="villa">Villa</option>
+              <option value="riad">Riad</option>
+              <option value="terrain">Terrain</option>
+            </select>
+          </div>
+
+          <!-- Transaction -->
+          <div class="form-group">
+            <label for="transaction">Transaction</label>
+            <select id="transaction" name="transaction" required>
+              <option value="">Vente ou location</option>
+              <option value="vente">Vente</option>
+              <option value="location">Location</option>
+            </select>
+          </div>
+
+          <!-- Localisation -->
+          <div class="form-group">
+            <label for="location">Localisation</label>
+            <input type="text" id="location" name="location" placeholder="Ville / Quartier" required>
+          </div>
+
+          <!-- Surface -->
+          <div class="form-group">
+            <label for="surface">Surface (m²)</label>
+            <input type="number" id="surface" name="surface" placeholder="Ex: 120" required>
+          </div>
+
+          <!-- Prix -->
+          <div class="form-group">
+            <label for="price">Prix (MAD)</label>
+            <input type="number" id="price" name="price" placeholder="Ex: 1 500 000" required>
+          </div>
+
+          <!-- Description -->
+          <div class="form-group">
+            <label for="description">Description du bien</label>
+            <textarea id="description" name="description" rows="4" placeholder="Décrivez votre bien..." required></textarea>
+          </div>
+
+          <!-- Photo Upload -->
+          <div class="form-group">
+            <label for="file">Ajouter des photos (max 3)</label>
+            <div class="file-drop-area" id="file-drop-area">
+              <span class="choose-file-btn"><i class="fas fa-upload"></i> Choisir ou glisser des images</span>
+              <input type="file" id="file" multiple>
+              <div class="file-counter" id="file-counter">0 / 3 photos ajoutées</div>
+              <div class="file-list" id="file-list"></div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-group text-center mt-4">
+            <button type="submit" class="cta-btn">Envoyer le formulaire</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.form-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #F9F9F9;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.property-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.property-form label {
+  font-weight: 600;
+  color: #112E4C;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.property-form input,
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  font-size: 14px;
+  color: #112E4C;
+}
+
+.property-form input:focus,
+.property-form select:focus,
+.property-form textarea:focus {
+  border-color: #00ADE7;
+  outline: none;
+}
+
+.cta-btn {
+  padding: 12px 40px;
+  background-color: #112E4C;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #0e2843;
+}
+
+/* Photo upload styles */
+.file-drop-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #00ADE7;
+  padding: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.file-drop-area:hover { background: #f5f5f5; }
+
+.file-drop-area input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  left: 0; top: 0;
+}
+
+.choose-file-btn {
+  color: #112E4C;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.file-counter {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #112E4C;
+  font-weight: 500;
+}
+
+.file-list {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.file-list img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+}
+</style>
+
+<!-- Script -->
+<script>
+const fileInput = document.getElementById('file');
+const fileList = document.getElementById('file-list');
+const fileDropArea = document.getElementById('file-drop-area');
+const fileCounter = document.getElementById('file-counter');
+const MAX_FILES = 3;
+
+fileInput.addEventListener('change', updateFileDisplay);
+fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
+fileDropArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  if(files.length > MAX_FILES) {
+    alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
+    return;
+  }
+  fileInput.files = files;
+  updateFileDisplay();
+});
+
+function updateFileDisplay() {
+  const files = fileInput.files;
+  fileList.innerHTML = "";
+  if(files.length > MAX_FILES){
+    alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
+    fileInput.value = "";
+    fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
+    return;
+  }
+  Array.from(files).forEach(file => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    fileList.appendChild(img);
+  });
+  fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
+
+    
+
+
+
+
+
+
+
+
+
 <!-- Testimonial Section Start -->
 <section class="luxury-testimonial-section">
   <div class="container">
