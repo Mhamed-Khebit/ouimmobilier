@@ -676,7 +676,6 @@ $('#header-carousel').on('slide.bs.carousel', function () {
     
 
 
-    
 <!-- About Start -->
 <div class="about-section container-fluid" id="A propos">
   <div class="container container-ab-sec py-5">
@@ -699,8 +698,8 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
       <!-- Right Text -->
       <div class="col-lg-6">
-        <br>
-        <h6 class="subtitle-lux py-1 px-3 mb-3">À propos de nous</h6>
+        
+        <h6 class="subtitle-lux bg-blue py-1 px-3 mb-3">À propos de nous</h6>
         <h1 class="about-title about-title-size mb-4">Votre partenaire immobilier à Marrakech</h1>
         
         <div class="about-container animated-line-div">
@@ -729,20 +728,22 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 /* === About Section === */
 .about-section {
   background: #F9F9F9;
-  padding: 80px 0;
+  padding: 50px 0;
   width: 95%;
 }
 
 /* Subtitle */
 .subtitle-lux {
-  background-color: rgba(0,173,231,0.15);
-  color: #00ADE7;
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 12px;
   font-size: 0.9rem;
   letter-spacing: 1px;
   display: inline-block;
+}
+.bg-blue {
+  background-color: #00ADE7 !important;
 }
 
 /* Title */
@@ -756,9 +757,7 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 }
 .about-title-size {
   font-size: 2rem !important;
-
 }
-
 .about-title::after {
   content: "";
   display: block;
@@ -808,11 +807,11 @@ $('#header-carousel').on('slide.bs.carousel', function () {
   100% { top: 100%; }
 }
 
-/* ✅ Gallery FIX */
+/* === Gallery === */
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 200px;
+  grid-auto-rows: 220px;
   gap: 15px;
   max-width: 600px;
   margin: 50px auto;
@@ -820,17 +819,16 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 .gallery-card {
   overflow: hidden;
   border-radius: 10px;
-  transform: scale(0.85);
+  transform: scale(0.9);
   transition: transform 0.6s ease-out;
   background-color: transparent !important;
-  height: 100%;
 }
 .gallery-card.in-view {
   transform: scale(1);
 }
 .tall-card {
   grid-row: span 2;
-  height: 415px !important; /* fixed proportional tall height */
+  height: auto;
 }
 .gallery-card img {
   width: 100%;
@@ -840,7 +838,7 @@ $('#header-carousel').on('slide.bs.carousel', function () {
   border-radius: 10px;
 }
 
-/* Twist effect style */
+/* Twist effect */
 .twistable {
   display: block;
   width: 100%;
@@ -868,11 +866,39 @@ $('#header-carousel').on('slide.bs.carousel', function () {
   transition: all 0.35s ease;
   text-decoration: none;
 }
-.social-icons-lux .icon:hover {
+.social-icons-lux .icon:active {
   background: #00ADE7;
   color: #fff;
   transform: translateY(-4px);
   box-shadow: 0 6px 15px rgba(0,173,231,0.3);
+}
+
+/* ✅ Responsive (same layout, just smaller) */
+@media (max-width: 992px) {
+  .about-section {
+    width: 100%;
+    padding: 40px 15px;
+  }
+  .gallery-container {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+    gap: 10px;
+  }
+  .gallery-card img {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+    gap: 8px;
+  }
+  .about-title {
+    font-size: 1.6rem;
+  }
 }
 </style>
 
@@ -880,14 +906,10 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 const cards = document.querySelectorAll('.gallery-card');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');
-    } else {
-      entry.target.classList.remove('in-view');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('in-view');
+    else entry.target.classList.remove('in-view');
   });
-}, { threshold: 0.9 });
-
+}, { threshold: 0.8 });
 cards.forEach(card => observer.observe(card));
 
 const imgs = document.querySelectorAll(".twistable");
@@ -896,15 +918,11 @@ imgs.forEach(img => {
     const rect = img.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-
     const rotateX = ((y - centerY) / centerY) * -12;
     const rotateY = ((x - centerX) / centerX) * 12;
-
     img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-
     setTimeout(() => {
       img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
     }, 300);
@@ -912,6 +930,9 @@ imgs.forEach(img => {
 });
 </script>
 <!-- About End -->
+<br>
+
+
 
 
 
@@ -930,8 +951,8 @@ imgs.forEach(img => {
 <!-- Founder Section Start -->
 <section id="founder" class="founder-section py-5">
   <div class="container text-center">
-    <h2 class="lux-title mb-5">À propos du fondateur</h2>
-
+    <h2 class="lux-title">À propos du fondateur</h2>
+<br>
     <div class="founder-card mx-auto">
       <div class="founder-content">
         <div class="founder-logo">
@@ -1105,9 +1126,10 @@ imgs.forEach(img => {
 <!-- Why Choose Ouimmobilier Start -->
 <section class="why-choose section-padding text-center">
   <div class="container">
-    <h2 class="section-title mb-5">
+    <h2 class="section-title">
       Pourquoi choisir <span class="lux-title">Ouimmobilier</span>
     </h2>
+    <br>
 
     <p class="intro-text mb-5">
       Chez <strong>Ouimmobilier Marrakech</strong>, nous mettons notre expertise au service de vos projets immobiliers à Marrakech.  
@@ -1919,6 +1941,7 @@ async function emailSendProperty() {
 
 <!-- New Testimonial Slider Section with Image Start -->
 <section class="new-testimonial-section">
+  <br>
   <div class="container">
     <div class="row align-items-center justify-content-center">
       
@@ -1926,7 +1949,7 @@ async function emailSendProperty() {
       <div class="col-lg-6 col-md-10 mb-4 text-center">
         <img
           class="img-new-luxury"
-          src="img/955870e5a6cf0d44663672a153426f0a.jpg"
+          src="imgs/Témoignages.jpg"
           alt="Happy clients"
           loading="lazy"
         />
@@ -2237,7 +2260,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </a>
                     <p>
                       Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.</p>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>Rue de Khenifra, 10052 Rabat, Maroc</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Marrakech, Maroc</p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+212774658208</p>
                     <p><i class="fa fa-envelope mr-2"></i> ouimmobiliermarrakech@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
