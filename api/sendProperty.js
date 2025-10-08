@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       subject: `Nouveau formulaire de ${transaction || "propriété"} - ${propertyType || "Bien"}`,
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-          <h2 style="color: #007BFF;">Nouvelle propriété soumise - Ouimmobilier Marrakech</h2>
+          <h2 style="color: #007BFF;">Nouvelle Propriété Soumise from Ouimmobilier Marrakech Website</h2>
           <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
             <tr>
               <td style="font-weight: bold; padding: 8px; border: 1px solid #ddd;">Nom:</td>
@@ -62,7 +62,7 @@ export default async function handler(req, res) {
             </tr>
           </table>
           <p style="font-size: 12px; color: #777; margin-top: 20px;">
-            Ce message a été envoyé depuis le formulaire de dépôt de bien sur <strong>Ouimmobilier Marrakech</strong>.
+            Ce message a été envoyé depuis le formulaire de dépôt de bien sur <strong>Ouimmobilier Marrakech</strong> Website.
           </p>
         </div>
       `
