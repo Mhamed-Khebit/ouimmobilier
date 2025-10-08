@@ -34,6 +34,10 @@
 
     
 
+<!-- SweetAlert2 CDN (if not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -1744,61 +1748,78 @@ window.addEventListener('scroll', () => {
 </style>
 
 <!-- Script -->
-<!-- Script -->
+
+
 <script>
-  const fileInput = document.getElementById('file');
-  const fileList = document.getElementById('file-list');
-  const fileDropArea = document.getElementById('file-drop-area');
-  const fileCounter = document.getElementById('file-counter');
-  const MAX_FILES = 3;
-  
-  fileInput.addEventListener('change', updateFileDisplay);
-  fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
-  fileDropArea.addEventListener('drop', (e) => {
-    e.preventDefault();
-    const files = e.dataTransfer.files;
-    if(files.length > MAX_FILES) {
-      alert(`Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`);
-      return;
-    }
-    fileInput.files = files;
-    updateFileDisplay();
+const fileInput = document.getElementById('file');
+const fileList = document.getElementById('file-list');
+const fileDropArea = document.getElementById('file-drop-area');
+const fileCounter = document.getElementById('file-counter');
+const MAX_FILES = 3;
+
+fileInput.addEventListener('change', updateFileDisplay);
+fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
+fileDropArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  if(files.length > MAX_FILES) {
+    Swal.fire("Erreur", `Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`, "error");
+    return;
+  }
+  fileInput.files = files;
+  updateFileDisplay();
+});
+
+function updateFileDisplay() {
+  const files = Array.from(fileInput.files).slice(0, MAX_FILES);
+  fileList.innerHTML = "";
+  files.forEach(file => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    fileList.appendChild(img);
   });
-  
-  function updateFileDisplay() {
-    const files = Array.from(fileInput.files).slice(0, MAX_FILES);
-    fileList.innerHTML = "";
-    files.forEach(file => {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      fileList.appendChild(img);
+  fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
+}
+
+async function emailSendProperty() {
+  const formData = new FormData(document.getElementById('propertyForm'));
+
+  try {
+    const res = await fetch('/api/sendProperty', {
+      method: 'POST',
+      body: formData
     });
-    fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
-  }
-  
-  async function emailSendProperty() {
-    const formData = new FormData(document.getElementById('propertyForm'));
-  
-    try {
-      const res = await fetch('/api/sendProperty', {
-        method: 'POST',
-        body: formData
+    const data = await res.json();
+    if(data.message) {
+      Swal.fire({
+        icon: "success",
+        title: "Succès !",
+        text: data.message,
+        confirmButtonColor: "#112E4C"
       });
-      const data = await res.json();
-      if(data.message) {
-        alert(data.message);
-        document.getElementById('propertyForm').reset();
-        fileList.innerHTML = '';
-        fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
-      } else {
-        alert(data.error || "Erreur lors de l'envoi !");
-      }
-    } catch(err) {
-      console.error(err);
-      alert("Erreur lors de l'envoi !");
+      document.getElementById('propertyForm').reset();
+      fileList.innerHTML = '';
+      fileCounter.textContent = `0 / ${MAX_FILES} photos ajoutées`;
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Erreur !",
+        text: data.error || "Erreur lors de l'envoi !",
+        confirmButtonColor: "#112E4C"
+      });
     }
+  } catch(err) {
+    console.error(err);
+    Swal.fire({
+      icon: "error",
+      title: "Erreur !",
+      text: "Erreur lors de l'envoi !",
+      confirmButtonColor: "#112E4C"
+    });
   }
-  </script>
+}
+</script>
+
   
 
 
