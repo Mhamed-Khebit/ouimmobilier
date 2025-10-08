@@ -1784,11 +1784,10 @@ function updateFileDisplay() {
 }
 
 // Submit form
-function emailSendProperty() {
+async function emailSendProperty() {
   const form = document.getElementById("propertyForm");
   const formData = new FormData(form);
 
-  // text fields only
   const data = {
     name: formData.get("name"),
     email: formData.get("email"),
@@ -1801,27 +1800,44 @@ function emailSendProperty() {
     description: formData.get("description"),
   };
 
-  fetch("/api/sendProperty", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(resp => {
-    if (resp.message) {
-      swal("Succès", resp.message, "success");
+  try {
+    const res = await fetch("/api/sendProperty", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await res.json();
+
+    if (result.message) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Succès',
+        text: result.message,
+        confirmButtonColor: '#112E4C'
+      });
       form.reset();
       document.getElementById("file-list").innerHTML = "";
       document.getElementById("file-counter").textContent = "0 / 3 photos ajoutées";
     } else {
-      swal("Erreur", resp.error || "Erreur lors de l'envoi !", "error");
+      Swal.fire({
+        icon: 'error',
+        title: 'Erreur',
+        text: result.error || "Erreur lors de l'envoi !",
+        confirmButtonColor: '#112E4C'
+      });
     }
-  })
-  .catch(err => {
-    console.error(err);
-    swal("Erreur", "Échec de l'envoi de l'email !", "error");
-  });
+  } catch (err) {
+    console.error("Error:", err);
+    Swal.fire({
+      icon: 'error',
+      title: 'Erreur',
+      text: "Échec de l'envoi de l'email !",
+      confirmButtonColor: '#112E4C'
+    });
+  }
 }
+
 
 </script>
 
