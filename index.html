@@ -671,322 +671,218 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
     
     
-    <!-- About Start -->
-    <div class="about-section container-fluid" id="A propos">
-      <div class="container container-ab-sec py-5">
-          <div class="row align-items-center">
-              <div class="col-lg-6 pb-5 pb-lg-0">
+<!-- About Start -->
+<div class="about-section container-fluid" id="A propos">
+  <div class="container container-ab-sec py-5">
+    <br>
+    <div class="row align-items-center">
+      
+      <!-- Left Gallery -->
+      <div class="col-lg-6 pb-5 pb-lg-0">
+        <div class="gallery-container">
+          <div class="gallery-card tall-card">
+            <img class="twistable" src="imgs/aboutImg1.jpg" alt="Lush Poolside with Huts">
+          </div>
+          <div class="gallery-card">
+            <img class="twistable" src="imgs/aboutImg2.jpg" alt="Resort Building by the Pool">
+          </div>
+          <div class="gallery-card">
+            <img class="twistable" src="imgs/aboutImg3.jpg" alt="Resort Poolside View">
+          </div>
+        </div>
+      </div>
 
+      <!-- Right Text -->
+      <div class="col-lg-6">
+        <br>
+        <h6 class="subtitle-lux py-1 px-3 mb-3">À propos de nous</h6>
+        <h1 class="about-title mb-4">Votre partenaire immobilier à Marrakech</h1>
+        
+        <div class="about-container animated-line-div">
+          <div class="animated-line-vertical"></div>
+          <p class="about-text ps-4">
+            Chez <strong>Ouimmobilier Marrakech</strong>, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. 
+            Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, 
+            nous vous accompagnons à chaque étape. 
+            Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, 
+            pour que vos transactions se déroulent en toute sérénité.
+          </p>
+        </div>
 
-                  <div class="gallery-container">
-                      
-                      <div class="gallery-card tall-card">
-                          <img class="twistable" src="imgs/aboutImg1.jpg" alt="Lush Poolside with Huts">
-                      </div>
-                      <div class="gallery-card">
-                          <img class="twistable" src="imgs/aboutImg2.jpg" alt="Resort Building by the Pool">
-                      </div>
-
-                      <div class="gallery-card">
-                        <img class="twistable" src="imgs/aboutImg3.jpg" alt="Resort Poolside View">
-                    </div>
-                  </div>
-
-
-                  <style>
-                    .about-section {
-                      background-color: #F9F9F9;
-                      padding-bottom: 60px;
-                      padding-top: 60px;
-                    }
-
-                 .gallery-container {
-                      display: grid;
-                      grid-template-columns: 1fr 1fr;
-                      grid-gap: 15px;
-                      max-width: 600px;
-                      margin: 50px auto;
-                  
-                  }
-                  .gallery-card {
-                      overflow: hidden;
-                      border-radius: 10px;
-                      transform: scale(0.85);
-                      transition: transform 0.6s ease-out;
-                      background-color:  transparent !important;
-                  }
-                  .gallery-card.in-view {
-                      transform: scale(1);
-                  }
-                  .tall-card {
-                      grid-row: span 2;
-                  }
-                  .gallery-card img {
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      display: block;
-                  }
-
-
-                  </style>
-
-<script>
-  const cards = document.querySelectorAll('.gallery-card');
-
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-          } else {
-              entry.target.classList.remove('in-view');
-          }
-      });
-  }, { threshold: 0.9 }); 
-
-  cards.forEach(card => {
-      observer.observe(card);
-   });
-</script>
-
-
-<!-- effect images -->
+        <div class="d-flex justify-content-start social-icons-lux">
+          <a href="https://wa.me/+212774658208" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
-  /* Twist effect style */
-  .twistable {
-    display: block;
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.4s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    
-  }
-  </style>
-  
-  <script>
-  const imgs = document.querySelectorAll(".twistable");
-  
-  imgs.forEach(img => {
-    img.addEventListener("click", (e) => {
-      const rect = img.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-  
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-  
-      const rotateX = ((y - centerY) / centerY) * -12;
-      const rotateY = ((x - centerX) / centerX) * 12;
-  
-      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-  
-      setTimeout(() => {
-        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-      }, 300);
-    });
-  });
-</script>
-
-              </div>
-              <div class="col-lg-6">
-                  
-                  <h6 class="d-inline-block text-primary text-uppercase bg-light luxury-subtitle py-1 px-2">À propos de nous</h6>
-                  <h1 class="about-title mb-4">Votre partenaire immobilier à Marrakech</h1>
-                  <div class="about-container animated-line-div">
-                      <div class="animated-line-vertical"></div>
-                      <p class=" about-text pl-4 border-left border-primary">Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.</p>
-                  </div>
-                  <!-- <div class="row pt-3">
-
-                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
-                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                      &nbsp;
-                      &nbsp;
-                      <h6 class="mb-0 fw-semibold">Gestion complète</h6>
-                    </div>
-                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.3s">
-                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                      &nbsp;
-                      &nbsp;
-                      <h6 class="mb-0 fw-semibold">Tranquillité d’esprit</h6>
-                    </div>
-                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.5s">
-                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                      &nbsp;
-                      &nbsp;
-                      <h6 class="mb-0 fw-semibold">Service Client 24/7</h6>
-                    </div>
-                      
-                  </div> -->
-
-                  <div class="d-flex justify-content-start mt-4 social-icons-lux">
-                    <a href="https://wa.me/+212774658208" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-                  </div>
-                  
-                  
-
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <style>
-
-    /* .container-ab-sec {
-      background-color: #112E4C0b;
-      border-radius: 20px;
-  
-    } */
-
-
-    /* Text */
-.about-section .about-text {
-  
-    text-align: justify;           /* neat block alignment */
-    text-justify: inter-word;      /* spacing between words */
-    hyphens: auto;                 /* automatic word breaks */
-    letter-spacing: 0.5px;         /* elegant spacing */
-    word-spacing: 1px;             /* clean text flow */
-
+/* === About Section === */
+.about-section {
+  background: #F9F9F9;
+  padding: 80px 0;
+  width: 95%;
 }
-.about-section .about-title ,.about-title{
-  font-family: "Playfair Display", serif;
-  font-size: 2.3rem;
+
+/* Subtitle */
+.subtitle-lux {
+  background-color: rgba(0,173,231,0.15);
+  color: #00ADE7;
   font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 12px;
+  font-size: 0.9rem;
   letter-spacing: 1px;
+  display: inline-block;
+}
+
+/* Title */
+.about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #112E4C;
+  letter-spacing: 0.5px;
   position: relative;
 }
 
+.about-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #00ADE7;
+  margin-top: 10px;
+  border-radius: 10px;
+}
 
+/* Text */
+.about-text {
+  text-align: justify;
+  color: #444;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+}
 
-
-
-    .bg-light{
-      background-color: #d5b163a8 !important;
-      border-radius: 20px !important;
-    }
-
-      .about-container {
-          display: flex;
-      }
-
-      .animated-line-vertical {
-          position: relative;
-          width: 30px;       
-          height: auto;    
-          background-color: #112E4C;
-          overflow: hidden;
-          border-radius: 2px;
-          margin-left: 2px;
-      }
-
+/* Animated Line */
+.about-container {
+  display: flex;
+  align-items: start;
+}
+.animated-line-vertical {
+  width: 6px;
+  min-height: 100%;
+  background-color: #112E4C;
+  border-radius: 3px;
+  margin-right: 15px;
+  position: relative;
+  overflow: hidden;
+}
 .animated-line-vertical::after {
-content: "";
-position: absolute;
-top: -50%;
-left: 0;
-width: 100%;
-height: 60%;
-background: rgba(255, 255, 255, 0.7); 
-animation: slide-vertical 2s linear infinite;
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: rgba(255, 255, 255, 0.8);
+  animation: slide-vertical 2s linear infinite;
 }
-
 @keyframes slide-vertical {
-0% {
-top: -50%;
-}
-100% {
-top: 100%;
-}
+  0% { top: -50%; }
+  100% { top: 100%; }
 }
 
-
-/* CSS */
-.col-6 img {
-transition: transform 0.8s ease-in-out;
-cursor: pointer;
+/* Gallery */
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.gallery-card {
+  overflow: hidden;
+  border-radius: 12px;
+  transform: scale(0.85);
+  transition: transform 0.6s ease-out;
+}
+.gallery-card.in-view {
+  transform: scale(1);
+}
+.tall-card {
+  grid-row: span 2;
+}
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.btn-primary-iconsAb {
-  border: 10px black;
+/* Twist Effect */
+.twistable {
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-
-
-.fa-check {
-  color: #BB9C5A !important;
-}
-
-
-
-
-/* icons style */
-
-
+/* Social Icons */
 .social-icons-lux {
   display: flex;
   gap: 15px;
 }
-
-
 .social-icons-lux .icon {
   width: 45px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #00ADE7;   /* border color */
-  /* border-radius: 12px;          مربعة بزاوية شوي round */
-  font-size: 22px;
-  color: #00ADE7;              /* icon color */
-  background: transparent;     /* خلفية شفافة */
+  border: 2px solid #00ADE7;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00ADE7;
   transition: all 0.35s ease;
   text-decoration: none;
 }
-
-/* active effect  */
-.social-icons-lux .icon:active {
+.social-icons-lux .icon:hover {
   background: #00ADE7;
   color: #fff;
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(187,156,90,0.4);
+  box-shadow: 0 6px 15px rgba(0,173,231,0.3);
 }
-
-
-
-
-
-
-  </style>
+</style>
 
 <script>
-  document.querySelectorAll(".col-6").forEach(col => {
-    const img = col.querySelector("img");
-    let angle = 0;
-
-    col.addEventListener("click", () => {
-      angle += 360;
-      img.style.transform = `rotate(${angle}deg)`;
-    });
-
-    col.addEventListener("mouseenter", () => {
-      if (!/Mobi|Android/i.test(navigator.userAgent)) { 
-        angle += 360;
-        img.style.transform = `rotate(${angle}deg)`;
-      }
-    });
+// Animate gallery on scroll
+const cards = document.querySelectorAll('.gallery-card');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('in-view', entry.isIntersecting);
   });
+}, { threshold: 0.9 });
+cards.forEach(card => observer.observe(card));
+
+// Twist image interaction
+const imgs = document.querySelectorAll(".twistable");
+imgs.forEach(img => {
+  img.addEventListener("click", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = ((y - rect.height / 2) / rect.height / 2) * -12;
+    const rotateY = ((x - rect.width / 2) / rect.width / 2) * 12;
+    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    setTimeout(() => img.style.transform = "perspective(800px) rotateX(0) rotateY(0) scale(1)", 300);
+  });
+});
 </script>
+<!-- About End -->
 
-
-
-  
-  <!-- About End -->
 
 
 
@@ -1005,7 +901,7 @@ cursor: pointer;
 
 <!-- Founder Section Start -->
 <section id="founder" class="founder-section py-5">
-  <div class="container text-center" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container text-center" >
     <h2 class="lux-title mb-5">À propos du fondateur</h2>
 
     <div class="founder-card mx-auto">
@@ -1028,7 +924,7 @@ cursor: pointer;
 .founder-section {
   background: #f9f9f9;
   position: relative;
-  padding-top: 20px !important;
+  padding-top: 10px !important;
   padding-bottom: 90px !important;
 }
 
@@ -1128,6 +1024,8 @@ AOS.init(); -->
 
 
 
+<!-- Section Divider -->
+<div class="luxury-divider"></div>
 
 
 
@@ -1147,9 +1045,9 @@ AOS.init(); -->
 
 <!-- Why Choose Ouimmobilier Start -->
 <section class="why-choose section-padding text-center">
-  <div class="container" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container" data-aos="fade-up" data-aos-duration="600">
     <h2 class="section-title mb-5">
-      Pourquoi choisir <span class="about-title">Ouimmobilier</span>
+      Pourquoi choisir <span class="lux-title">Ouimmobilier</span>
     </h2>
 
     <p class="intro-text mb-5">
@@ -1160,7 +1058,7 @@ AOS.init(); -->
     <div class="why-grid">
 
       <!-- Vente de biens -->
-      <div class="why-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon-box"><i class="fas fa-home"></i></div>
         <h4>Vente de biens immobiliers</h4>
         <p>
@@ -1180,7 +1078,7 @@ AOS.init(); -->
       </div>
 
       <!-- Estimation -->
-      <div class="why-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
         <h4>Estimation précise</h4>
         <p>
@@ -1190,7 +1088,7 @@ AOS.init(); -->
       </div>
 
       <!-- Recherche acheteurs -->
-      <div class="why-card" data-aos="zoom-in" data-aos-delay="500">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon-box"><i class="fas fa-search-location"></i></div>
         <h4>Recherche personnalisée</h4>
         <p>
@@ -1200,7 +1098,7 @@ AOS.init(); -->
       </div>
 
       <!-- Accompagnement -->
-      <div class="why-card" data-aos="zoom-in" data-aos-delay="600">
+      <div class="why-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon-box"><i class="fas fa-handshake"></i></div>
         <h4>Accompagnement complet</h4>
         <p>
@@ -1386,97 +1284,73 @@ AOS.init(); -->
 
 
 
-
-
-
 <!-- Services Section Start -->
 <section id="services" class="py-services">
   <div class="container">
     <div class="row mx-0 justify-content-center text-center">
       <div class="col-lg-6">
-          <h6 class="d-inline-block bg-light luxury-subtitle text-primary text-uppercase py-1 px-2">Nos Services</h6>
-          <h2>Nos services de gestion immobilière premium</h2>
-
-          <br>
+        <h6 class="d-inline-block bg-light luxury-subtitle text-primary text-uppercase py-1 px-2">Nos Services</h6>
+        <h2 style="color:#112E4C;">Des services immobiliers sur mesure</h2>
+        <br>
       </div>
-      
-  </div>    <div class="services-slider swiper">
+    </div>
+
+    <div class="services-slider swiper">
       <div class="swiper-wrapper">
 
         <!-- Slide 1 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img1.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-key"></i>
-            </div> -->
-            <h4>Gestion locative clé en main</h4>
-            <p>Nous prenons tout en charge, de la mise en ligne à la gestion complète de vos locations, pour une rentabilité sans stress.</p>
+            <h4>Vente de biens immobiliers</h4>
+            <p>De l’estimation à la signature, nous vous accompagnons à chaque étape pour vendre votre bien dans les meilleures conditions du marché.</p>
           </div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide service-slide" style="background-image: url('img/slideImg3.jpg');">
+        <div class="swiper-slide service-slide" style="background-image: url('img/img2.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-chart-line"></i>
-            </div> -->
-            <h4>Location saisonnière et longue durée</h4>
-            <p>Profitez d’une gestion fluide pour vos locations courtes ou longues, avec un suivi professionnel et des locataires fiables.</p>
+            <h4>Location longue durée</h4>
+            <p>Nous assurons la recherche de locataires fiables, la rédaction des contrats et la gestion complète du processus locatif.</p>
           </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img3.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-headset"></i>
-            </div> -->
-            <h4>Check-in / Check-out professionnels</h4>
-            <p>Accueil chaleureux, départ organisé — vos clients profitent d’une expérience 5 étoiles dès leur arrivée.</p>
+            <h4>Estimation du bien</h4>
+            <p>Évaluation précise de la valeur de votre bien selon le marché local, les tendances et les spécificités du quartier.</p>
           </div>
         </div>
 
         <!-- Slide 4 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img4.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-broom"></i>
-            </div> -->
-            <h4>Ménage</h4>
-            <p>Service de nettoyage impeccable pour garantir un logement toujours propre et prêt à accueillir vos hôtes.</p>
+            <h4>Mise en valeur du bien</h4>
+            <p>Photos professionnelles, description optimisée et diffusion sur les meilleures plateformes (Mubawab, Avito, réseaux sociaux...)</p>
           </div>
         </div>
 
         <!-- Slide 5 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img5.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-tools"></i>
-            </div> -->
-            <h4>Maintenance</h4>
-            <p>Interventions rapides et efficaces pour entretenir votre bien et assurer son bon fonctionnement à tout moment.</p>
+            <h4>Recherche personnalisée</h4>
+            <p>Nous trouvons pour vous le bien idéal selon vos critères de budget, d’emplacement et de type de propriété.</p>
           </div>
         </div>
 
         <!-- Slide 6 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img6.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-gem"></i>
-            </div> -->
-            <h4>Valorisation de votre bien</h4>
-            <p>Nous mettons en avant le potentiel de votre propriété pour maximiser sa valeur et attirer plus de clients.</p>
+            <h4>Négociation & accompagnement</h4>
+            <p>Nous gérons les visites, les offres, la négociation et le suivi jusqu’à la signature du compromis ou de l’acte de vente.</p>
           </div>
         </div>
 
         <!-- Slide 7 -->
         <div class="swiper-slide service-slide" style="background-image: url('img/img7.jpg');">
           <div class="slide-content">
-            <!-- <div class="icon-box">
-              <i class="fas fa-bullseye"></i>
-            </div> -->
-            <h4>Optimisation des annonces</h4>
-            <p>Des annonces attractives et bien positionnées grâce à des visuels professionnels et une stratégie tarifaire adaptée.</p>
+            <h4>Gestion complète</h4>
+            <p>Confiez-nous la gestion de votre patrimoine immobilier pour une tranquillité d’esprit totale et un suivi professionnel.</p>
           </div>
         </div>
 
@@ -1498,9 +1372,6 @@ AOS.init(); -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
 <!-- Custom CSS -->
 <style>
   .py-services {
@@ -1520,60 +1391,39 @@ AOS.init(); -->
   }
 
   .slide-content {
-    background: rgba(6,14,37,0.75);
+    background: rgba(17,46,76,0.78); /* bleu foncé transparent */
     color: #fff;
     text-align: center;
     padding: 25px 30px;
     border-radius: 15px;
     max-width: 90%;
+    transition: all 0.4s ease;
   }
 
-  .slide-content .icon-box {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 15px;
-    background: linear-gradient(135deg, #BB9C5A, #d4af37);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    color: #112E4C;
+  .slide-content:hover {
+    background: rgba(17, 46, 76, 0.805); 
+    transform: translateY(-4px);
   }
 
   .slide-content h4 {
     font-size: 20px;
     margin-bottom: 8px;
     color: #fff;
+    font-weight: 600;
   }
 
   .slide-content p {
     font-size: 14px;
-    margin: 0;
-    color: #ffffff9a;
+    color: #ffffffd0;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: #112E4C;
+    color: #00ADE7;
   }
 
   .swiper-pagination-bullet {
     background: #112E4C;
-  }
-
-  /* Fade-up animation only on mobile */
-  @media (max-width: 768px) {
-    .slide-content.fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.8s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   }
 </style>
 
@@ -1601,26 +1451,7 @@ const swiper = new Swiper('.services-slider', {
     disableOnInteraction: false,
   },
 });
-
-//  Fade-up on mobile for all slides
-if (window.innerWidth <= 768) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-up');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.slide-content').forEach(el => observer.observe(el));
-}
 </script>
-
-
-
-<br><br>
-
-<!-- section services End -->
 
 
 
