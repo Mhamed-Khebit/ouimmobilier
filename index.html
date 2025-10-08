@@ -1748,44 +1748,42 @@ window.addEventListener('scroll', () => {
 </style>
 
 <!-- Script -->
-
 <script>
-  const fileInput = document.getElementById('file');
-  const fileList = document.getElementById('file-list');
-  const fileDropArea = document.getElementById('file-drop-area');
-  const fileCounter = document.getElementById('file-counter');
-  const MAX_FILES = 3;
-  
-  // Handle file selection & drag-drop
-  fileInput.addEventListener('change', updateFileDisplay);
-  fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
-  fileDropArea.addEventListener('drop', (e) => {
-    e.preventDefault();
-    const files = e.dataTransfer.files;
-    if(files.length > MAX_FILES) {
-      Swal.fire("Erreur", `Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`, "error");
-      return;
-    }
-    fileInput.files = files;
-    updateFileDisplay();
-  });
-  
-  function updateFileDisplay() {
-    const files = Array.from(fileInput.files).slice(0, MAX_FILES);
-    fileList.innerHTML = "";
-    files.forEach(file => {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      fileList.appendChild(img);
-    });
-    fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
+const fileInput = document.getElementById('file');
+const fileList = document.getElementById('file-list');
+const fileDropArea = document.getElementById('file-drop-area');
+const fileCounter = document.getElementById('file-counter');
+const MAX_FILES = 3;
+
+// File selection & drag-drop
+fileInput.addEventListener('change', updateFileDisplay);
+fileDropArea.addEventListener('dragover', (e) => e.preventDefault());
+fileDropArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  if(files.length > MAX_FILES) {
+    Swal.fire("Erreur", `Vous pouvez ajouter un maximum de ${MAX_FILES} photos.`, "error");
+    return;
   }
-  
-  // Submit form
-  async function emailSendProperty() {
+  fileInput.files = files;
+  updateFileDisplay();
+});
+
+function updateFileDisplay() {
+  const files = Array.from(fileInput.files).slice(0, MAX_FILES);
+  fileList.innerHTML = "";
+  files.forEach(file => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    fileList.appendChild(img);
+  });
+  fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
+}
+
+// Submit form
+async function emailSendProperty() {
   const form = document.getElementById('propertyForm');
   const formData = new FormData(form);
-
   const data = Object.fromEntries(formData.entries()); // convert to JSON
 
   try {
@@ -1800,8 +1798,8 @@ window.addEventListener('scroll', () => {
     if (result.message) {
       swal("Succès", result.message, "success");
       form.reset();
-      document.getElementById("file-list").innerHTML = "";
-      document.getElementById("file-counter").textContent = "0 / 3 photos ajoutées";
+      fileList.innerHTML = "";
+      fileCounter.textContent = "0 / 3 photos ajoutées";
     } else {
       swal("Erreur", result.error || "Erreur lors de l'envoi !", "error");
     }
@@ -1810,9 +1808,8 @@ window.addEventListener('scroll', () => {
     swal("Erreur", "Échec de l'envoi de l'email !", "error");
   }
 }
+</script>
 
-  </script>
-  
   
 
 
