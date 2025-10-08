@@ -1782,46 +1782,44 @@ function updateFileDisplay() {
   fileCounter.textContent = `${files.length} / ${MAX_FILES} photos ajoutées`;
 }
 
-// emailSendProperty
-async function emailSendProperty() {
-  const form = document.getElementById('propertyForm');
+// Submit form
+function emailSendProperty() {
+  const form = document.getElementById("propertyForm");
   const formData = new FormData(form);
 
-  try {
-    const res = await fetch('/api/sendProperty', {
-      method: 'POST',
-      body: formData // send as FormData directly
-    });
+  // text fields only
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    propertyType: formData.get("propertyType"),
+    transaction: formData.get("transaction"),
+    location: formData.get("location"),
+    surface: formData.get("surface"),
+    price: formData.get("price"),
+    description: formData.get("description"),
+  };
 
-    const result = await res.json();
-
-    if (result.message) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Succès !',
-        text: result.message,
-        confirmButtonColor: '#112E4C'
-      });
+  fetch("/api/sendProperty", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(resp => {
+    if (resp.message) {
+      swal("Succès", resp.message, "success");
       form.reset();
       document.getElementById("file-list").innerHTML = "";
       document.getElementById("file-counter").textContent = "0 / 3 photos ajoutées";
     } else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Erreur !',
-        text: result.error || "Erreur lors de l'envoi !",
-        confirmButtonColor: '#112E4C'
-      });
+      swal("Erreur", resp.error || "Erreur lors de l'envoi !", "error");
     }
-  } catch (err) {
-    console.error("Error:", err);
-    Swal.fire({
-      icon: 'error',
-      title: 'Erreur !',
-      text: "Échec de l'envoi de l'email !",
-      confirmButtonColor: '#112E4C'
-    });
-  }
+  })
+  .catch(err => {
+    console.error(err);
+    swal("Erreur", "Échec de l'envoi de l'email !", "error");
+  });
 }
 
 </script>
@@ -2294,7 +2292,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
 
 
 
