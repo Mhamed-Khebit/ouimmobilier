@@ -18,28 +18,38 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: email,
-      to: "mhamedkbt@gmail.com", // your inbox
+      to: "mhamedkbt@gmail.com",
       subject: `Nouveau formulaire de ${transaction || "propriété"} - ${propertyType || "Bien"}`,
       html: `
-        <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-          <h2 style="color: #007BFF;">Nouvelle propriété soumise sur BOOKDARI</h2>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Nom:</td><td>${name}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Email:</td><td>${email}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Téléphone:</td><td>${phone}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Type de bien:</td><td>${propertyType}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Transaction:</td><td>${transaction}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Localisation:</td><td>${location}</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Surface:</td><td>${surface} m²</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Prix:</td><td>${price} MAD</td></tr>
-            <tr><td style="font-weight: bold; padding: 5px; border: 1px solid #ddd;">Description:</td><td>${description}</td></tr>
-          </table>
-          <p style="font-size: 12px; color: #777; margin-top: 20px;">
-            Ce message a été envoyé depuis le formulaire de dépôt de bien sur BOOKDARI.
-          </p>
+        <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; background: #f9f9f9; padding: 20px;">
+          <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 0 15px rgba(0,0,0,0.1);">
+            <h1 style="color: #112E4C; text-align: center; margin-bottom: 20px;">Nouvelle propriété soumise</h1>
+    
+            <p style="color: #555; font-size: 16px;">Bonjour,</p>
+            <p style="color: #555; font-size: 16px;">
+              Vous avez reçu une nouvelle soumission de propriété via le formulaire <strong>Ouimmobilier Marrakech</strong>. Voici les détails :
+            </p>
+    
+            <div style="margin: 20px 0;">
+              <p><strong>Nom:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Téléphone:</strong> ${phone}</p>
+              <p><strong>Type de bien:</strong> ${propertyType}</p>
+              <p><strong>Transaction:</strong> ${transaction}</p>
+              <p><strong>Localisation:</strong> ${location}</p>
+              <p><strong>Surface:</strong> ${surface} m²</p>
+              <p><strong>Prix:</strong> ${price} MAD</p>
+              <p><strong>Description:</strong><br> ${description}</p>
+            </div>
+    
+            <p style="font-size: 14px; color: #777; text-align: center; margin-top: 30px;">
+              Ce message a été envoyé depuis le formulaire de dépôt de bien sur <strong>Ouimmobilier Marrakech</strong>.
+            </p>
+          </div>
         </div>
       `
     };
+    
 
     await transporter.sendMail(mailOptions);
 
