@@ -673,34 +673,31 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
 
     
-
-
 <!-- About Start -->
 <div class="about-section container-fluid" id="A propos">
   <div class="container container-ab-sec py-5">
     <div class="row align-items-center">
-      
-      <!-- Left Gallery -->
-      <div class="gallery-container">
-                      
-        <div class="gallery-card tall-card">
-            <img class="twistable" src="img/AboutImg1.jpg" alt="Lush Poolside with Huts">
-        </div>
-        <div class="gallery-card">
-            <img class="twistable" src="img/AboutImg7.jpg" alt="Resort Building by the Pool">
-        </div>
 
-        <div class="gallery-card">
-          <img class="twistable" src="img/AboutImg2.jpg" alt="Resort Poolside View">
+      <!-- Left Gallery -->
+      <div class="col-lg-6 pb-5 pb-lg-0 glr-Imgs">
+        <div class="gallery-container">
+          <div class="gallery-card tall-card">
+            <img class="twistable" src="imgs/aboutImg1.jpg" alt="Image principale">
+          </div>
+          <div class="gallery-card">
+            <img class="twistable" src="imgs/aboutImg2.jpg" alt="Image secondaire 1">
+          </div>
+          <div class="gallery-card">
+            <img class="twistable" src="imgs/aboutImg3.jpg" alt="Image secondaire 2">
+          </div>
+        </div>
       </div>
-    </div>
 
       <!-- Right Text -->
       <div class="col-lg-6">
-        
         <h6 class="subtitle-lux bg-blue py-1 px-3 mb-3">À propos de nous</h6>
         <h1 class="about-title about-title-size mb-4">Votre partenaire immobilier à Marrakech</h1>
-        
+
         <div class="about-container animated-line-div">
           <div class="animated-line-vertical"></div>
           <p class="about-text ps-4">
@@ -712,7 +709,7 @@ $('#header-carousel').on('slide.bs.carousel', function () {
           </p>
         </div>
 
-        <div class="d-flex justify-content-start social-icons-lux">
+        <div class="d-flex justify-content-start social-icons-lux mt-4">
           <a href="https://wa.me/+212774658208" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
           <a href="#" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
           <a href="#" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
@@ -727,8 +724,7 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 /* === About Section === */
 .about-section {
   background: #F9F9F9;
-  padding: 50px 0;
-  width: 95%;
+  padding: 60px 0;
 }
 
 /* Subtitle */
@@ -807,47 +803,43 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 }
 
 /* === Gallery === */
-
 .gallery-container {
-                      display: grid;
-                      grid-template-columns: 1fr 1fr;
-                      grid-gap: 15px;
-                      max-width: 600px;
-                      margin: 50px auto;
-                  
-                  }
-                  .gallery-card {
-                      overflow: hidden;
-                      border-radius: 10px;
-                      transform: scale(0.85);
-                      transition: transform 0.6s ease-out;
-                      background-color:  transparent !important;
-                  }
-                  .gallery-card.in-view {
-                      transform: scale(1);
-                  }
-                  .tall-card {
-                      grid-row: span 2;
-                  }
-                  .gallery-card img {
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      display: block;
-                  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 200px;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.gallery-card {
+  overflow: hidden;
+  border-radius: 10px;
+  transform: scale(0.85);
+  transition: transform 0.6s ease-out;
+}
+.gallery-card.in-view {
+  transform: scale(1);
+}
+.tall-card {
+  grid-row: span 2;
+}
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
 
-
-
-  /* Twist effect style */
-  .twistable {
-    display: block;
-    width: 100%;
-    border-radius: 12px;
-    transition: transform 0.4s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    
-  }
+/* Twist effect style */
+.twistable {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
 
 /* Social Icons */
 .social-icons-lux {
@@ -874,86 +866,67 @@ $('#header-carousel').on('slide.bs.carousel', function () {
   box-shadow: 0 6px 15px rgba(0,173,231,0.3);
 }
 
-/* ✅ Responsive (same layout, just smaller) */
+/* ✅ Responsive — same layout but flexible */
 @media (max-width: 992px) {
   .about-section {
     width: 100%;
     padding: 40px 15px;
+
+  }
+
+  .glr-Imgs {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+  }
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+  }
+}
+@media (max-width: 576px) {
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 120px;
+    gap: 10px;
   }
 }
 </style>
 
-
-
 <script>
-
-
-  const cards = document.querySelectorAll('.gallery-card');
-
+// fade-in scaling animation
+const cards = document.querySelectorAll('.gallery-card');
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-        } else {
-            entry.target.classList.remove('in-view');
-        }
-    });
-}, { threshold: 0.9 }); 
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    } else {
+      entry.target.classList.remove('in-view');
+    }
+  });
+}, { threshold: 0.9 });
+cards.forEach(card => observer.observe(card));
 
-cards.forEach(card => {
-    observer.observe(card);
-   });
-
-
-
-
-
+// twist click effect
 const imgs = document.querySelectorAll(".twistable");
-  
-  imgs.forEach(img => {
-    img.addEventListener("click", (e) => {
-      const rect = img.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-  
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-  
-      const rotateX = ((y - centerY) / centerY) * -12;
-      const rotateY = ((x - centerX) / centerX) * 12;
-  
-      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-  
-      setTimeout(() => {
-        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-      }, 300);
-    });
+imgs.forEach(img => {
+  img.addEventListener("click", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY) / centerY) * -12;
+    const rotateY = ((x - centerX) / centerX) * 12;
+    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    setTimeout(() => {
+      img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+    }, 300);
   });
-
-
-
-  document.querySelectorAll(".col-6").forEach(col => {
-    const img = col.querySelector("img");
-    let angle = 0;
-
-    col.addEventListener("click", () => {
-      angle += 360;
-      img.style.transform = `rotate(${angle}deg)`;
-    });
-
-    col.addEventListener("mouseenter", () => {
-      if (!/Mobi|Android/i.test(navigator.userAgent)) { 
-        angle += 360;
-        img.style.transform = `rotate(${angle}deg)`;
-      }
-    });
-  });
-
-
+});
 </script>
 <!-- About End -->
 <br>
-
 
 
 
