@@ -674,275 +674,328 @@ $('#header-carousel').on('slide.bs.carousel', function () {
 
     
 
+    
+    <!-- About Start -->
+    <div class="about-section container-fluid" id="A propos">
+      <div class="container container-ab-sec py-5">
+          <div class="row align-items-center">
+              <div class="col-lg-6 pb-5 pb-lg-0">
 
-<!-- About Start -->
-<div class="about-section container-fluid" id="A propos">
-  <div class="container container-ab-sec py-5">
-    <div class="row align-items-center">
-      
-      <!-- Left Gallery -->
-      <div class="col-lg-6 pb-5 pb-lg-0">
-        <div class="gallery-container">
-          <div class="gallery-card tall-card">
-            <img class="twistable" src="imgs/aboutImg1.jpg" alt="">
-          </div>
-          <div class="gallery-card">
-            <img class="twistable" src="imgs/AboutImg2.jpg" alt="">
-          </div>
-          <div class="gallery-card">
-            <img class="twistable" src="imgs/AboutImg3.jpg" alt="">
-          </div>
-        </div>
-      </div>
 
-      <!-- Right Text -->
-      <div class="col-lg-6">
-        
-        <h6 class="subtitle-lux bg-blue py-1 px-3 mb-3">À propos de nous</h6>
-        <h1 class="about-title about-title-size mb-4">Votre partenaire immobilier à Marrakech</h1>
-        
-        <div class="about-container animated-line-div">
-          <div class="animated-line-vertical"></div>
-          <p class="about-text ps-4">
-            Chez <strong>Ouimmobilier Marrakech</strong>, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. 
-            Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, 
-            nous vous accompagnons à chaque étape. 
-            Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, 
-            pour que vos transactions se déroulent en toute sérénité.
-          </p>
-        </div>
+                  <div class="gallery-container">
+                      
+                      <div class="gallery-card tall-card">
+                          <img class="twistable" src="img/AboutImg1.jpg" alt="Lush Poolside with Huts">
+                      </div>
+                      <div class="gallery-card">
+                          <img class="twistable" src="img/AboutImg7.jpg" alt="Resort Building by the Pool">
+                      </div>
 
-        <div class="d-flex justify-content-start social-icons-lux">
-          <a href="https://wa.me/+212774658208" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+                      <div class="gallery-card">
+                        <img class="twistable" src="img/AboutImg2.jpg" alt="Resort Poolside View">
+                    </div>
+                  </div>
+
+
+                  <style>
+                    .about-section {
+                      background-color: #F9F9F9;
+                      padding-bottom: 60px;
+                      padding-top: 60px;
+                    }
+
+                 .gallery-container {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      grid-gap: 15px;
+                      max-width: 600px;
+                      margin: 50px auto;
+                  
+                  }
+                  .gallery-card {
+                      overflow: hidden;
+                      border-radius: 10px;
+                      transform: scale(0.85);
+                      transition: transform 0.6s ease-out;
+                      background-color:  transparent !important;
+                  }
+                  .gallery-card.in-view {
+                      transform: scale(1);
+                  }
+                  .tall-card {
+                      grid-row: span 2;
+                  }
+                  .gallery-card img {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                      display: block;
+                  }
+
+
+                  </style>
+
+<script>
+  const cards = document.querySelectorAll('.gallery-card');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+          } else {
+              entry.target.classList.remove('in-view');
+          }
+      });
+  }, { threshold: 0.9 }); 
+
+  cards.forEach(card => {
+      observer.observe(card);
+   });
+</script>
+
+
+<!-- effect images -->
 
 <style>
-/* === About Section === */
-.about-section {
-  background: #F9F9F9;
-  padding: 50px 0;
-  width: 95%;
-}
+  /* Twist effect style */
+  .twistable {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    
+  }
+  </style>
+  
+  <script>
+  const imgs = document.querySelectorAll(".twistable");
+  
+  imgs.forEach(img => {
+    img.addEventListener("click", (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+  
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+  
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+  
+      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+  
+      setTimeout(() => {
+        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
+      }, 300);
+    });
+  });
+</script>
 
-/* Subtitle */
-.subtitle-lux {
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  display: inline-block;
-}
-.bg-blue {
-  background-color: #00ADE7 !important;
-}
+              </div>
+              <div class="col-lg-6">
+                  
+                  <h6 class="d-inline-block text-primary text-uppercase bg-light luxury-subtitle py-1 px-2">À propos de nous</h6>
+                  <h1 class="about-title mb-4">Conciergerie premium & revenus optimisés</h1>
+                  <div class="about-container animated-line-div">
+                      <div class="animated-line-vertical"></div>
+                      <p class=" about-text pl-4 border-left border-primary">BOOKDARI est une conciergerie immobilière haut de gamme basée à Kénitra. Nous accompagnons les propriétaires et investisseurs dans la gestion locative complète, en courte et longue durée. De la création et l’optimisation des annonces sur Airbnb et Booking aux check‑in/out professionnels, ménage hôtelier et maintenance, nous protégeons votre bien tout en offrant une expérience client irréprochable. Nos équipes optimisent les photos, la description et la tarification pour booster la visibilité, l’occupation et les revenus. Votre bien, notre priorité.
 
-/* Title */
-.about-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #112E4C;
-  letter-spacing: 0.5px;
+                      </p>
+
+                  </div>
+                  <!-- <div class="row pt-3">
+
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.1s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Gestion complète</h6>
+                    </div>
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.3s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Tranquillité d’esprit</h6>
+                    </div>
+                    <div class="col-sm-4 d-flex align-items-center wow fadeIn" data-wow-delay="0.5s">
+                      <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                      &nbsp;
+                      &nbsp;
+                      <h6 class="mb-0 fw-semibold">Service Client 24/7</h6>
+                    </div>
+                      
+                  </div> -->
+
+                  <div class="d-flex justify-content-start mt-4 social-icons-lux">
+                    <a href="https://wa.me/+212688427362" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+                  </div>
+                  
+                  
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <style>
+
+    /* .container-ab-sec {
+      background-color: #060e250b;
+      border-radius: 20px;
+  
+    } */
+
+
+    /* Text */
+.about-section .about-text {
+  
+    text-align: justify;           /* neat block alignment */
+    text-justify: inter-word;      /* spacing between words */
+    hyphens: auto;                 /* automatic word breaks */
+    letter-spacing: 0.5px;         /* elegant spacing */
+    word-spacing: 1px;             /* clean text flow */
+
+}
+.about-section .about-title ,.about-title{
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
   position: relative;
 }
-.about-title-size {
-  font-size: 2rem !important;
-}
-.about-title::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background: #00ADE7;
-  margin-top: 10px;
-  border-radius: 10px;
-}
 
-/* Text */
-.about-text {
-  text-align: justify;
-  color: #444;
-  line-height: 1.8;
-  letter-spacing: 0.3px;
-  font-size: 1rem;
-  margin-right: 10px;
-}
 
-/* Animated Line */
-.about-container {
-  display: flex;
-  align-items: start;
-}
-.animated-line-vertical {
-  width: 6px;
-  min-height: 100%;
-  background-color: #112E4C;
-  border-radius: 3px;
-  margin-right: 15px;
-  position: relative;
-  overflow: hidden;
-}
+
+
+
+    .bg-light{
+      background-color: #d5b163a8 !important;
+      border-radius: 20px !important;
+    }
+
+      .about-container {
+          display: flex;
+      }
+
+      .animated-line-vertical {
+          position: relative;
+          width: 30px;       
+          height: auto;    
+          background-color: #BB9C5A;
+          overflow: hidden;
+          border-radius: 2px;
+          margin-left: 2px;
+      }
+
 .animated-line-vertical::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: rgba(255, 255, 255, 0.8);
-  animation: slide-vertical 2s linear infinite;
+content: "";
+position: absolute;
+top: -50%;
+left: 0;
+width: 100%;
+height: 60%;
+background: rgba(255, 255, 255, 0.7); 
+animation: slide-vertical 2s linear infinite;
 }
+
 @keyframes slide-vertical {
-  0% { top: -50%; }
-  100% { top: 100%; }
+0% {
+top: -50%;
+}
+100% {
+top: 100%;
+}
 }
 
-/* === Gallery === */
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 200px; /* base height for small cards */
-  gap: 15px;
-  max-width: 600px;
-  margin: 50px auto;
+
+/* CSS */
+.col-6 img {
+transition: transform 0.8s ease-in-out;
+cursor: pointer;
 }
 
-.gallery-card {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.tall-card {
-  grid-row: span 2;       /* tall card spans 2 rows */
-  height: 100%;           /* takes the combined height of 2 rows */
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-}
-
-/* responsive */
-@media (max-width: 600px) {
-  .gallery-container {
-    grid-auto-rows: 140px; /* small rows for mobile */
-  }
-  .tall-card {
-    grid-row: span 2;
-  }
+.btn-primary-iconsAb {
+  border: 10px black;
 }
 
 
 
-.gallery-card.in-view {
-  transform: scale(1);
+.fa-check {
+  color: #BB9C5A !important;
 }
 
 
-/* Twist effect */
-.twistable {
-  display: block;
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.4s ease;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
 
-/* Social Icons */
+
+/* icons style */
+
+
 .social-icons-lux {
   display: flex;
   gap: 15px;
 }
+
+
 .social-icons-lux .icon {
   width: 45px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #00ADE7;
-  border-radius: 50%;
-  font-size: 20px;
-  color: #00ADE7;
+  border: 2px solid #BB9C5A;   /* border color */
+  /* border-radius: 12px;          مربعة بزاوية شوي round */
+  font-size: 22px;
+  color: #BB9C5A;              /* icon color */
+  background: transparent;     /* خلفية شفافة */
   transition: all 0.35s ease;
   text-decoration: none;
 }
+
+/* active effect  */
 .social-icons-lux .icon:active {
-  background: #00ADE7;
+  background: #BB9C5A;
   color: #fff;
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0,173,231,0.3);
+  box-shadow: 0 6px 15px rgba(187,156,90,0.4);
 }
 
-/* ✅ Responsive (same layout, just smaller) */
-@media (max-width: 992px) {
-  .about-section {
-    width: 100%;
-    padding: 40px 15px;
-  }
-  .gallery-container {
-    max-width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 160px;
-    gap: 10px;
-  }
-  .gallery-card img {
-    border-radius: 8px;
-  }
-}
 
-@media (max-width: 600px) {
-  .gallery-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 140px;
-    gap: 8px;
-  }
-  .about-title {
-    font-size: 1.6rem;
-  }
-}
-</style>
+
+
+
+
+  </style>
 
 <script>
-const cards = document.querySelectorAll('.gallery-card');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('in-view');
-    else entry.target.classList.remove('in-view');
-  });
-}, { threshold: 0.8 });
-cards.forEach(card => observer.observe(card));
+  document.querySelectorAll(".col-6").forEach(col => {
+    const img = col.querySelector("img");
+    let angle = 0;
 
-const imgs = document.querySelectorAll(".twistable");
-imgs.forEach(img => {
-  img.addEventListener("click", (e) => {
-    const rect = img.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * -12;
-    const rotateY = ((x - centerX) / centerX) * 12;
-    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-    setTimeout(() => {
-      img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-    }, 300);
+    col.addEventListener("click", () => {
+      angle += 360;
+      img.style.transform = `rotate(${angle}deg)`;
+    });
+
+    col.addEventListener("mouseenter", () => {
+      if (!/Mobi|Android/i.test(navigator.userAgent)) { 
+        angle += 360;
+        img.style.transform = `rotate(${angle}deg)`;
+      }
+    });
   });
-});
 </script>
-<!-- About End -->
+
+
+
+  
+  <!-- About End -->
+
+
+
+
 <br>
 
 
