@@ -4,22 +4,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>BOOKDARI</title>
-    <meta property="og:title" content="BOOKDARI">
-    <meta property="og:description" content="BOOKDARI est une conciergerie immobilière premium à Kénitra, spécialisée dans la gestion locative courte et longue durée.
-    Nous optimisons vos annonces, photos et tarifs sur Airbnb et Booking, assurons les check-in/out, le ménage hôtelier et la maintenance — pour une expérience client impeccable et des revenus maximisés.">
-    <meta property="og:image" content="img/logo.png">
-    <meta property="og:url" content="https://bookdari.vercel.app">
+    <title>Ouimmobilier Marrakech</title>
+    <meta property="og:title" content="Ouimmobilier">
+    <meta property="og:description" content="Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.">
+    <meta property="og:image" content="imgs/logo.png">
+    <meta property="og:url" content="https://ouimmobilier.vercel.app">
     <meta property="og:type" content="website">
-    
+
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="BOOKDARI" name="keywords">
-    <meta content="BOOKDARI" name="description">
+    <meta content="Ouimmobilier" name="keywords">
+    <meta content="Ouimmobilier" name="description">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="imgs/logo.png"  rel="icon">
+
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -93,23 +96,24 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); } 
   }
-  </style>
-  <!-- WhatsApp Button End-->
 
+</style>
+  <!-- WhatsApp Button End-->
+  
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-topBar d-none d-lg-block">
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+212688427362</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+212774658208</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>bookdari.conciergerie@gmail.com</small>
+                    <small><i class="fa fa-envelope mr-2"></i>ouimmobiliermarrakech@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-6 text-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-2" href="https://wa.me/+212688427362">
+                    <a class="text-primary px-2" href="https://wa.me/+212774658208">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="text-primary px-2" href="">
@@ -130,7 +134,7 @@
 
     <style>
         .bg-topBar{
-            background-color: #fff0d9;
+            background-color: #00ade708;
         }
     </style>
     <!-- Topbar End -->
@@ -147,198 +151,203 @@
     
 
 
+
+
     <!-- Navbar Start -->
-<div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-      <a href="index.html">
-        <img src="img/logoPng.png" width="110px">
-      </a>
-  
-      <!-- Hamburger SVG -->
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <svg viewBox="0 0 32 32" class="hamburger-svg">
-          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-          <path class="line" d="M7 16 27 16"></path>
-        </svg>
-      </button>
-  
-      <!-- Menu -->
-      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-        <ul class="navbar-nav m-auto py-0 lux-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
-          <li class="nav-item"><a href="index.html" class="nav-link">A propos</a></li>
-          <li class="nav-item"><a href="index.html" class="nav-link">Nos services</a></li>
-          <li class="nav-item"><a href="propriétés.html" class="nav-link">Nos propriétés</a></li>
-          <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
-        </ul>
-        <!-- <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a> -->
-      </div>
-    </nav>
-  </div>
-  
-  <style>
-  /* Hamburger SVG */
-  .hamburger-svg {
-    height: 3em;
-    width: 3em;
-    cursor: pointer;
-    transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
-  }
-  
-  .line {
-    fill: none;
-    stroke: #f9f9f9df;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 3;
-    transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
-                stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
-  }
-  
-  .line-top-bottom {
-    stroke-dasharray: 12 63;
-  }
-  
-  /* Hamburger open/close animation */
-  .navbar-toggler.collapsed svg {
-    transform: rotate(0);
-  }
-  
-  .navbar-toggler:not(.collapsed) svg {
-    transform: rotate(-45deg);
-  }
-  
-  .navbar-toggler:not(.collapsed) .line-top-bottom {
-    stroke-dasharray: 20 300;
-    stroke-dashoffset: -32.42;
-  }
-  
-  /* Navbar links - luxury style */
-  .lux-menu .nav-link {
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-weight: 500;
-    font-size: 1.05rem;
-    color: #060E25;
-    position: relative;
-    margin: 0 12px;
-    transition: all 0.3s ease;
-  }
-  
-  .lux-menu .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -4px;
-    transform: translateX(-50%);
-    width: 0%;
-    height: 2px;
-    background: #060E25;
-    border-radius: 2px;
-    transition: width 0.4s ease;
-  }
-  
-  .lux-menu .nav-link:hover::after {
-    width: 50%;
-  }
-  
-  .lux-menu .nav-link:hover {
-    transform: translateY(-2px);
-  }
-  
-  /* Luxury button */
-  .lux-btn {
-    font-weight: 600;
-    padding: 0.5rem 1.8rem;
-    font-size: 1rem;
-    border-radius: 50px;
-    transition: all 0.4s ease;
-    box-shadow: 0 5px 15px rgba(6,14,37,0.2);
-  }
-  
-  .lux-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(6,14,37,0.35);
-    background-color: #060E25;
-    color: #fff;
-  }
-  
-  /* Overlay effect */
-  body.menu-open-overlay::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.25);
-    z-index: 998;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    opacity: 1;
-  }
-  
-  body {
-    transition: all 0.4s ease;
-  }
-  
-  /* Mobile adjustments */
-  @media (max-width: 992px) {
-    .navbar-toggler {
-      display: block;
-      background: none;
-      border: none;
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html">
+          <img src="imgs/logoPng.png" width="150px">
+        </a>
+    
+        <!-- Hamburger SVG -->
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <svg viewBox="0 0 32 32" class="hamburger-svg">
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </button>
+    
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+          <ul class="navbar-nav m-auto py-0 lux-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">A propos</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Nos services</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Déposer un bien</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">Contact</a></li>
+          </ul>
+          <!-- <a href="contact.html" class="btn btn-primary d-none d-lg-block lux-btn">Contactez-nous</a> -->
+        </div>
+      </nav>
+    </div>
+    
+    <style>
+    /* Hamburger SVG */
+    .hamburger-svg {
+      height: 3em;
+      width: 3em;
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
     }
-  
-    .collapse.navbar-collapse {
-      transition: all 0.5s ease;
-      position: relative;
-      z-index: 1001; /* above overlay */
-      background: inherit; /* keep navbar color */
-      padding: 15px 0;
+    
+    .line {
+      fill: none;
+      stroke: #f9f9f9df;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      transition: stroke-dasharray 0.6s cubic-bezier(0.4,0,0.2,1),
+                  stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
     }
-  
+    
+    .line-top-bottom {
+      stroke-dasharray: 12 63;
+    }
+    
+    /* Hamburger open/close animation */
+    .navbar-toggler.collapsed svg {
+      transform: rotate(0);
+    }
+    
+    .navbar-toggler:not(.collapsed) svg {
+      transform: rotate(-45deg);
+    }
+    
+    .navbar-toggler:not(.collapsed) .line-top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+    }
+    
+    /* Navbar links - luxury style */
     .lux-menu .nav-link {
-      font-size: 1.2rem;
-      padding: 12px 0;
-      display: block;
-      text-align: center;
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #112E4C;
+      position: relative;
+      margin: 0 12px;
+      transition: all 0.3s ease;
     }
-  
+    
+    .lux-menu .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 2px;
+      background: #112E4C;
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+    
+    .lux-menu .nav-link:hover::after {
+      width: 50%;
+    }
+    
+    .lux-menu .nav-link:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Luxury button */
     .lux-btn {
-      display: block;
-      margin: 20px auto;
+      font-weight: 600;
+      padding: 0.5rem 1.8rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(6,14,37,0.2);
+      border-color: #00ADE7 !important;
+    
     }
-  }
-  </style>
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const navbarCollapse = document.getElementById('navbarCollapse');
-    const body = document.body;
-  
-    const updateBodyOverlay = () => {
-      if (navbarCollapse.classList.contains('show')) {
-        body.classList.add('menu-open-overlay');
-      } else {
-        body.classList.remove('menu-open-overlay');
+    
+    .lux-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(6,14,37,0.35);
+      background-color: #112E4C;
+      color: #fff;
+      border-color: #00ADE7 !important;
+    }
+    
+    /* Overlay effect */
+    body.menu-open-overlay::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.25);
+      z-index: 998;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 1;
+    }
+    
+    body {
+      transition: all 0.4s ease;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 992px) {
+      .navbar-toggler {
+        display: block;
+        background: none;
+        border: none;
+      }
+    
+      .collapse.navbar-collapse {
+        transition: all 0.5s ease;
+        position: relative;
+        z-index: 1001; /* above overlay */
+        background: inherit; /* keep navbar color */
+        padding: 15px 0;
+      }
+    
+      .lux-menu .nav-link {
+        font-size: 1.2rem;
+        padding: 12px 0;
+        display: block;
+        text-align: center;
+      }
+    
+      .lux-btn {
+        display: block;
+        margin: 20px auto;
       }
     }
-  
-    // Observe menu open/close
-    navbarCollapse.addEventListener('show.bs.collapse', updateBodyOverlay);
-    navbarCollapse.addEventListener('hide.bs.collapse', updateBodyOverlay);
-  
-    // Close overlay when link clicked inside menu
-    document.querySelectorAll('#navbarCollapse .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarCollapse = document.getElementById('navbarCollapse');
+      const body = document.body;
+    
+      const updateBodyOverlay = () => {
         if (navbarCollapse.classList.contains('show')) {
-          $(navbarCollapse).collapse('hide'); // Bootstrap collapse
+          body.classList.add('menu-open-overlay');
+        } else {
+          body.classList.remove('menu-open-overlay');
         }
+      }
+    
+      // Observe menu open/close
+      navbarCollapse.addEventListener('show.bs.collapse', updateBodyOverlay);
+      navbarCollapse.addEventListener('hide.bs.collapse', updateBodyOverlay);
+    
+      // Close overlay when link clicked inside menu
+      document.querySelectorAll('#navbarCollapse .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navbarCollapse.classList.contains('show')) {
+            $(navbarCollapse).collapse('hide'); // Bootstrap collapse
+          }
+        });
       });
     });
-  });
-  </script>
-  
-  
-  <!-- Navbar End -->
+    </script>
+    
+    
+    <!-- Navbar End  -->
   
   
   
@@ -383,7 +392,7 @@
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative map-wrapper" style="height:480px;">
                     <iframe class="position-absolute w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.1358629040838!2d-6.825451325059736!3d34.01472337317119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b9b67c54329%3A0xb6af4309d2543450!2sRue%20de%20Kh%C3%A9nifra%2C%20Rabat!5e0!3m2!1sen!2sma!4v1759760684351!5m2!1sen!2sma"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108703.12973920697!2d-8.090255200040959!3d31.63459498885141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakesh!5e0!3m2!1sen!2sma!4v1760003514493!5m2!1sen!2sma" width="600" height="450"
                         style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
                   </div>
@@ -451,7 +460,7 @@
         font-family: 'Space Grotesk', sans-serif;
     }
     #sendMessageButton {
-        background-color: #060e25ee !important;
+        background-color: #112E4Cee !important;
         border-radius: 3px;
     }
     .form-control {
@@ -548,78 +557,176 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   
   <style>
-  .contact-info-section {
-    width: 100%;
-    background-color: #f9f9f9;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .contact-container {
-    width: 100%;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
-  }
-  
-  /* Box Style */
-  .contact-box {
-    display: flex;
-    align-items: center;
-    background-color: #f4f6f8;
-    border: 1px solid #00000010 !important;    
-    border-radius: 12px;
-    padding: 25px 30px;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  }
-  
-  .contact-box:hover {
-    background: #eef1f776;
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  }
-  
-  /* Icon */
-  .contact-box .icon {
-    font-size: 26px;
-    color: #060E25;
-    margin-right: 20px;
-    flex-shrink: 0;
-  }
-  
-  /* Text Content */
-  .contact-box .content h4 {
-    font-weight: 600;
-    color: #000;
-    font-size: 17px;
-    margin-bottom: 5px;
-  }
-  
-  .contact-box .content p {
-    color: #5a5a5a;
-    font-size: 15px;
-    margin: 0;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .contact-container {
-      grid-template-columns: 1fr;
+    /* === CONTACT FORM RESTYLE TO MATCH PROPERTY FORM === */
+    
+    .bg-contact-light {
+      background-color: #112e4c07;
+      border: 1px solid rgba(0, 0, 0, 0.083) !important;
+      border-radius: 20px;
+      padding: 30px;
+      
     }
-    .contact-box {
-      flex-direction: column;
-      text-align: center;
+ 
+    
+    #contactForm {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    #contactForm .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #d0d0d0 !important;
+      font-size: 14px;
+      color: #112E4C;
+      resize: none;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+    
+    #contactForm .form-control:focus {
+      border-color: #00ADE7 !important;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0,173,231,0.15);
+    }
+    
+    #contactForm label {
+      font-weight: 600;
+      color: #112E4C;
+      margin-bottom: 8px;
+      display: block;
+    }
+    
+    #sendMessageButton {
+      padding: 12px 40px;
+      background-color: #112E4C !important;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    #sendMessageButton:active {
+      background-color: #0e253d !important;
+      transform: scale(1.03);
+    }
+    
+    /* === Section Background === */
+    .container-fluid.py-5 {
+      background-color: #F9F9F9;
 
     }
-    .contact-box .icon {
-      margin-right: 0;
-      margin-bottom: 10px;
+    
+    /* === Title Style === */
+    .luxury-subtitle {
+      background-color: #00ADE7 !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-  }
-  </style>
+    
+    /* === Map Styling === */
+    .map-wrapper iframe {
+      border-radius: 20px;
+      filter: grayscale(10%) brightness(98%);
+    }
+
+
+    
+    
+    .map-wrapper {
+      height: 350px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    @media (min-width: 992px) {
+      .map-wrapper {
+        height: 600px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .map-wrapper {
+        height: 300px;
+      }
+    }
+    
+    /* === CONTACT INFO BOXES (below form) === */
+    .contact-info-section {
+      width: 100%;
+      background-color: #F9F9F9;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .contact-container {
+      width: 100%;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+    
+    .contact-box {
+      display: flex;
+      align-items: center;
+      background-color: #112e4c07;
+      border: 1px solid rgba(0, 0, 0, 0.083) !important;
+      border-radius: 20px;
+      padding: 25px 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-box:hover {
+      background-color: #eef1f776;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    .contact-box .icon {
+      font-size: 26px;
+      color: #112E4C;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .contact-box .content h4 {
+      font-weight: 600;
+      color: #112E4C;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+    
+    .contact-box .content p {
+      color: #5a5a5a;
+      font-size: 15px;
+      margin: 0;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+      .contact-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      .contact-box .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+    </style>
+    
   
 
 
@@ -669,7 +776,7 @@
   position: relative;
   width: 100%;
   height: 7px;
-  background: linear-gradient(90deg, #060E25, #0A1B3D, #060E25);
+  background: linear-gradient(90deg, #112E4C, #0A1B3D, #112E4C);
   overflow: hidden;
   box-shadow: 0 0 15px rgba(6, 14, 37, 0.6); /* subtle glow */
 }
@@ -709,315 +816,301 @@
 
 
 
- <!-- Testimonial Section Start -->
- <section class="luxury-testimonial-section">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <!-- Left: Image -->
-        <div class="col-lg-6 col-md-10  mb-lg-0 text-center">
-          <img
-            class="img-fluid img-luxury"
-            src="img/955870e5a6cf0d44663672a153426f0a.jpg"
-            alt="Luxury happy clients"
-            loading="lazy"
-          />
+
+<!-- New Testimonial Slider Section with Image Start -->
+<section id="termoignages" class="new-testimonial-section">
+  <br>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      
+      <!-- Left: Image (all devices) -->
+      <div class="col-lg-6 col-md-10 mb-4 text-center">
+        <img
+          class="img-new-luxury"
+          src="imgs/Témoignages.jpg"
+          alt="Happy clients"
+          loading="lazy"
+        />
+      </div>
+
+      <br>
+
+      <!-- Right: Testimonials -->
+      <div class="col-lg-6 col-md-10">
+        <div class="text-center mb-4">
+          <h6 class="subtitle-lux py-1 px-3 mb-3">Témoignages</h6>
+          <h2 class="luxury-title">Ce que disent nos clients</h2>
+          <p class="text-muted">Les avis vérifiés de nos clients sur Google Maps</p>
         </div>
-  
-        <br>
-        <!-- Right: Testimonials -->
-        <div class="col-lg-6 col-md-10">
-          <div class="text-center ">
-            <h6 class="luxury-subtitle bg-light">Témoignages</h6>
-            <h2 class="luxury-title">Ce que disent nos clients</h2>
+
+        <div class="new-slider">
+          <!-- Slide 1 -->
+          <div class="new-slide active">
+            <div class="new-stars">★★★★★</div>
+            <p>Excellent estate agent! Very professional and really works hard to understand and meet client expectations. The process with Karim was very smooth and transparent. Highly recommend and looking forward to working with Karim in the Future. Keep up the great work!</p>
+            <h5>Waqqar Mirza</h5>
           </div>
-          
-          <br>
-  
-          <div class="lux-slider">
-            <div class="lux-slide active">
-              <div class="lux-stars">★★★★★</div>
-              <p>
-                “Au début, j’étais un peu hésitant à confier mon appartement. 
-        Mais dès le premier mois, j’ai constaté une vraie différence : 
-        plus de réservations, une meilleure gestion et zéro tracas.”
-              </p>
-              <h5>— Mohamed R.</h5>
-            </div>
-  
-            <div class="lux-slide">
-              <div class="lux-stars">★★★★★</div>
-              <p>
-                “Service impeccable ! L’équipe s’occupe de tout : annonces, check-in, ménage… 
-        Je reçois mes revenus sans le moindre souci. 
-        C’est exactement ce qu’il me fallait.”
-              </p>
-              <h5>— Youssef K.</h5>
-            </div>
-  
-            <!-- <div class="lux-slide">
-              <div class="lux-stars">★★★★★</div>
-              <p>
-                “Les activités proposées font toute la différence : excursions, mer,
-                location... mes voyageurs adorent ! Une expérience premium.”
-              </p>
-              <h5>— Fatima A.</h5>
-            </div> -->
-  
-            <div class="lux-slide">
-              <div class="lux-stars">★★★★★</div>
-              <p>
-                “Une gestion très professionnelle et transparente. 
-        Mon bien est toujours impeccable, et mes locataires sont ravis. 
-        Je me sens enfin serein.”
-              </p>
-              <h5>— Karim L.</h5>
-            </div>
-  
-            <div class="lux-slide">
-              <div class="lux-stars">★★★★★</div>
-              <p>
-                “Une équipe à l’écoute, réactive et disponible. 
-        Depuis que j’ai confié mes biens à BOOKDARI, mes revenus ont littéralement doublé. 
-        Je recommande sans hésiter.”
-              </p>
-              <h5>— Nadia M.</h5>
-            </div>
-  
-            <!-- Controls (inside slider for z-index fix) -->
-            <div class="lux-slider-controls text-center">
-              <span class="lux-prev">‹</span>
-              <span class="lux-next">›</span>
-            </div>
+
+          <!-- Slide 2 -->
+          <div class="new-slide">
+            <div class="new-stars">★★★★★</div>
+            <p>Exceptional real estate agent! Karim is highly professional and trustworthy. He is available, honest, and transparent. He quickly understands needs and finds solutions. He has been a great help. I recommend him without hesitation! Thanks again!</p>
+            <h5>Soraya</h5>
           </div>
+
+          <!-- Slide 3 -->
+          <div class="new-slide">
+            <div class="new-stars">★★★★★</div>
+            <p>Very professional service, super fast and clear communication, no unpleasant surprises. Karim helped us find the perfect apartment for us very quickly. Recommended 100%!</p>
+            <h5>Federica Vaghetti</h5>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="new-slide">
+            <div class="new-stars">★★★★★</div>
+            <p>Very satisfied with my experiences. A very kind, helpful person who supports me throughout my investments. Thank you Karim and see you soon</p>
+            <h5>Art Sanab</h5>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="new-slide">
+            <div class="new-stars">★★★★★</div>
+            <p>Mr. Karim, from the agency, very punctual, very professional!! Nothing to say or reproach for listening to its customers! I recommend it to you with your eyes closed!! ✨✨</p>
+            <h5>Rene Arama</h5>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="new-slide">
+            <div class="new-stars">★★★★★</div>
+            <p>Excellent service I had the pleasure of working with you my brother Karim a helpful and very professional man thank you very much.</p>
+            <h5>Omar Aarab</h5>
+          </div>
+
+          <!-- Slider Controls -->
+          <div class="new-slider-controls">
+            <span class="prev">‹</span>
+            <span class="next">›</span>
+          </div>
+        </div>
+
+        <!-- Show More Button -->
+        <div class="text-center mt-4">
+          <a href="https://www.google.com/maps/place/Ouimmobilier+Marrakech/@31.6346214,-8.0078531,12z/data=!4m8!3m7!1s0x69e0e1e7f0bb50ad:0xc2f6cbc8c0bcba25!8m2!3d31.6346214!4d-8.0078531!9m1!1b1!16s%2Fg%2F11srzf24zc?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D" 
+             target="_blank" 
+             class="btn-review">
+            Voir plus d’avis
+          </a>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+
+
+
+.new-testimonial-section {
+  padding-top: 80px !important;
+  padding-bottom: 50px !important;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+
+
+/* Image with 3D hover */
+.img-new-luxury {
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+
+/* Original luxury title and subtitle styles */
+.subtitle-lux {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: #00ADE7;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.luxury-title {
+  color: #112E4C;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-top: 2px;
+}
+
+/* New slider */
+.new-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
   
-  <style>
-  /* --- Image Animation --- */
-  .img-luxury {
-    display: block;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    width: 100%;
-    max-width: 550px;
-    margin: 0 auto;
+}
+
+.new-slide {
+  position: absolute;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  width: 85%;
+  max-width: 700px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+
+.new-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.new-stars {
+  color: #f4b400;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  animation: glowStars 2s ease-in-out infinite alternate;
+}
+@keyframes glowStars {
+  from { text-shadow: 0 0 5px #f4b400, 0 0 15px #f4b400; }
+  to   { text-shadow: 0 0 15px #ffd95a, 0 0 25px #f4b400; }
+}
+
+.new-slide p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.new-slide h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #112E4C;
+}
+
+/* Slider Controls */
+.new-slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.new-slider-controls span {
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.123);
+  color: #00ADE7;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 5px;
+  pointer-events: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.new-slider-controls span:active {
+  background: #00ADE7;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Show More Button */
+.btn-review {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #112E4C;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-review:hover { color: #fff; }
+.btn-review:active { background-color: #0e2844; transform: scale(1.05); }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .new-slide { width: 95%; padding: 1.8rem; }
+  .luxury-title { font-size: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .new-slide { width: 100%; padding: 1.6rem; }
+}
+</style>
+
+<!-- JS Slider + Image 3D effect -->
+<script>
+/* Image 3D hover effect */
+const img = document.querySelector(".img-new-luxury");
+if(img){
+  img.addEventListener("click", (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = ((y - centerY)/centerY) * -12;
+    const rotateY = ((x - centerX)/centerX) * 12;
+    img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
+    setTimeout(()=>{ img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)"; },400);
+  })
+};
+
+/* Testimonial Slider */
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".new-slide");
+  const next = document.querySelector(".new-slider-controls .next");
+  const prev = document.querySelector(".new-slider-controls .prev");
+  let index = 0;
+
+  function showSlide(newIndex){
+    slides.forEach((slide,i)=>{slide.classList.remove("active"); if(i===newIndex) slide.classList.add("active");});
   }
-  
-  /* --- Section --- */
-  .luxury-testimonial-section {
-    background: #f9f9f9;
-    overflow: hidden;
-    position: relative;
-    font-family: "Poppins", sans-serif;
-    padding-top: 100px !important;
-  }
-  
-  .luxury-subtitle {
-    display: inline-block;
-    color: #060E25;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    background: rgba(6, 14, 37, 0.06);
-    padding: 6px 14px;
-    border-radius: 20px;
-  }
-  
-  .luxury-title {
-    color: #060E25;
-    font-weight: 700;
-    font-size: 2.3rem;
-    margin-top: 2px;
-  }
-  
-  /* --- Slider --- */
-  .lux-slider {
-    position: relative;
-    perspective: 1200px;
-    height: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .lux-slide {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(12px);
-    /* box-shadow: 0 10px 40px rgba(6, 14, 37, 0.12); */
-    border-radius: 20px;
-    padding: 2rem 2.5rem;
-    width: 85%;
-    max-width: 700px;
-    text-align: center;
-    transform: rotateY(80deg) translateZ(-200px) scale(0.8);
-    opacity: 0;
-    transition: all 0.9s cubic-bezier(0.25, 1, 0.3, 1);
-  }
-  
-  .lux-slide.active {
-    transform: rotateY(0deg) translateZ(0px) scale(1);
-    opacity: 1;
-    z-index: 2;
-  }
-  
-  .lux-slide.prev {
-    transform: rotateY(-80deg) translateZ(-200px) scale(0.8);
-    opacity: 0;
-  }
-  
-  .lux-slide.next {
-    transform: rotateY(80deg) translateZ(-200px) scale(0.8);
-    opacity: 0;
-  }
-  
-  /* --- Stars --- */
-  .lux-stars {
-    color: #f4b400;
-    font-size: 1.4rem;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    animation: glowStars 2s ease-in-out infinite alternate;
-  }
-  
-  @keyframes glowStars {
-    from {
-      text-shadow: 0 0 5px #f4b400, 0 0 15px #f4b400;
-    }
-    to {
-      text-shadow: 0 0 15px #ffd95a, 0 0 25px #f4b400;
-    }
-  }
-  
-  .lux-slide p {
-    color: #333;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-  }
-  
-  .lux-slide h5 {
-    color: #060E25;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  
-  /* --- Controls --- */
-  .lux-slider-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 5;
-    pointer-events: none;
-  }
-  
-  .lux-slider-controls span {
-    font-size: 2rem;
-    color: #060E25;
-    cursor: pointer;
-    margin: 0 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    user-select: none;
-    pointer-events: auto;
-  }
-  
-  .lux-slider-controls span:hover {
-    color: #0d1a4f;
-    transform: scale(1.3);
-  }
-  
-  /* --- Responsive --- */
-  @media (max-width: 992px) {
-    .lux-slider {
-      height: auto;
-      min-height: 280px;
-    }
-    .lux-slide {
-      width: 95%;
-      padding: 1.8rem;
-    }
-    .luxury-title {
-      font-size: 2rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .row {
-      flex-direction: column;
-    }
-    .img-luxury {
-      margin-bottom: 2rem;
-    }
-    .lux-slide {
-      width: 100%;
-      padding: 1.6rem;
-    }
-  }
-  </style>
-  
-  <script>
-  /* Image Animation */
-  const img = document.querySelector(".img-luxury");
-  if (img) {
-    img.addEventListener("click", (e) => {
-      const rect = img.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -12;
-      const rotateY = ((x - centerX) / centerX) * 12;
-      img.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.97)`;
-      setTimeout(() => {
-        img.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
-      }, 400);
-    });
-  }
-  
-  /* Testimonial Slider */
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".lux-slide");
-    const next = document.querySelector(".lux-next");
-    const prev = document.querySelector(".lux-prev");
-    let index = 0;
-  
-    function showSlide(newIndex) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active", "prev", "next");
-        if (i === newIndex) slide.classList.add("active");
-        else if (i === (newIndex - 1 + slides.length) % slides.length) slide.classList.add("prev");
-        else if (i === (newIndex + 1) % slides.length) slide.classList.add("next");
-      });
-    }
-  
-    next.addEventListener("click", () => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    });
-  
-    prev.addEventListener("click", () => {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
-    });
-  
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    }, 5500);
-  
-    showSlide(index);
-  });
-  </script>
-  <!-- Testimonial Section End -->
-  
+
+  next.addEventListener("click", ()=>{ index = (index+1)%slides.length; showSlide(index); });
+  prev.addEventListener("click", ()=>{ index = (index-1+slides.length)%slides.length; showSlide(index); });
+
+  setInterval(()=>{ index = (index+1)%slides.length; showSlide(index); },20000);
+  showSlide(index);
+});
+</script>
+<!-- New Testimonial Slider Section with Image End -->
 
 
 
@@ -1034,78 +1127,79 @@
 
 
 
-   <!-- Footer Start -->
-   <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
-    <br>
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-6 pr-lg-5 mb-5">
-                <a href="#" class="navbar-brand">
-                    <img src="img/logo.png" loading="lazy" width="130px">   
-                    <br>
-                </a>
-                <p>
-                    BOOKDARI est une conciergerie immobilière premium à Kénitra, spécialisée dans la gestion locative courte et longue durée. Nous optimisons vos annonces, photos et tarifs sur Airbnb et Booking, assurons les check-in/out, le ménage hôtelier et la maintenance — pour une expérience client impeccable et des revenus maximisés.</p>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Rue de Khenifra, 10052 Rabat, Maroc</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+212688427362</p>
-                <p><i class="fa fa-envelope mr-2"></i> bookdari.conciergerie@gmail.com</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://wa.me/+212688427362"><i class="fab fa-whatsapp"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 pl-lg-5">
-                <div class="row">
-                    <div class="col-sm-6 mb-5">
-                        <br>
-                        <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                            <a href="index.html" class="nav-item nav-link">A propos</a>
-                            <a href="index.html" class="nav-item nav-link">Nos services</a>
-                            <a href="propriétés.html" class="nav-item nav-link">Nos propriétés</a>
-                            <a href="#" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
-                    <!-- <div class="col-sm-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-4">Our Services</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>servece 1</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 2</a>
-                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 3</a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-sm-12 mb-5">
-                        <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
-                        <div class="w-100">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary px-4">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">BOOKDARI</a>. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <p class="m-0 text-white">Developed by <a href="">Mhamed</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 20px;">
+  
+      <div class="container pt-5">
+          <div class="row">
+              <div class="col-lg-6 pr-lg-5 mb-5">
+                  <a href="index.html" class="navbar-brand">
+                      <img src="imgs/logo.png" loading="lazy" width="130px">   
+                      
+                  </a>
+                  <p>
+                    Chez Ouimmobilier Marrakech, nous mettons notre expertise au service de vos projets immobiliers à Marrakech. Que vous souhaitiez vendre, acheter ou louer un appartement, une villa, un riad ou un terrain, nous vous accompagnons à chaque étape. Notre objectif : vous offrir un service personnalisé, efficace et sécurisé, pour que vos transactions se déroulent en toute sérénité.</p>
+                  <p><i class="fa fa-map-marker-alt mr-2"></i>Marrakech, Maroc</p>
+                  <p><i class="fa fa-phone-alt mr-2"></i>+212774658208</p>
+                  <p><i class="fa fa-envelope mr-2"></i> ouimmobiliermarrakech@gmail.com</p>
+                  <div class="d-flex justify-content-start mt-4">
+                      <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://wa.me/+212774658208"><i class="fab fa-whatsapp"></i></a>
+                      <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                      <a class="btn btn-lg btn-primary btn-lg-square" href=""><i class="fab fa-instagram"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-6 pl-lg-5">
+                  <div class="row">
+                      <div class="col-sm-6 mb-5">
+                          <br>
+                          <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                          <div class="d-flex flex-column justify-content-start">
+                              <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                              <a href="#A propos" class="nav-item nav-link">A propos</a>
+                              <a href="#services" class="nav-item nav-link">Nos services</a>
+                              <a href="#deposer" class="nav-item nav-link">Déposer un bien</a>
+                              <a href="contact.html" class="nav-item nav-link">Contact</a>
+                          </div>
+                      </div>
+                      <!-- <div class="col-sm-6 mb-5">
+                          <h5 class="text-white text-uppercase mb-4">Our Services</h5>
+                          <div class="d-flex flex-column justify-content-start">
+                              <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>servece 1</a>
+                              <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 2</a>
+                              <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>service 3</a>
+                          </div>
+                      </div> -->
+                      <!-- <div class="col-sm-12 mb-5">
+                          <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
+                          <div class="w-100">
+                              <div class="input-group">
+                                  <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
+                                  <div class="input-group-append">
+                                      <button class="btn btn-primary px-4">Sign Up</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                  <p class="m-0 text-white">&copy; <a href="#">Ouimmobilier</a>. All Rights Reserved.</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right">
+                  <p class="m-0 text-white">Developed by <a href="">Mhamed</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
 
 <style>
     .bg-ttl-style{
