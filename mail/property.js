@@ -1,7 +1,7 @@
 function emailSendProperty() {
   const form = document.getElementById("propertyForm");
   const formData = new FormData(form);
-
+  
   // Convert form fields to JSON
   const data = {
     name: formData.get("name"),
